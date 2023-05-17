@@ -1,0 +1,33 @@
+.wraper{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+    height: 500px;
+    width: 700px;
+    border: 2px black solid;
+    background-color: rgb(246, 238, 227);
+}
+.subcont1{
+    margin-right: 25px;
+   
+}
+.hading{
+    height: 50px;
+    width: 700px;
+    text-align: center;
+    background-color: bisque;
+    border: 2px solid black;
+}
+
+
+
