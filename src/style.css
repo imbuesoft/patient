@@ -1,0 +1,27 @@
+.wraper{
+    background-image: url('images/gym.jpg');
+    background-size: cover;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 500px;
+    border: 2px solid white;
+    margin-top: 100px;
+}
+.form-label{
+    color: whitesmoke;
+    font-size: large;
+    font-weight: 200px;
+    justify-content: center;
+}
+.mt-3{
+    color: white;
+}
+
+
