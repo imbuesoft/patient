@@ -1,0 +1,92 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color:#f5f5f5;
+    
+}
+
+.container{
+    box-shadow: 0px 0px 50px #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: darkgrey;
+}
+
+input{
+    display: block;
+    width: 75%;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin: 5px 1px 1px 30px;
+    padding: 8px 4px;
+}
+.button{
+    width: auto;
+    display: inline;
+    margin-bottom: 10px;
+
+}
+.age{
+    border-radius: 15px;
+    width: 100px;
+}
+.btn{
+    display: inline;
+    width: auto;
+
+    align-items: center;
+    box-shadow: 0 0 5px darkgray, 0 0 25px darkgray;
+    font-size: 1rem;
+    padding: 5px;
+    margin: 12px;
+    border-radius: 10px;
+    background-color:grey;
+    color: black;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 0 0 5px grey, 0 0 25px grey,0 0 50px gray, 0 0 100px grey;
+}
+
+
+.img{
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.icon-button {
+    display: inline;
+
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 3px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .icon-button.selected {
+    background-color: #f0f0f0;
+
+  }
+  
+  .icon-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .icon-label {
+    margin-top: 5px;
+  }
