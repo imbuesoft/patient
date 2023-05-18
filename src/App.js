@@ -1,12 +1,9 @@
-
-import './App.css';
-import BmiCalculatorForm from './features/BmiCalculatorForm';
-
+import BmiCalculator from './features/BmiCalculator/';
 
 function App() {
   return (
     <>
-      <BmiCalculatorForm />
+      <BmiCalculator />
     </>
   );
 }
