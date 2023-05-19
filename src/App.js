@@ -9,16 +9,16 @@ const { Title } = Typography;
 function App() {
   return (
     <>
-      {/***** BMI calculator bootstrap *****/}
+      {/***** 🧮 BMI calculator bootstrap *****/}
       {/* <BmiCalculatorBootstrap /> */}
       
-      {/***** BMI calculator ant-design *****/}
+      {/***** 🧮 BMI calculator ant-design *****/}
       {/* <BmiCalculator /> */}
 
-      {/***** Search box *****/}
+      {/***** 🔍 Search box *****/}
       <div className="container " style={{ height: "100vh" }}>
         <Title className='mt-4'>Search fruits and vegetables by name, color or category</Title>
-        <div className="d-flex justify-content-center mt-5 h-100">
+        <div className="d-flex flex-column justify-content-center mt-5">
           <Search data={fruitsAndVegetables} />
         </div>
       </div>
