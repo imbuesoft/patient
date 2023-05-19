@@ -2,6 +2,7 @@ import React from 'react'
 import { InputNumber,Button, Form,Typography,Radio,Table} from 'antd';
 import {useState} from 'react'
 
+
   
 export default function Bmi() {
   const columns = [
@@ -52,6 +53,7 @@ export default function Bmi() {
   return ( 
       <>
     <h1 align='center'><b>BMI Calculator</b></h1>
+    <div className='form'>
     <Form form={form}>
        <Form.Item name="height" label="Height(cm)">
           <InputNumber />
@@ -69,12 +71,14 @@ export default function Bmi() {
           </Radio.Group>
         </Form.Item>
       <Button type='primary' onClick={submit} >Calculate</Button>
+      <Button onClick={()=>{form.resetFields()}}>Reset</Button>
     </Form>
      <Typography>
      <pre>BMI: {bmi.toFixed(2)}</pre>
      <h1 align="center">BMI Chart</h1>
      <Table columns={columns} dataSource={data} />;
    </Typography>
+   </div>
    </>
   );
 }
