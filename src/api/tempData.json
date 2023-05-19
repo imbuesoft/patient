@@ -1,0 +1,194 @@
+[
+    {
+        "id": "a9876",
+        "name": "apple",
+        "color": "red",
+        "category": "fruit"
+    },
+    {
+        "id": "b5432",
+        "name": "banana",
+        "color": "yellow",
+        "category": "fruit"
+    },
+    {
+        "id": "c1234",
+        "name": "orange",
+        "color": "orange",
+        "category": "fruit"
+    },
+    {
+        "id": "d9876",
+        "name": "grape",
+        "color": "purple",
+        "category": "fruit"
+    },
+    {
+        "id": "e5432",
+        "name": "strawberry",
+        "color": "red",
+        "category": "fruit"
+    },
+    {
+        "id": "f1234",
+        "name": "pineapple",
+        "color": "yellow",
+        "category": "fruit"
+    },
+    {
+        "id": "g9876",
+        "name": "watermelon",
+        "color": "green",
+        "category": "fruit"
+    },
+    {
+        "id": "h5432",
+        "name": "kiwi",
+        "color": "brown",
+        "category": "fruit"
+    },
+    {
+        "id": "i1234",
+        "name": "carrot",
+        "color": "orange",
+        "category": "vegetable"
+    },
+    {
+        "id": "j9876",
+        "name": "broccoli",
+        "color": "green",
+        "category": "vegetable"
+    },
+    {
+        "id": "k5432",
+        "name": "tomato",
+        "color": "red",
+        "category": "vegetable"
+    },
+    {
+        "id": "l1234",
+        "name": "cucumber",
+        "color": "green",
+        "category": "vegetable"
+    },
+    {
+        "id": "m9876",
+        "name": "potato",
+        "color": "brown",
+        "category": "vegetable"
+    },
+    {
+        "id": "n5432",
+        "name": "bell pepper",
+        "color": "red",
+        "category": "vegetable"
+    },
+    {
+        "id": "o1234",
+        "name": "onion",
+        "color": "white",
+        "category": "vegetable"
+    },
+    {
+        "id": "p9876",
+        "name": "spinach",
+        "color": "green",
+        "category": "vegetable"
+    },
+    {
+      "id": "q2468",
+      "name": "pear",
+      "color": "green",
+      "category": "fruit"
+    },
+    {
+      "id": "r1357",
+      "name": "mango",
+      "color": "yellow",
+      "category": "fruit"
+    },
+    {
+      "id": "s9753",
+      "name": "blueberry",
+      "color": "blue",
+      "category": "fruit"
+    },
+    {
+      "id": "t8642",
+      "name": "avocado",
+      "color": "green",
+      "category": "fruit"
+    },
+    {
+      "id": "u7531",
+      "name": "cauliflower",
+      "color": "white",
+      "category": "vegetable"
+    },
+    {
+      "id": "v8642",
+      "name": "asparagus",
+      "color": "green",
+      "category": "vegetable"
+    },
+    {
+      "id": "w7531",
+      "name": "zucchini",
+      "color": "green",
+      "category": "vegetable"
+    },
+    {
+      "id": "x8642",
+      "name": "radish",
+      "color": "red",
+      "category": "vegetable"
+    },
+    {
+      "id": "y7531",
+      "name": "pomegranate",
+      "color": "red",
+      "category": "fruit"
+    },
+    {
+      "id": "z8642",
+      "name": "pineapple",
+      "color": "yellow",
+      "category": "fruit"
+    },
+    {
+      "id": "aa7531",
+      "name": "kiwifruit",
+      "color": "green",
+      "category": "fruit"
+    },
+    {
+      "id": "bb8642",
+      "name": "grapefruit",
+      "color": "yellow",
+      "category": "fruit"
+    },
+    {
+      "id": "cc7531",
+      "name": "eggplant",
+      "color": "purple",
+      "category": "vegetable"
+    },
+    {
+      "id": "dd8642",
+      "name": "celery",
+      "color": "green",
+      "category": "vegetable"
+    },
+    {
+      "id": "ee7531",
+      "name": "sweet potato",
+      "color": "orange",
+      "category": "vegetable"
+    },
+    {
+      "id": "ff8642",
+      "name": "cabbage",
+      "color": "green",
+      "category": "vegetable"
+    }
+]
