@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React from 'react';
+import { Layout, theme } from 'antd';
+const { Footer } = Layout;
+const App = () => {
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Footer
+      style={{
+        textAlign: 'center',
+        borderBottom: '1px solid #ddd',
+        height: '100px',
+        lineHeight: '60px',
+        backgroundColor: 'orange',
+        marginBottom: '100px',
+        marginTop: '800px'
+      }}
+    >
+      <h1>this is a footer.</h1>
+    </Footer>
   );
-}
-
+};
 export default App;
+
