@@ -1,0 +1,62 @@
+[
+    {
+      "key": "1",
+      "label": "Dashboard",
+      "children": "Content of Dashboard"
+    },
+    {
+      "key": "2",
+      "label": "Appointments",
+      "children": "Content of Appointments"
+    },
+    {
+      "key": "3",
+      "label": " Reception",
+      "children": "Content of Reception"
+    },
+    {
+      "key": "4",
+      "label": "Case List",
+      "children": "Content of Case List"
+    },
+    {
+      "key": "5",
+      "label": "Finance",
+      "children": "Content of Finance"
+    },
+    {
+      "key": "6",
+      "label": "CRM",
+      "children": "Content of CRM"
+    },
+    {
+      "key": "7",
+      "label": "Gift Card",
+      "children": "Content of Gift Card"
+    },
+    {
+      "key": "8",
+      "label": "Certificate",
+      "children": "Content of Certificate"
+    },
+    {
+      "key": "9",
+      "label": "Custom Print",
+      "children": "Content of Custom Print"
+    },
+    {
+      "key": "10",
+      "label": "Reports",
+      "children": "Content of Reports"
+    },
+    {
+      "key": "11",
+      "label": "Charts",
+      "children": "Content of Charts"
+    },
+    {
+      "key": "12",
+      "label": "Settings",
+      "children": "Content of Settings"
+    }
+]
