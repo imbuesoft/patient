@@ -45,14 +45,14 @@ const BmiCalculator = () => {
                     >
                         <Input type="number" />
                     </Form.Item>
-                    <Form.Item style={{margin:"2em 0 0 0"}}>
+                    <Form.Item style={{margin:"3em 0 0 0"}}>
                         <Button type="primary" size='large' htmlType="submit" block>
                             Calculate BMI
                         </Button>
                     </Form.Item>
                 </Form>
                 {bmiResult && (
-                    <div>
+                    <div style={{margin:"2em 0 0 0"}}>
                         <Title level={4} type="bmi_result">Your BMI: {bmiResult}</Title>
                         <Title level={4} type="category_result">Category: {getBmiCategory(bmiResult)}</Title>
                     </div>

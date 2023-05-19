@@ -12,18 +12,14 @@ const BmiForm = () => {
     const [system, setSystem] = useState("metric");
     const [gender, setGender] = useState()
 
-    const calculateBMI = () => {
+    const calculateBMI = async () => {
 
-        let { height, weight, age } = data
+        let { height, weight } = data
 
         if (system === 'metric') {
-
-            setBmi((weight / (height * height)).toFixed(2))
-
+            await setBmi((weight / (height * height)).toFixed(2))
         } else if (system === 'imperial') {
-
-            setBmi(((weight / (height * height)) * 703).toFixed(2))
-
+            await setBmi(((weight / (height * height)) * 703).toFixed(2))
         }
 
         let genderValue = {
@@ -31,15 +27,19 @@ const BmiForm = () => {
             female: [18.5, 24, 30]
         }
 
-
-        let x = 'Obese'
-        if (bmi < genderValue[gender && gender || "male"][0]) {
+        let x = ''
+        if (bmi < genderValue[gender ? gender : "male"][0]) {
             x = 'Underweight';
-        } else if (bmi >= genderValue[gender && gender || "male"][0] && bmi < genderValue[gender && gender || "male"][1]) {
+        } else if (bmi >= genderValue[gender ? gender : "male"][0] && bmi < genderValue[gender ? gender : "male"][1]) {
             x = 'Normal weight';
-        } else if (bmi >= genderValue[gender && gender || "male"][1] && bmi < genderValue[gender && gender || "male"][2]) {
+        } else if (bmi >= genderValue[gender ? gender : "male"][1] && bmi < genderValue[gender ? gender : "male"][2]) {
             x = 'Overweight';
+        } else {
+            x = 'Obese';
         }
+        
+        console.log(bmi);
+        console.log(x);
 
         setCategory(x)
     }
@@ -49,14 +49,6 @@ const BmiForm = () => {
         setData({ ...data, [e.target.name]: e.target.value }); bmi && setBmi(0); category && setCategory("")
     }
 
-    // const handleHeightChange = (e) => {
-    //     (system == "metric") ?
-    //         setData({ ...data, [e.target.name]: e.target.value })
-    //         :
-    //         setData({ ...data, [e.target.name]: e.target.value })
-    //     bmi && setBmi(0);
-    //     category && setCategory("")
-    // }
     const handleHeightChange = (e) => {
         console.log(data);
         if (system === "metric") {
@@ -83,12 +75,11 @@ const BmiForm = () => {
     return (
         <>
             <div className="d-grid h-100">
-                <div className="m-auto container px-3 px-sm-4 px-md-5 border border-2 rounded-4 shadow-lg">
+                <div className="m-auto mt-5 container px-3 px-sm-4 px-md-5 border border-2 rounded-4 shadow-lg">
                     <form id='bmi-form' method="post" onSubmit={handleSubmit}>
                         <h1 className="h1 text-center mt-3 ">BMI Calculator</h1>
-                        <div className="d-flex flex-wrap mt-3">
-                            <Radio className="flex-grow-1 d-inline-flex gap-3" data={["male", "female", "other"]} title="Gender : " name="gender" checkedData={gender} handleChange={handleGenderChange} />
-                            <Radio className="d-inline-flex gap-3" data={["imperial", "metric"]} name="system" checkedData={system} handleChange={handleSystemChange} />
+                        <div className="d-flex flex-wrap flex-column flex-md-row mt-3">
+                            <Radio className="mx-auto d-inline-flex gap-3 order-1 order-md-2" data={["imperial", "metric"]} name="system" checkedData={system} handleChange={handleSystemChange} />
                         </div>
                         {
                             (system === "metric") ?
@@ -101,6 +92,7 @@ const BmiForm = () => {
                         }
                         <Input placeholder={`x.x ${system === "metric" ? "kg" : "pounds"}`} onChange={handleDataChange} title="Enter your weight" required={true} name="weight" right={system === "metric" ? "kg" : "pounds"} type="number" />
                         <Input onChange={handleDataChange} title="Enter your age" name="age" type="number" />
+                        <Radio className=" flex-grow-1 d-inline-flex gap-3 mt-3" data={["male", "female", "other"]} title="Gender : " name="gender" checkedData={gender} handleChange={handleGenderChange} />
                         {bmi && <h3 className="h3 mt-4">BMI : {bmi}</h3> || ""}
                         {category && <h3 className="h3 mt-4">Category : {category}</h3> || ""}
                         <div className="d-flex justify-content-center">
@@ -108,7 +100,7 @@ const BmiForm = () => {
                                 Calculate BMI
                             </button>
                         </div>
-                        <div className="space" style={{ height: "1em" }}></div>
+                        <div className="space" style={{ height: "2em" }}></div>
                     </form>
                 </div>
 
