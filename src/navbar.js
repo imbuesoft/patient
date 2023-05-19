@@ -14,7 +14,7 @@ const Navbar = () => {
               </button>
               <div className="collapse navbar-collapse" id="xyz">
                 <div className="navbar-nav"  >
-                  <Link to="/" className="navbar navbar-brand nav-link active" style={{color:'blue'}}><h1>Dev</h1></Link>
+                  <Link to="/" className="navbar navbar-brand nav-link active" style={{color:'blue'}}><h1>DEV</h1></Link>
                   <Link to="/Home" className="nav-link" style={{color:'white',marginTop:'10px',marginLeft:'10px'}}>Home</Link>
                   <Link to="/About" className="nav-link" style={{color:'white',marginTop:'10px',marginLeft:'10px'}}>About Us</Link>
                   <Link to="/Product" className="nav-link" style={{color:'white',marginTop:'10px',marginLeft:'10px'}}>Product</Link>	
