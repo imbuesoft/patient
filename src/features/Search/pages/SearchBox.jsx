@@ -34,6 +34,21 @@ const SearchBox = ({ data }) => {
     setSearchTerm(value);
   };
 
+  const colorList = {
+    "red": "#ff000080",
+    "yellow": "#ffff0080",
+    "orange": "#ffa50080",
+    "purple": "#80008080",
+    "green": "#00800080",
+    "brown": "#a52a2a80",
+    "white": "#dddddd80",
+    "blue": "#0000ff80"
+  }
+
+  const getColor = color => {
+    return colorList[color] ? colorList[color] : "#fff";
+  }
+
   return (
     <>
       <AutoComplete
@@ -45,13 +60,13 @@ const SearchBox = ({ data }) => {
       >
         <Input.Search size="large" placeholder="Search..." allowClear={true} />
       </AutoComplete>
-      <div style={{ display: "flex", gap: "1em", flexWrap: "wrap", margin:"1em 0 0 0" }}>
+      <div style={{ display: "flex", gap: "1em", flexWrap: "wrap", margin: "1em 0 0 0" }}>
         {searchResults.map(result => {
           return (
             <Button
               key={result.id}
               size='large'
-              style={{ background: result.color }}
+              style={{ background: getColor(result.color) }}
             >
               {result.name} : {result.category}
             </Button>
