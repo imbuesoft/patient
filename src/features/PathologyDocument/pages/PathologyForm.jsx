@@ -1,7 +1,8 @@
-import React from 'react';
-import { Input, Typography } from 'antd';
+import React, { useEffect } from 'react';
+import { Button, Input, Typography } from 'antd';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import '../assets/patho.css'
+import PathoData from '../../../api/PathoData.json';
 
 const { Title } = Typography;
 
@@ -10,18 +11,20 @@ const bold = { fontWeight: "700" }
 const Low = () => (<span style={{ color: "#e076c9", cursor: "default", textShadow: "0 0 1em  #e076c9" }}>LOW</span>)
 const High = () => (<span style={{ color: "#009acc", cursor: "default", textShadow: "0 0 1em  #009accaa  " }}>HIGH</span>)
 
+
 const PathologyForm = ({ pathoData, setPathoData }) => {
 
     const a = parseFloat;
 
+    const handleInputChange = (key, index, field, value) => {
+        const updatedData = { ...pathoData };
+        updatedData[key][index][field] = value;
+        setPathoData(updatedData);
+    };
+
     const handlePush = (key) => {
         setPathoData({ ...pathoData, [key]: [...pathoData[key], { name: "", value: "", min: "", max: "", unit: "" }] })
-        console.log("push", key)
     }
-    React.useEffect(() => {
-        console.log(pathoData);
-    }, [pathoData]);
-
 
     const handlePop = (key) => {
         setPathoData({ ...pathoData, [key]: pathoData[key].slice(0, -1) })
@@ -29,16 +32,34 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
     }
 
     const handleRemove = (key, index) => {
-        // write code that delete the item from the array at give index
-        const temp = [...pathoData[key]];
-        temp.splice(index, 1);
-        setPathoData({ ...pathoData, [key]: temp });
-        console.log(pathoData[key]);
+        setPathoData({ ...pathoData, [key]: pathoData[key].filter((x, i) => i !== index) })
     }
+
+    const resetData = () => {
+        setPathoData(PathoData);
+        localStorage.removeItem('pathoData');
+    };
+
+    const resetForm = () => {
+        setPathoData({
+            "hemoglobin": [{"name": "", "value": "", "min": "", "max": "", "unit": ""}], "rbc count": [{"name": "", "value": "", "min": "", "max": "", "unit": ""}], "blood indics": [{"name": "", "value": "", "min": "", "max": "", "unit": ""}], "WBC count": [{"name": "", "value": "", "min": "", "max": "", "unit": ""}], "Differential WBC count": [{"name": "", "value": "", "min": "", "max": "", "unit": ""}], "Platelet count": [{"name": "", "value": "", "min": "", "max": "", "unit": ""}]
+        });
+        localStorage.removeItem('pathoData');
+    };
+
+    useEffect(() => {
+        localStorage.setItem('pathoData', JSON.stringify(pathoData));
+    }, [pathoData]);
+
     return (
         <>
             <div style={{ display: 'grid' }}>
                 <div style={{ margin: "1em auto 0 ", border: "2px solid #ddd", boxShadow: "0 1em 5em #00000022", borderRadius: "12px", padding: "1em", maxWidth: "96em", width: "", background: "#fff" }} >
+
+                    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+                        <Button onClick={resetData}>Reset Data</Button >
+                        <Button onClick={resetForm}>Reset Form</Button >
+                    </div>
                     <table style={{ width: "", borderCollapse: "separate", borderSpacing: " 0.4em 0em" }}>
                         <thead>
                             <tr>
@@ -72,6 +93,9 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
                                                         placeholder='name'
                                                         defaultValue={item.name}
                                                         style={{ width: "13rem" }}
+                                                        onChange={(e) =>
+                                                            handleInputChange(key, index, "name", e.target.value)
+                                                        }
                                                     />
                                                 </td>
                                                 <td>
@@ -79,6 +103,9 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
                                                         placeholder='value'
                                                         defaultValue={item.value}
                                                         style={{ width: "6em", textAlign: "center" }}
+                                                        onChange={(e) =>
+                                                            handleInputChange(key, index, "value", e.target.value)
+                                                        }
                                                     />
                                                 </td>
                                                 <td>
@@ -87,14 +114,23 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
                                                     </div>
                                                 </td>
                                                 <td style={{ display: "flex", }}>
-                                                    <Input defaultValue={item.min} placeholder='min' style={{ width: "4em", textAlign: "right" }} size='small' className='input-border-style' />
+                                                    <Input defaultValue={item.min} placeholder='min' style={{ width: "4em", textAlign: "right" }} size='small' className='input-border-style'
+                                                        onChange={(e) =>
+                                                            handleInputChange(key, index, "min", e.target.value)
+                                                        } />
                                                     -
-                                                    <Input defaultValue={item.max} placeholder='max' style={{ width: "4em", textAlign: "left" }} size='small' className='input-border-style' /></td>
+                                                    <Input defaultValue={item.max} placeholder='max' style={{ width: "4em", textAlign: "left" }} size='small' className='input-border-style'
+                                                        onChange={(e) =>
+                                                            handleInputChange(key, index, "max", e.target.value)
+                                                        } /></td>
                                                 <td>
                                                     <Input size='small' className='input-border-style'
                                                         placeholder='unit'
                                                         defaultValue={item.unit}
-                                                        style={{ width: "7em" }} />
+                                                        style={{ width: "7em" }}
+                                                        onChange={(e) =>
+                                                            handleInputChange(key, index, "unit", e.target.value)
+                                                        } />
                                                     <span onClick={() => { handleRemove(key, index) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}><MinusOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /></span>
 
                                                 </td>
@@ -105,6 +141,7 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
                             ))}
                         </tbody>
                     </table>
+
                 </div>
             </div>
         </>

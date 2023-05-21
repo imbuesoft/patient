@@ -15,7 +15,10 @@ const { Title } = Typography;
 
 function App() {
 
-  const [pathoData, setPathoData] = useState(PathoData);
+  const [pathoData, setPathoData] = useState(
+    JSON.parse(localStorage.getItem('pathoData')) || PathoData
+  );
+
 
   return (
     <>
