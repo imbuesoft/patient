@@ -1,0 +1,98 @@
+{
+    "hemoglobin": [
+        {
+            "name": "Heloglobin (Hb)",
+            "value": "12.5",
+            "min": "13.0",
+            "max": "17.0",
+            "unit": "g/dL"
+        }
+    ],
+    "rbc count": [
+        {
+            "name": "Total RBC Count",
+            "value": "5.2",
+            "min": "4.5",
+            "max": "5.5",
+            "unit": "mill/cumm"
+        }
+    ],
+    "blood indics": [
+        {
+            "name": "Packed Cell Volume (PCV)",
+            "value": "37.5",
+            "min": "40",
+            "max": "50",
+            "unit": "%"
+        },
+        {
+            "name": "Mean Corpuscular Volume",
+            "value": "72.12",
+            "min": "50",
+            "max": "62",
+            "unit": "%"
+        },
+        {
+            "name": "RDW",
+            "value": "13.6",
+            "min": "11.6",
+            "max": "14.0",
+            "unit": "%"
+        }
+    ],
+    "WBC count": [
+        {
+            "name": "Total WBC count",
+            "value": "9000",
+            "min": "4000",
+            "max": "11000",
+            "unit": "cumm"
+        }
+    ],
+    "Differential WBC count": [
+        {
+            "name": "Neutrophils",
+            "value": "60",
+            "min": "50",
+            "max": "62",
+            "unit": "%"
+        },
+        {
+            "name": "Lymphocytes",
+            "value": "31",
+            "min": "20",
+            "max": "40",
+            "unit": "%"
+        },
+        {
+            "name": "Eosinophils",
+            "value": "1",
+            "min": "0",
+            "max": "6",
+            "unit": "%"
+        },
+        {
+            "name": "Monocytes",
+            "value": "7",
+            "min": "0",
+            "max": "10",
+            "unit": "%"
+        },
+        {
+            "name": "Basophils",
+            "value": "0",
+            "min": "0",
+            "max": "2",
+            "unit": "%"
+        }
+    ],
+    "Platelet count": [
+        {
+            "name": "Platelet count",
+            "value": "320000",
+            "min": "150000",
+            "max": "410000",
+            "unit": "cumm"
+        }
+    ]
+}
