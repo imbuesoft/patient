@@ -35,4 +35,13 @@
   to {
     transform: rotate(360deg);
   }
+} 
+
+table { 
+  justify-content: space-between; 
+  align-items: center;  
+  
+} 
+td { 
+  padding: 6px;
 }
