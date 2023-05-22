@@ -1,73 +1,57 @@
 import React from "react";
+import QRCode from 'qrcode.react';
+import { Divider } from 'antd';
+import Header from './Header';
+import H1 from './H1';
+import H2 from './H2';
 
-import { Comment } from '@ant-design/compatible';
-import { Tooltip, Avatar } from 'antd';
-import moment from 'moment';
-
-class App extends React.Component {
-  state = {
-    likes: 0,
-    dislikes: 0,
-    action: null,
+const App=()=>{
+  
+  const person={
+    name:"Yash M. Patel",
+    age:21 ,
+    sex:"Male",
+    pid:"555"
   };
-
-  like = () => {
-    this.setState({
-      likes: 1,
-      dislikes: 0,
-      action: 'liked',
-    });
+  
+  const h1 ={
+    name :"Sample Collected At:",
+    address:"125,Shivam Bungalow,S GRoad,Ahmadabad",
+    refby:"Dr. Hiren Shah."
   };
-
-  dislike = () => {
-    this.setState({
-      likes: 0,
-      dislikes: 1,
-      action: 'disliked',
-    });
+  const h2 ={
+    registered: "02:31 PM 02 Dec,21",
+    collected: "03:11 PM 02 Dec,21",
+    reported: "04:35 PM 02 Dec,21"
+    
   };
+  return(
+    <div style={{display:'flex',justifyContent:'center'}}>
+      <div style={{margin:'0 200px 0 40px', borderLeftWidth: 1,borderLeftColor: 'gray'}}>
+        
+      <Header
+        {...person}>
+      </Header>
+      
+    </div><QRCode Value="http://www.vistaderm.in"/> < Divider
+   type="vertical" style={{ height: "200px", backgroundColor: "#ede9c0" }}
+/>
 
-  render() {
-    const { likes, dislikes, action } = this.state;
+    <div style={{margin: '0 200px 0 40px'}}>
+      <H1 {...h1}/>
 
-    const actions = [
-      <span key="comment-basic-like">
-        <Tooltip title="Like">
-         
-        </Tooltip>
-        <span style={{ paddingLeft: 8, cursor: 'auto' }}>{likes}</span>
-      </span>,
-      <span key=' key="comment-basic-dislike"'>
-        <Tooltip title="Dislike">
-         
-        </Tooltip>
-        <span style={{ paddingLeft: 8, cursor: 'auto' }}>{dislikes}</span>
-      </span>,
-      <span key="comment-basic-reply-to">Reply to</span>,
-    ];
-    return (
-      <Comment
-        actions={actions}
-        author={<a></a>}
-        avatar={
-          <Avatar
-            src="<CommentOutlined />"
-            alt="<CommentOutlined />"
-          />
-        }
-        content={
-          <p>
-           Write your comment here..
-          </p>
-        }
-        datetime={
-          <Tooltip title={moment().format('YYYY-MM-DD HH:mm:ss')}>
-            <span>{moment().fromNow()}</span>
-          </Tooltip>
-        }
-      />
-    );
-  }
-}
+      
 
+    </div>
+    < Divider
+   type="vertical" style={{ height: "200px", backgroundColor: "#ede9c0" }}
+/>
+    <div style={{margin: '0 200px 0 40px'}}>
+      <H2 {...h2}/>
+    </div>
+   
+    </div>
+  );
+
+};
 export default App;
