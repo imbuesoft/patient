@@ -1,0 +1,79 @@
+body{
+    background-color: rgb(173, 230, 187);
+}
+.container{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.main{
+    padding: 30px;
+    background-color: aliceblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.table-head-main{
+    font-size: 16px;
+    text-align: left;
+}
+
+td.header-cell::before{  
+    content: '';
+    top:50px;
+    width: 0;
+    height: 100px;
+    position: absolute;    
+    border: 1px solid rgb(90, 90, 90,0.6);
+}
+.table-head{
+    font-size: 12px;
+    font-weight: 800;
+    text-align: left;
+    padding-top: 17px;
+    color: rgb(25, 25, 25);
+}
+
+
+hr{
+    border-width: 0 0 2px;
+    color: rgb(90, 90, 90);
+    border-image: linear-gradient(90deg, rgba(135, 206, 235, 0), rgb(59, 59, 59) 50%, rgba(135, 206, 235, 0) 100%) 0 0 100%;
+    border-style: solid;
+}
+
+input{
+    width:50px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(149, 177, 202);
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    background-color:  rgb(173, 230, 187,0.3);
+    border:2px solid rgb(173, 230, 187);
+    font-weight: 900;
+    margin-top: 15px;
+    font-size: 15px;
+    border-radius: 9px;
+    
+}
+.table-footer{
+    width:100%;
+}
+
+.table-footer img{
+    width:120px;
+}
+
+.table-footer span{
+    font-size: 12px;
+}
