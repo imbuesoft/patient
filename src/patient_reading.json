@@ -1,0 +1,17 @@
+{
+    "name": "Bhargav Padhiyar",
+    "investigations": {
+        "Hemoglobin(Hb)": "1",
+        "Total RBC count": "2",
+        "Packed Cell Volume(PCV)": "3",
+        "Mean Corpuscular Volume": "4",
+        "RDW": "5",
+        "Total Web count": "6",
+        "Neutrophils": "7",
+        "Lymphocytes": "8",
+        "Eoinophils": "9",
+        "Monocytes": "10",
+        "Basophils": "11",
+        "Platelet Count": "12"
+    }
+}
