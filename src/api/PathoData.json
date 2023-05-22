@@ -1,6 +1,7 @@
 {
     "hemoglobin": [
         {
+            "id": "11",
             "name": "Heloglobin (Hb)",
             "value": "12.5",
             "min": "13.0",
@@ -10,6 +11,7 @@
     ],
     "rbc count": [
         {
+            "id": "21",
             "name": "Total RBC Count",
             "value": "5.2",
             "min": "4.5",
@@ -19,6 +21,7 @@
     ],
     "blood indics": [
         {
+            "id": "31",
             "name": "Packed Cell Volume (PCV)",
             "value": "37.5",
             "min": "40",
@@ -26,6 +29,7 @@
             "unit": "%"
         },
         {
+            "id": "32",
             "name": "Mean Corpuscular Volume",
             "value": "72.12",
             "min": "50",
@@ -33,6 +37,7 @@
             "unit": "%"
         },
         {
+            "id": "33",
             "name": "RDW",
             "value": "13.6",
             "min": "11.6",
@@ -42,6 +47,7 @@
     ],
     "WBC count": [
         {
+            "id": "41",
             "name": "Total WBC count",
             "value": "9000",
             "min": "4000",
@@ -51,6 +57,7 @@
     ],
     "Differential WBC count": [
         {
+            "id": "51",
             "name": "Neutrophils",
             "value": "60",
             "min": "50",
@@ -58,6 +65,7 @@
             "unit": "%"
         },
         {
+            "id": "52",
             "name": "Lymphocytes",
             "value": "31",
             "min": "20",
@@ -65,6 +73,7 @@
             "unit": "%"
         },
         {
+            "id": "53",
             "name": "Eosinophils",
             "value": "1",
             "min": "0",
@@ -72,6 +81,7 @@
             "unit": "%"
         },
         {
+            "id": "54",
             "name": "Monocytes",
             "value": "7",
             "min": "0",
@@ -79,6 +89,7 @@
             "unit": "%"
         },
         {
+            "id": "55",
             "name": "Basophils",
             "value": "0",
             "min": "0",
@@ -88,6 +99,7 @@
     ],
     "Platelet count": [
         {
+            "id": "61",
             "name": "Platelet count",
             "value": "320000",
             "min": "150000",
