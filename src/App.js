@@ -14,16 +14,16 @@ const App = () => {
   };
   const patientList = [
     {
-      value: 'Atif Aslam',
-      label: 'Atif Aslam',
+      value: 'Harshal Katakiya',
+      label: 'Harshal Katakiya',
     },
     {
-      value: 'KK',
-      label: 'KK',
+      value: 'Jay Parmar',
+      label: 'Jay Parmar',
     },
     {
-      value: 'Arijit Singh',
-      label: 'Arijit Singh',
+      value: 'Miraj',
+      label: 'Miraj',
     },
   ];
 
