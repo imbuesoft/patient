@@ -1,0 +1,69 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+input{
+    border: none;
+    box-shadow: 0px 0px 10px rgb(67, 65, 65,.4);
+    font-size: 1rem;
+    outline: none;
+    padding: 2px;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+input:focus{
+    text-decoration: none;
+}
+input:focus-within{
+    border: 2px solid aqua;
+}
+.App{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction: row;
+    background-color: aquamarine;
+    height: 100vh;
+}
+button{
+    width: auto;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px rgb(67, 65, 65,.4);
+    height: 50px;
+    font-size: 1.2rem;
+    margin-left: 90px;
+    
+}
+button:active{
+    color: red;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+.infocontainer{
+    border: 0px solid black;
+    border-radius: 2px;
+    box-shadow: 10px 10px 20px rgb(0, 0, 0);
+    padding: 50px;
+    background-color: rgba(233, 243, 207, 0.788);
+    /* padding-inline: 10px; */
+    margin: 10px;
+}
+.tb{
+    margin-bottom: 350px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+table{
+    width: 370px;
+    border: 2px solid black;
+    box-shadow: 0px 0px 10px rgb(67, 65, 65,.4);
+}
+table td{
+    height: 30px;
+    text-align: center;
+}
