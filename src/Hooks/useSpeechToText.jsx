@@ -58,8 +58,8 @@ const useSpeechToText = () => {
     }
   };
 
-  const handleLanguageChange = (event) => {
-    setLanguage(event.target.value);
+  const handleLanguageChange = (value) => {
+    setLanguage(value);
   };
 
   useEffect(() => {
