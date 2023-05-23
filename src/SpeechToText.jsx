@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import useSpeechToText from './NewHook';
 
 const SpeechToText = ({ text, language, recognitionActive, requestMicrophonePermission, startRecognition, stopRecognition, handleLanguageChange}) => {
 

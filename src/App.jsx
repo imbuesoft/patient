@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useSpeechToText from './NewHook';
 import SpeechToText from './SpeechToText';
+// import SpeechToText from './SpeechToTextBtnPress';
 
 const medicines = ['Paracetamol', 'Ibuprofen', 'Aspirin', 'Amoxicillin', 'Azithromycin', 'Ciprofloxacin', 'Omeprazole', 'Ranitidine', 'Pantoprazole', 'Metformin', 'Insulin', 'Atorvastatin', 'Simvastatin', 'Amlodipine', 'Losartan', 'Metoprolol', 'Albuterol', 'Montelukast', 'Loratadine', 'Cetirizine',]
 
