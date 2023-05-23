@@ -18,6 +18,18 @@ const App = () => {
   });
 
   useEffect(() => {
+
+    medicines.forEach((medicine) => {
+      if (text.includes(medicine)) {
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          medicine: medicine
+        }));
+      }
+    });
+
+
+
     if (text.includes('morning')) {
       setFormData((prevFormData) => ({
         ...prevFormData,
