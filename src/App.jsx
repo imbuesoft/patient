@@ -1,60 +1,125 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import useSpeechToText from './NewHook';
+import SpeechToText from './SpeechToText';
 
-const SpeechToText = () => {
-  const {
-    text,
-    language,
-    recognitionActive,
-    requestMicrophonePermission,
-    startRecognition,
-    stopRecognition,
-    handleLanguageChange,
-  } = useSpeechToText();
+const medicines = ['Paracetamol', 'Ibuprofen', 'Aspirin', 'Amoxicillin', 'Azithromycin', 'Ciprofloxacin', 'Omeprazole', 'Ranitidine', 'Pantoprazole', 'Metformin', 'Insulin', 'Atorvastatin', 'Simvastatin', 'Amlodipine', 'Losartan', 'Metoprolol', 'Albuterol', 'Montelukast', 'Loratadine', 'Cetirizine',]
 
-  const [isSpaceBarPressed, setIsSpaceBarPressed] = useState(false);
+const App = () => {
+  const STT = useSpeechToText();
+
+  const { text, language, recognitionActive, requestMicrophonePermission, startRecognition, stopRecognition, handleLanguageChange } = STT;
+
+  // JSON data to use in the form
+  const [formData, setFormData] = useState({
+    medicine: '',
+    morning: false,
+    afternoon: false,
+    evening: false
+  });
 
   useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.code === 'Space' && !isSpaceBarPressed) {
-        setIsSpaceBarPressed(true);
-        startRecognition();
+    if (text.includes('morning')) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        morning: true
+      }));
+    }
+
+    if (text.includes('afternoon')) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        afternoon: true
+      }));
+    }
+
+    if (text.includes('evening')) {
+      setFormData((prevFormData) => ({
+        ...prevFormData,
+        evening: true
+      }));
+    }
+
+    if (text.includes('save')) {
+      handleSubmit();
+    }
+
+    if (text.includes('reset')) {
+      setFormData({
+        medicine: '',
+        morning: false,
+        afternoon: false,
+        evening: false
+      });
+    }
+
+  }, [text]);
+
+  // Function to handle form change
+  const handleFormChange = ({ target }) => {
+    const { name, value, type, checked } = target;
+
+    setFormData((prevFormData) => {
+      if (type === 'checkbox') {
+        return {
+          ...prevFormData,
+          [name]: checked,
+        };
       }
-    };
 
-    const handleKeyUp = (event) => {
-      if (event.code === 'Space') {
-        setIsSpaceBarPressed(false);
-        stopRecognition();
-      }
-    };
+      return {
+        ...prevFormData,
+        [name]: value,
+      };
+    });
+  };
 
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('keyup', handleKeyUp);
+  // Function to console the data and reset the form
+  const handleSubmit = () => {
+    console.log('Form Data:', formData);
+    // reset the form
+    setFormData({
+      medicine: '',
+      morning: false,
+      afternoon: false,
+      evening: false
+    });
+  };
 
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('keyup', handleKeyUp);
-    };
-  }, [isSpaceBarPressed, startRecognition, stopRecognition]);
+  // Array of options for the select 
+  const medicineOptions = medicines.map((medicine) => (
+    <option key={medicine} value={medicine}>
+      {medicine}
+    </option>
+  ));
 
   return (
     <div>
-      <button onClick={requestMicrophonePermission}>Allow Microphone</button>
-      <select value={language} onChange={handleLanguageChange}>
-        <option value="en-IN">English (India)</option>
-        <option value="hi-IN">Hindi (India)</option>
-        <option value="gu-IN">Gujarati (India)</option>
+      <SpeechToText {...STT} />
+
+      <label htmlFor="medicine">Select Medicine:</label>
+      <select id="medicine" name="medicine" value={formData.medicine} onChange={handleFormChange}>
+        <option value="">-- Select Medicine --</option>
+        {medicineOptions}
       </select>
-      <button onClick={startRecognition} disabled={recognitionActive}>
-        Start
-      </button>
-      <button onClick={stopRecognition} disabled={!recognitionActive}>
-        Stop
-      </button>
-      <p>{text}</p>
+
+      <div>
+        <label htmlFor="morning">Morning:</label>
+        <input id="morning" name="morning" type="checkbox" checked={formData.morning} onChange={handleFormChange} />
+      </div>
+
+      <div>
+        <label htmlFor="afternoon">Afternoon:</label>
+        <input id="afternoon" name="afternoon" type="checkbox" checked={formData.afternoon} onChange={handleFormChange} />
+      </div>
+
+      <div>
+        <label htmlFor="evening">Evening:</label>
+        <input id="evening" name="evening" type="checkbox" checked={formData.evening} onChange={handleFormChange} />
+      </div>
+
+      <button onClick={handleSubmit}>Save</button>
     </div>
   );
 };
 
-export default SpeechToText;
+export default App;
