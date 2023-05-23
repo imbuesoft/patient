@@ -12,6 +12,32 @@ const SpeechToText = () => {
     handleLanguageChange,
   } = useSpeechToText();
 
+  const [isSpaceBarPressed, setIsSpaceBarPressed] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.code === 'Space' && !isSpaceBarPressed) {
+        setIsSpaceBarPressed(true);
+        startRecognition();
+      }
+    };
+
+    const handleKeyUp = (event) => {
+      if (event.code === 'Space') {
+        setIsSpaceBarPressed(false);
+        stopRecognition();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('keyup', handleKeyUp);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keyup', handleKeyUp);
+    };
+  }, [isSpaceBarPressed, startRecognition, stopRecognition]);
+
   return (
     <div>
       <button onClick={requestMicrophonePermission}>Allow Microphone</button>
