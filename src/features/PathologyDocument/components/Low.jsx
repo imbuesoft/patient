@@ -1,4 +1,7 @@
+import {Typography} from 'antd'
+const {Text} = Typography
+
 const Low = () => (
-    <span style={{ color: "#e076c9", cursor: "default", textShadow: "0 0 1em  #e076c9" }}>LOW</span>
+    <Text strong style={{ color: "#e076c9", cursor: "default", textShadow: "0 0 1em  #e076c9" }}>LOW</Text>
 )
 export default Low;

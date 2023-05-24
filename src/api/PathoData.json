@@ -106,5 +106,7 @@
             "max": "410000",
             "unit": "cumm"
         }
-    ]
+    ],
+    "Instruments":"Fully automated cell counter - Mindray 300",
+    "Interpretation":"Further confirm for Anemia"
 }
