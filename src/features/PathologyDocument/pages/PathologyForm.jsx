@@ -1,19 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../assets/patho.css'
 import PathoData from '../../../api/PathoData.json'
 import Low from '../components/Low'
 import High from '../components/High'
-import { MinusOutlined, PlusOutlined } from '@ant-design/icons'
-import { Button, Input, InputNumber, Typography } from 'antd'
+import { MinusOutlined, EditOutlined, PlusOutlined, CheckOutlined } from '@ant-design/icons'
+import { Button, Input, Typography } from 'antd'
 
 const { Title } = Typography
 const defaultPathoData = { "hemoglobin": [{ "id": "1", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "rbc count": [{ "id": "2", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "blood indics": [{ "id": "3", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "WBC count": [{ "id": "4", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "Differential WBC count": [{ "id": "5", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "Platelet count": [{ "id": "6", "name": "", "value": "", "min": "", "max": "", "unit": "" }] }
 const generateUniqueId = () => Date.now().toString(36) + Math.random().toString(36).substring(2, 7)
 
 
-const PathologyForm = ({ pathoData, setPathoData }) => {
+const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
 
     const a = parseFloat
+
+    const [formEditable, setFormEditable] = useState(formEditableProps)
 
     const handleInputChange = (key, index, field, value) => {
         const updatedData = { ...pathoData }
@@ -21,9 +23,8 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
         setPathoData(updatedData)
     }
 
-
     const handlePush = (key) => {
-        setPathoData({ ...pathoData, [key]: [...pathoData[key], { id: generateUniqueId(), name: "", value: "", min: "", max: "", unit: "" }] })
+        setPathoData({ ...pathoData, [key]: [...pathoData[key], { id: generateUniqueId(), name: "", value: "", min: "", max: "", unit: "", editable: "true" }] })
     }
 
     const handlePop = (key) => {
@@ -31,8 +32,17 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
         console.log("pop", pathoData[key])
     }
 
+    const handleEdit = (key, index) => {
+        const updatedData = JSON.parse(JSON.stringify(pathoData))
+        if (updatedData[key][index].editable === "true")
+            delete updatedData[key][index].editable
+        else
+            updatedData[key][index].editable = "true"
+        setPathoData(updatedData)
+    }
+
     const handleRemove = (key, index) => {
-        setPathoData({ ...pathoData, [key]: pathoData[key].filter((x, i) => i !== index) })
+        setPathoData({ ...pathoData, [key]: pathoData[key].filter((_, i) => i !== index) })
     }
 
     const resetData = () => {
@@ -61,12 +71,10 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
 
     return (
         <>
-            <div style={{ display: 'grid' }}>
-                <div style={{ margin: "1em auto 0 ", border: "2px solid #ddd", boxShadow: "0 1em 5em #00000022", borderRadius: "12px", padding: "1em", maxWidth: "96em", width: "", background: "#fff" }} >
-
                     <div style={{ display: "flex", justifyContent: "space-evenly" }}>
                         <Button title='this is temporary buttons' onClick={resetData}>Reset Data</Button >
                         <Button title='this is temporary buttons' onClick={resetForm}>Reset Form</Button >
+                        <Button title='this is temporary buttons' onClick={() => { setFormEditable(x => !x) }}>{formEditable ? "View" : "Edit"}</Button >
                     </div>
                     <table style={{ width: "", borderCollapse: "separate", borderSpacing: " 0.4em 0em" }}>
                         <thead>
@@ -85,10 +93,14 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
                                     <tr>
                                         {/* <td colSpan={5}><Title level={5} style={{  fontWeight: "700" , margin: " 0.7em 0 0 0", textTransform: "uppercase" }}>{key}</Title></td> */}
                                         <td colSpan={5}>
-                                            <h4 style={{  fontWeight: "700" , margin: " 0.7em 0 0 0", padding: " 0 0.3em", textTransform: "uppercase" }}>
+                                            <h4 style={{ fontWeight: "700", margin: " 0.7em 0 0 0", padding: " 0 0.3em", textTransform: "uppercase" }}>
                                                 {key}
-                                                <span onClick={() => { handlePush(key) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}><PlusOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /></span>
-                                                <span onClick={() => { handlePop(key) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}><MinusOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /></span>
+                                                {formEditable &&
+                                                    <>
+                                                        <span onClick={() => { handlePush(key) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}><PlusOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /></span>
+                                                        <span onClick={() => { handlePop(key) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}><MinusOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /></span>
+                                                    </>
+                                                }
                                             </h4>
                                         </td>
                                     </tr>
@@ -97,6 +109,7 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
                                             <tr key={item.id}>
                                                 <td>
                                                     <Input size='small' className='input-border-style'
+                                                        disabled={(item.editable && formEditable) ? false : true}
                                                         placeholder='name'
                                                         defaultValue={item.name}
                                                         style={{ width: "13rem" }}
@@ -106,7 +119,8 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
                                                     />
                                                 </td>
                                                 <td>
-                                                    <InputNumber size='small' className='input-border-style'
+                                                    <Input size='small' className='input-border-style'
+                                                        disabled={!formEditable}
                                                         placeholder='value'
                                                         defaultValue={item.value}
                                                         style={{ width: "6em", textAlign: "center" }}
@@ -121,24 +135,37 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
                                                     </div>
                                                 </td>
                                                 <td style={{ display: "flex", }}>
-                                                    <InputNumber defaultValue={item.min} placeholder='min' style={{ width: "4em", textAlign: "right" }} size='small' className='input-border-style'
+                                                    <Input defaultValue={item.min} placeholder='min'
+                                                        className='input-border-style'
+                                                        disabled={(item.editable && formEditable) ? false : true}
+                                                        style={{ width: "4em", textAlign: "right" }} size='small'
                                                         onChange={(e) =>
                                                             handleInputChange(key, index, "min", e)
                                                         } />
                                                     -
-                                                    <InputNumber defaultValue={item.max} placeholder='max' style={{ width: "4em", textAlign: "left" }} size='small' className='input-border-style'
+                                                    <Input defaultValue={item.max}
+                                                        className='input-border-style'
+                                                        disabled={(item.editable && formEditable) ? false : true} placeholder='max' style={{ width: "4em", textAlign: "left" }} size='small'
                                                         onChange={(e) =>
                                                             handleInputChange(key, index, "max", e)
                                                         } /></td>
                                                 <td>
                                                     <Input size='small' className='input-border-style'
+                                                        disabled={(item.editable && formEditable) ? false : true}
                                                         placeholder='unit'
                                                         defaultValue={item.unit}
                                                         style={{ width: "7em" }}
                                                         onChange={(e) =>
                                                             handleInputChange(key, index, "unit", e.target.value)
                                                         } />
-                                                    <span onClick={() => { handleRemove(key, index) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}><MinusOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /></span>
+                                                    {formEditable &&
+                                                        <>
+                                                            <span onClick={() => { handleEdit(key, index) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}>
+                                                                {!item.editable ? <EditOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /> : <CheckOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} />}
+                                                            </span>
+                                                            <span onClick={() => { handleRemove(key, index) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}><MinusOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /></span>
+                                                        </>
+                                                    }
                                                 </td>
                                             </tr>
                                         ))
@@ -147,8 +174,6 @@ const PathologyForm = ({ pathoData, setPathoData }) => {
                             ))}
                         </tbody>
                     </table>
-                </div>
-            </div>
         </>
     )
 }

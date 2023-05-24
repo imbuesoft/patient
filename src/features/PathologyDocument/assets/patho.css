@@ -1,4 +1,11 @@
 .input-border-style {
-    border: 1px solid #fff;
+    border: 1px solid transparent;
     padding: 0 0.3em;
+}
+
+.input-border-style:disabled {
+    color: #333;
+    border: none;
+    background: transparent;
+    cursor: default;
 }
