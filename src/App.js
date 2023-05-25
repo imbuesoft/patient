@@ -10,6 +10,7 @@ import PathologyDocument from './features/PathologyDocument';
 
 import fruitsAndVegetables from './api/tempData.json'
 import PathoData from './api/PathoData.json';
+import Invoice from './features/Invoice/';
 
 const { Title } = Typography;
 
@@ -32,7 +33,9 @@ function App() {
       {/* <div style={{ height: "100vh", width: "100vw", display: "grid" }}><div style={{ height: "100vh", maxWidth: "60em", margin:"auto" }}><Title style={{margin:"1em 0"}}>Search fruits and vegetables by name, color or category</Title><div className="d-flex flex-column justify-content-center mt-5"><Search data={fruitsAndVegetables} /></div></div></div> */}
 
       {/***** 🧬 Pathology Document *****/}
-      <PathologyDocument pathoData={pathoData} setPathoData={setPathoData} />
+      {/* <PathologyDocument pathoData={pathoData} setPathoData={setPathoData} /> */}
+
+      <Invoice />
 
     </>
   );
