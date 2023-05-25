@@ -10,17 +10,14 @@ const PathologyHeader = ({ data = { name: "Yash M. Patel", age: "21", sex: "Male
         <>
             <Row>
                 <Col span={8}>
-                    <div style={{display:"flex"}}>
-                        <div style={{flexGrow:1}}>
-                            <Title level={5} style={{ margin: "0", fontSize:"1.3em" }} >{data.name}</Title>
-                            <div style={{ display: "flex", flexDirection: "column" }}>
-                                <Text>Age : {data.age} Years</Text>
-                                <Text>Sex : {data.sex}</Text>
-                                <Text>PID : {data.pid}</Text>
-                            </div>
-                        </div>
-                        <QRCode value="https://jaysparmar303.000webhostapp.com/" style={{margin:"auto"}} bordered={false} size={70} />
+                    <Title level={4} style={{ margin: "0", fontWeight:"700"}} >{data.name}</Title>
+                    <div style={{ display: "inline-flex", flexDirection: "column" }}>
+                        <Text>Age : {data.age} Years</Text>
+                        <Text>Sex : {data.sex}</Text>
+                        <Text>PID : {data.pid}</Text>
                     </div>
+                    <QRCode value="https://jaysparmar303.000webhostapp.com/" style={{ display: "inline", float: "right" }} bordered={false} size={70} />
+
                 </Col>
 
                 <Col span={10}>
@@ -39,16 +36,18 @@ const PathologyHeader = ({ data = { name: "Yash M. Patel", age: "21", sex: "Male
 
                 <Col span={6} style={{ textAlign: "right", fontSize: "0.8rem", lineHeight: "1.1em" }} >
                     <div style={{ display: "flex", flexDirection: "column" }}>
-                        <StrongDiv>Registered on:</StrongDiv>
+                        <StrongDiv style={{ margin: "1em" }}>Registered on:</StrongDiv>
                         <div>{data.regDate}</div>
+                        <space style={{ height: "0.4em" }}></space>
                         <StrongDiv>Collected on:</StrongDiv>
                         <div>{data.collectedDate}</div>
+                        <space style={{ height: "0.4em" }}></space>
                         <StrongDiv>Reported on:</StrongDiv>
                         <div>{data.reportedDate}</div>
                     </div>
                 </Col>
             </Row>
-            <div style={{ height:"1px", width:"100%", margin: "0.5em 0", background:"#ccc" }} ></div>
+            <div style={{ height: "1px", width: "100%", margin: "0.5em 0", background: "#ccc" }} ></div>
         </>
     )
 }
