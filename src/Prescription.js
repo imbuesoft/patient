@@ -4,76 +4,77 @@ import { Row, Col, AutoComplete, Button, Radio, Input, Checkbox, Table } from 'a
 const Prescription = () => {
     const [currentValue, setCurrentValue] = useState('')
     const [currentInstructionValue, setCurrentInstructionValue] = useState('')
+    const [medicineTypeValue, setMedicineTypeValue] = useState('Tablet')
     const [currentPresetValue, setCurrentPresetValue] = useState('')
     const [options, setOptions] = useState([]);
+    const [qty, setQty] = useState(0);
+    const [day, setDay] = useState(0);
+    const [doseQty, setDoseQty] = useState({ morning: 0, afternoon: 0, evening: 0 });
+    const [prescribedData, setPrescribedData] = useState([]);
 
-
-    const columns = [
-        {
+    //1-0-1
+    //{morning: 1, afternoon: 0, evening: 1}
+    /*{
             title: 'No',
             dataIndex: 'no',
             key: 'no'
-        },
+        }*/
+    const columns = [
         {
             title: 'Medicine',
             dataIndex: 'medicine',
             key: 'medicine'
         },
         {
-            title: 'Time',
-            dataIndex: 'time',
-            key: 'time'
+            title: 'Medicine Type',
+            dataIndex: 'medicineType',
+            key: 'medicineType'
         },
         {
-            title: 'days',
-            dataIndex: 'days',
-            key: 'days'
+            title: 'Day',
+            dataIndex: 'day',
+            key: 'day'
         },
         {
-            title: 'duration',
-            dataIndex: 'duration',
-            key: 'duration'
+            title: 'Dose Qty',
+            dataIndex: 'doseQty',
+            key: 'doseQty'
         },
         {
-            title: 'type',
-            dataIndex: 'type',
-            key: 'type'
+            title: 'Medicine Instruction',
+            dataIndex: 'medicineInstruction',
+            key: 'medicineInstruction'
         },
         {
-            title: 'instruction',
-            dataIndex: 'instruction',
-            key: 'instruction'
-        },
-        {
-            title: 'action',
+            title: 'Action',
             dataIndex: 'action',
             key: 'action',
-            render: (text) => <><Button type="primary">{text[0]}</Button> <Button type="primary">{text[1]}</Button></>,
+            //render: (text) => <><Button type="primary">{text[0]}</Button> <Button type="primary">{text[1]}</Button></>,
         }
     ];
 
-    const prescribedata = [{
-        no: '1',
-        medicine: 'Paracicamol',
-        time: '1-0-1',
-        days: 'Daily',
-        duration: '-',
-        type: 'Tablet',
-        instruction: 'After Meal',
-        action: ['Edit', 'Delete']
-    }, {
-        no: '1',
-        medicine: 'Dolo',
-        time: '1-0-1',
-        days: 'Daily',
-        duration: '-',
-        type: 'Tablet',
-        instruction: 'After Meal',
-        action: ['Edit', 'Delete']
-    }]
+    // const prescribedata = [{
+    //     no: '1',
+    //     medicine: 'Paracicamol',
+    //     time: '1-0-1',
+    //     days: 'Daily',
+    //     duration: '-',
+    //     type: 'Tablet',
+    //     instruction: 'After Meal',
+    //     action: ['Edit', 'Delete']
+    // }, {
+    //     no: '1',
+    //     medicine: 'Dolo',
+    //     time: '1-0-1',
+    //     days: 'Daily',
+    //     duration: '-',
+    //     type: 'Tablet',
+    //     instruction: 'After Meal',
+    //     action: ['Edit', 'Delete']
+    // }]
 
     const dozes = ['1/4', '1/3', '1/2', '1', '1(1/2)', '2', '2(1/2)', '3', '3(1/2)', '4'];
-    const days = ['1d', '2d', '3d', '4d', '5d', '6d', '7d', '14d', '21d', '28d', '56d', '84d', '168d'];
+    const days = [1, 2, 3, 4, 5, 6, 7, 14, 21, 28, 56, 84, 168];
 
     const medicines = [
         { label: 'Paracitamol', value: 'Paracitamol' },
@@ -132,12 +133,39 @@ const Prescription = () => {
     }
 
     const onDozeChange = (e) => {
-        console.log(`radio checked:${e.target.name} - ${e.target.value}`);
+        //console.log(qty);
+        setDoseQty({ ...doseQty, [e.target.name]: qty });
+    };
+
+    const onQtyDozeChange = (e) => {
+        //console.log(e.target.value);
+        setQty(e.target.value);
     };
 
     const onSoSChange = (e) => {
         console.log(`checked = ${e.target.checked}`);
     };
+
+    const onAddClick = () => {
+        //console.log(doseQty);
+        //console.log({ "medicine": currentValue, "medicineInstruction": currentInstructionValue, "medicineType": medicineTypeValue, "qty": qty, "day": day, "doseQty": doseQty });
+        //console.log(doseQty['afternoon'].qty);
+        const prescribed = { "medicine": currentValue, "medicineInstruction": currentInstructionValue, "medicineType": medicineTypeValue, "qty": qty, "day": day, "doseQty": `${doseQty['morning']}-${doseQty['afternoon']}-${doseQty['evening']}` };
+        setPrescribedData((prevData) => [...prevData, prescribed]);
+    }
+
+    const clearDoze = (value) => {
+        console.log(value);
+    }
+
+    const onDayClick = (e) => {
+        //console.log(e.target.value);
+        setDay(e.target.value)
+    }
+
+    const onSubmit = () => {
+        console.log(prescribedData);
+    }
 
 
     return (
@@ -208,31 +236,33 @@ const Prescription = () => {
                     <h4 style={{ textAlign: 'center', backgroundColor: 'lightgray', padding: 5 + 'px' }}>{medicine_types[0]}</h4>
 
                     <div style={{ textAlign: 'center' }}>
-                        {
-                            dozes.map((doze, index) => {
-                                return <Button key={index} type='primary' shape='circle' size='large' style={{ marginRight: 10 + 'px' }}>{doze}</Button>
-                            })
-                        }
+                        <Radio.Group buttonStyle="solid" style={{ textAlign: 'center', width: '100%', padding: 5 + 'px' }} onChange={onQtyDozeChange} name='breakfast'>
+                            {
+                                dozes.map((doze, index) => {
+                                    return <Radio.Button shape='circle' value={doze}>{doze}</Radio.Button>
+                                })
+                            }
+                        </Radio.Group>
                     </div>
 
                     <Row style={{ marginTop: 10 + 'px' }}>
                         <Col span={8}>
-                            <h2 style={{ textAlign: 'center', backgroundColor: 'gray', margin: 5 + 'px', color: 'white' }}>Breakfast</h2>
-                            <Radio.Group style={{ textAlign: 'center', width: '100%', padding: 5 + 'px', color: 'white' }} onChange={onDozeChange} name='breakfast'>
+                            <h2 style={{ textAlign: 'center', backgroundColor: 'gray', margin: 5 + 'px', color: 'white' }} onClick={() => clearDoze("morning")}>Breakfast</h2>
+                            <Radio.Group buttonStyle="solid" style={{ textAlign: 'center', width: '100%', padding: 5 + 'px', color: 'white' }} onChange={onDozeChange} name='morning'>
                                 <Radio.Button style={{ width: '50%' }} value="before">Before</Radio.Button>
                                 <Radio.Button style={{ width: '50%' }} value="after">After</Radio.Button>
                             </Radio.Group>
                         </Col>
                         <Col span={8}>
-                            <h2 style={{ textAlign: 'center', backgroundColor: 'gray', margin: 5 + 'px', color: 'white' }}>Lunch</h2>
-                            <Radio.Group style={{ textAlign: 'center', width: '100%', padding: 5 + 'px', color: 'white' }} onChange={onDozeChange} name='lunch'>
+                            <h2 style={{ textAlign: 'center', backgroundColor: 'gray', margin: 5 + 'px', color: 'white' }} onClick={() => clearDoze("afternoon")}>Lunch</h2>
+                            <Radio.Group buttonStyle="solid" style={{ textAlign: 'center', width: '100%', padding: 5 + 'px', color: 'white' }} onChange={onDozeChange} name='afternoon'>
                                 <Radio.Button style={{ width: '50%' }} value="before">Before</Radio.Button>
                                 <Radio.Button style={{ width: '50%' }} value="after">After</Radio.Button>
                             </Radio.Group>
                         </Col>
                         <Col span={8}>
-                            <h2 style={{ textAlign: 'center', backgroundColor: 'gray', margin: 5 + 'px', color: 'white' }}>Dinner</h2>
-                            <Radio.Group style={{ textAlign: 'center', width: '100%', padding: 5 + 'px', color: 'white' }} onChange={onDozeChange} name='dinner'>
+                            <h2 style={{ textAlign: 'center', backgroundColor: 'gray', margin: 5 + 'px', color: 'white' }} onClick={() => clearDoze("evening")}>Dinner</h2>
+                            <Radio.Group buttonStyle="solid" style={{ textAlign: 'center', width: '100%', padding: 5 + 'px', color: 'white' }} onChange={onDozeChange} name='evening'>
                                 <Radio.Button style={{ width: '50%' }} value="before">Before</Radio.Button>
                                 <Radio.Button style={{ width: '50%' }} value="after">After</Radio.Button>
                             </Radio.Group>
@@ -240,12 +270,15 @@ const Prescription = () => {
                     </Row>
 
                     <div style={{ textAlign: 'center', marginTop: 10 + 'px' }}>
-                        {
-                            days.map((day, index) => {
-                                return <Button key={index} type='primary' shape='squre' size='large' style={{ marginRight: 10 + 'px' }}>{day}</Button>
-                            })
-                        }
-                        <Button type='button' shape='circle' style={{ width: '40px', height: '40px', marginTop: '10px', backgroundColor: 'green', color: 'white' }}>Add</Button>
+                        <Radio.Group buttonStyle="solid" style={{ textAlign: 'center', width: '100%', padding: 5 + 'px' }} onChange={onDayClick} name='breakfast'>
+                            {
+                                days.map((day, index) => {
+                                    //return <Button key={index} type='primary' shape='squre' size='large' style={{ marginRight: 10 + 'px' }} onClick={onDayClick} value={day}>{day}D</Button>
+                                    return <Radio.Button shape='circle' value={day}>{day}</Radio.Button>
+                                })
+                            }
+                        </Radio.Group>
+                        <Button type='button' style={{ width: '100%', height: '40px', marginTop: '10px', backgroundColor: 'green', color: 'white' }} onClick={onAddClick}>Add</Button>
                     </div>
 
 
@@ -272,12 +305,12 @@ const Prescription = () => {
                             <Checkbox style={{ paddingTop: '5px', paddingLeft: '25px' }} name="sos" onChange={onSoSChange}>SoS</Checkbox>
                         </Col>
                         <Col span={3}>
-                            <Button type='button' style={{ backgroundColor: 'red', color: 'white' }}>Submit</Button>
+                            <Button type='button' style={{ backgroundColor: 'red', color: 'white' }} onClick={onSubmit}>Submit</Button>
                         </Col>
                     </Row>
                 </Col >
                 <Col span={12}>
-                    <Table columns={columns} dataSource={prescribedata} pagination={false} style={{ border: "1px solid grey", marginTop: "10px" }} />
+                    <Table columns={columns} dataSource={prescribedData} pagination={false} style={{ border: "1px solid grey", marginTop: "10px" }} />
                 </Col>
             </Row >
         </>
