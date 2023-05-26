@@ -77,6 +77,11 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
 
     return (
         <>
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <Button title='this is temporary buttons' onClick={() => { setFormEditable(x => !x) }}>{formEditable ? <><CheckOutlined/> View</> : <><EditOutlined/> Edit</> }</Button >
+                <Button title='this is temporary buttons' onClick={resetData}>Reset Data</Button >
+                <Button title='this is temporary buttons' onClick={resetForm}>Reset Form</Button >
+            </div>
             <Title level={4} style={{ fontWeight: "700", textAlign: "center" }}>Complate Blood Count (CBC)</Title>
             <table style={{ width: "", borderCollapse: "separate", borderSpacing: " 0.4em 0em" }}>
                 <thead>
@@ -188,21 +193,16 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                     {/* TODO update below data */}
                     <tr>
                         <td colSpan={5}>
-                            <Text> <span style={{ fontWeight: "700"}}>Instruments:</span> {pathoData.Instruments}</Text>
+                            <Text> <span style={{ fontWeight: "700" }}>Instruments:</span> {pathoData.Instruments}</Text>
                         </td>
                     </tr>
                     <tr>
                         <td colSpan={5}>
-                            <Text><span style={{ fontWeight: "700"}}>Interpretation:</span> {pathoData.Interpretation}</Text>
+                            <Text><span style={{ fontWeight: "700" }}>Interpretation:</span> {pathoData.Interpretation}</Text>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-                <Button title='this is temporary buttons' onClick={resetData}>Reset Data</Button >
-                <Button title='this is temporary buttons' onClick={resetForm}>Reset Form</Button >
-                <Button title='this is temporary buttons' onClick={() => { setFormEditable(x => !x) }}>{formEditable ? "View" : "Edit"}</Button >
-            </div>
         </>
     )
 }
