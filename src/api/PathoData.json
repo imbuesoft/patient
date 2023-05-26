@@ -1,5 +1,5 @@
 {
-    "hemoglobin": [
+    "Hemoglobin": [
         {
             "id": "11",
             "name": "Heloglobin (Hb)",
@@ -9,7 +9,7 @@
             "unit": "g/dL"
         }
     ],
-    "rbc count": [
+    "RBC count": [
         {
             "id": "21",
             "name": "Total RBC Count",
@@ -19,7 +19,7 @@
             "unit": "mill/cumm"
         }
     ],
-    "blood indics": [
+    "Blood Indics": [
         {
             "id": "31",
             "name": "Packed Cell Volume (PCV)",

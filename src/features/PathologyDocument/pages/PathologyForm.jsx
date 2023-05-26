@@ -7,7 +7,7 @@ import { MinusOutlined, EditOutlined, PlusOutlined, CheckOutlined } from '@ant-d
 import { Button, Input, Typography } from 'antd'
 
 const { Title, Text } = Typography
-const defaultPathoData = { "hemoglobin": [{ "id": "1", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "rbc count": [{ "id": "2", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "blood indics": [{ "id": "3", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "WBC count": [{ "id": "4", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "Differential WBC count": [{ "id": "5", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "Platelet count": [{ "id": "6", "name": "", "value": "", "min": "", "max": "", "unit": "" }] }
+const defaultPathoData = { "Hemoglobin": [{ "id": "1", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "RBC count": [{ "id": "2", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "Blood Indics": [{ "id": "3", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "WBC count": [{ "id": "4", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "Differential WBC count": [{ "id": "5", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "Platelet count": [{ "id": "6", "name": "", "value": "", "min": "", "max": "", "unit": "" }], "Instruments": "", "Technique": "", "Interpretation": "" }
 const generateUniqueId = () => Date.now().toString(36) + Math.random().toString(36).substring(2, 7)
 
 
@@ -78,7 +78,7 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
     return (
         <>
             <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <Button title='this is temporary buttons' onClick={() => { setFormEditable(x => !x) }}>{formEditable ? <><CheckOutlined/> View</> : <><EditOutlined/> Edit</> }</Button >
+                <Button title='this is temporary buttons' onClick={() => { setFormEditable(x => !x) }}>{formEditable ? <><CheckOutlined /> View</> : <><EditOutlined /> Edit</>}</Button >
                 <Button title='this is temporary buttons' onClick={resetData}>Reset Data</Button >
                 <Button title='this is temporary buttons' onClick={resetForm}>Reset Form</Button >
             </div>
@@ -142,7 +142,7 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                                                         defaultValue={item.value}
                                                         style={{ width: "6em", textAlign: "center" }}
                                                         onChange={(e) =>
-                                                            handleInputChange(key, index, "value", e)
+                                                            handleInputChange(key, index, "value", e.target.value)
                                                         }
                                                     />
                                                 </td>
@@ -157,14 +157,14 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                                                         disabled={(item.editable && formEditable) ? false : true}
                                                         style={{ width: "4em", textAlign: "right" }} size='small'
                                                         onChange={(e) =>
-                                                            handleInputChange(key, index, "min", e)
+                                                            handleInputChange(key, index, "min", e.target.value)
                                                         } />
                                                     -
                                                     <Input defaultValue={item.max}
                                                         className='input-border-style'
                                                         disabled={(item.editable && formEditable) ? false : true} placeholder='max' style={{ width: "4em", textAlign: "left" }} size='small'
                                                         onChange={(e) =>
-                                                            handleInputChange(key, index, "max", e)
+                                                            handleInputChange(key, index, "max", e.target.value)
                                                         } /></td>
                                                 <td>
                                                     <Input size='small' className='input-border-style'
@@ -193,12 +193,28 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                     {/* TODO update below data */}
                     <tr>
                         <td colSpan={5}>
-                            <Text> <span style={{ fontWeight: "700" }}>Instruments:</span> {pathoData.Instruments}</Text>
+                            <div style={{ display: "flex", margin: "0.3em 0 0 0" }}>
+                                <span style={{ fontWeight: "700" }}>Instruments:</span>
+                                <Input size='small' className='input-border-style'
+                                    key={pathoData.Instruments}
+                                    disabled={!formEditable}
+                                    placeholder='unit'
+                                    defaultValue={pathoData.Instruments}
+                                    onChange={(e) => setPathoData({ ...pathoData, Instruments: e.target.value })} />
+                            </div>
                         </td>
                     </tr>
                     <tr>
                         <td colSpan={5}>
-                            <Text><span style={{ fontWeight: "700" }}>Interpretation:</span> {pathoData.Interpretation}</Text>
+                            <div style={{ display: "flex", margin: "0.3em 0 0 0" }}>
+                                <span style={{ fontWeight: "700" }}>Interpretation:</span>
+                                <Input size='small' className='input-border-style'
+                                    key={pathoData.Interpretation}
+                                    disabled={!formEditable}
+                                    placeholder='unit'
+                                    defaultValue={pathoData.Interpretation}
+                                    onChange={(e) => setPathoData({ ...pathoData, Interpretation: e.target.value })} />
+                            </div>
                         </td>
                     </tr>
                 </tbody>
