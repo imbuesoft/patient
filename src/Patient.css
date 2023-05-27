@@ -1,140 +1,146 @@
  body {
-    font-family: sans-serif;
-    background-color: rgb(173, 230, 187);
-  }
-  .main{
-    display: flex;
-  }
-  .form {
-    margin-top: 3%;
-    margin-left: 3%;
-    
-    width: 30%;
-    padding: 50px;
-    background-color: aliceblue;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
-  }
+   font-family: sans-serif;
+   background-color: rgb(173, 230, 187);
+ }
 
-  .form h2 {
-    margin: 0 0 30px;
-    text-align: center; 
-    color:  rgb(81, 133, 94);
-  }
-  
-  .input-container {
-    height: 50px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .ic1 {
-    margin-top: 40px;
-  }
-  
-  .ic2 {
-    margin-top: 30px;
-  }
-  
-  .input {
-    border-radius: 12px;
-    border: 0;
-    box-sizing: border-box;
-    color: #eee;
-    font-size: 18px;
-    height: 100%;
-    outline: 0;
-    padding: 4px 20px 0;
-    width: 100%;
-  }
-  
-  .cut {
-    background-color: aliceblue;
-    border-radius: 10px;
-    height: 20px;
-    left: 20px;
-    position: absolute;
-    top: -20px;
-    transform: translateY(0);
-    width: 100px;
-    text-align: center;
-  }
-  
-  .cut-short {
-    width: 50px;
-  }
-  
-  .input:focus ~ .cut,
-  .input:not(:placeholder-shown) ~ .cut {
-    transform: translateY(8px);
-  }
-  
-  .placeholder {
-    color: #65657b;
-    font-family: sans-serif;
-    left: 20px;
-    line-height: 14px;
-    pointer-events: none;
-    position: absolute;
-    transform-origin: 0 50%;
-    top: 20px;
-  }
-  
-  .input:focus ~ .placeholder,
-  .input:not(:placeholder-shown) ~ .placeholder {
-    transform: translateY(-30px) translateX(10px) scale(0.8);
-  }
-  
-  .input:not(:placeholder-shown) ~ .placeholder {
-    color: #808097;
-  }
-  
-  .input:focus ~ .placeholder {
-    color: rgb(81, 133, 94);
-  }
-  
-  .sub-btn {
-    background-color: rgb(111, 168, 125);
-    border-radius: 12px;
-    border: 0;
-    box-sizing: border-box;
-    color: #eee;
-    cursor: pointer;
-    font-size: 18px;
-    height: 50px;
-    margin-top: 38px;
-    text-align: center;
-    width: 100%;
-  }
+ .main {
+   display: flex;
+ }
 
-  .showPatient{
-    margin: 3% 9%;
-    width:50%;
-  }
-  
-  .showPatient table{
-    margin-top: 3%;
-    width:100%;
-    border:0;
-    text-decoration: none;
-  }
-  thead{
-    background-color: rgb(81, 133, 94);
-    color:#fff;
-    font-size: 18px;
-    height: 40px;
-  }
-  th{
-    padding: 15px;
-  }
-  tbody{
-    background-color:#fff;
-    margin-top: 100px;
-  }
-  .tableBody{
-    height: 35px;
-    font-size: 20px;
-    margin-top: 20px;
-    text-align: center;
-  }
+ .form {
+   margin-top: 3%;
+   margin-left: 3%;
+
+   width: 30%;
+   padding: 50px;
+   background-color: aliceblue;
+   box-sizing: border-box;
+   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+   border-radius: 10px;
+ }
+
+ .form h2 {
+   margin: 0 0 30px;
+   text-align: center;
+   color: rgb(81, 133, 94);
+ }
+
+ .input-container {
+   height: 50px;
+   position: relative;
+   width: 100%;
+ }
+
+ .ic1 {
+   margin-top: 40px;
+ }
+
+ .ic2 {
+   margin-top: 30px;
+ }
+
+ .input {
+   border-radius: 12px;
+   border: 0;
+   box-sizing: border-box;
+   color: black;
+   font-size: 18px;
+   height: 100%;
+   outline: 0;
+   padding: 4px 20px 0;
+   width: 100%;
+ }
+
+ .cut {
+   background-color: aliceblue;
+   border-radius: 10px;
+   height: 20px;
+   left: 20px;
+   position: absolute;
+   top: -20px;
+   transform: translateY(0);
+   width: 100px;
+   text-align: center;
+ }
+
+ .cut-short {
+   width: 50px;
+ }
+
+ .input:focus~.cut,
+ .input:not(:placeholder-shown)~.cut {
+   transform: translateY(8px);
+ }
+
+ .placeholder {
+   color: #65657b;
+   font-family: sans-serif;
+   left: 20px;
+   line-height: 14px;
+   pointer-events: none;
+   position: absolute;
+   transform-origin: 0 50%;
+   top: 20px;
+ }
+
+ .input:focus~.placeholder,
+ .input:not(:placeholder-shown)~.placeholder {
+   transform: translateY(-30px) translateX(10px) scale(0.8);
+ }
+
+ .input:not(:placeholder-shown)~.placeholder {
+   color: #808097;
+ }
+
+ .input:focus~.placeholder {
+   color: rgb(81, 133, 94);
+ }
+
+ .sub-btn {
+   background-color: rgb(111, 168, 125);
+   border-radius: 12px;
+   border: 0;
+   box-sizing: border-box;
+   color: #eee;
+   cursor: pointer;
+   font-size: 18px;
+   height: 50px;
+   margin-top: 38px;
+   text-align: center;
+   width: 100%;
+ }
+
+ .showPatient {
+   margin: 3% 9%;
+   width: 50%;
+ }
+
+ .showPatient table {
+   margin-top: 3%;
+   width: 100%;
+   border: 0;
+   text-decoration: none;
+ }
+
+ thead {
+   background-color: rgb(81, 133, 94);
+   color: #fff;
+   font-size: 18px;
+   height: 40px;
+ }
+
+ th {
+   padding: 15px;
+ }
+
+ tbody {
+   background-color: #fff;
+   margin-top: 100px;
+ }
+
+ .tableBody {
+   height: 35px;
+   font-size: 20px;
+   margin-top: 20px;
+   text-align: center;
+ }
