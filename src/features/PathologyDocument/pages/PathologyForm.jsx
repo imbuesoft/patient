@@ -11,69 +11,74 @@ const defaultPathoData = { "Hemoglobin": [{ "id": "1", "name": "", "value": "", 
 const generateUniqueId = () => Date.now().toString(36) + Math.random().toString(36).substring(2, 7)
 
 
-const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
+const PathologyForm = props => {
 
-    const a = parseFloat
+    const { data, setData, isEditable } = props;
 
-    const [formEditable, setFormEditable] = useState(formEditableProps)
+    const a = parseFloat /* Just reference to parseFloat, So dont have to write parseFloat() every this, i can use a() */
+
+    const [formEditable, setFormEditable] = useState(isEditable)
 
     const handleInputChange = (key, index, field, value) => {
-        const updatedData = { ...pathoData }
+        const updatedData = { ...data }
         updatedData[key][index][field] = value
-        setPathoData(updatedData)
+        setData(updatedData)
     }
 
     const handlePush = (key) => {
-        setPathoData({ ...pathoData, [key]: [...pathoData[key], { id: generateUniqueId(), name: "", value: "", min: "", max: "", unit: "", editable: "true" }] })
+        setData({ ...data, [key]: [...data[key], { id: generateUniqueId(), name: "", value: "", min: "", max: "", unit: "", editable: "true" }] })
     }
 
     const handlePop = (key) => {
-        setPathoData({ ...pathoData, [key]: pathoData[key].slice(0, -1) })
-        console.log("pop", pathoData[key])
+        setData({ ...data, [key]: data[key].slice(0, -1) })
+        console.log("pop", data[key])
     }
 
     const handleEdit = (key, index) => {
-        const updatedData = JSON.parse(JSON.stringify(pathoData))
+        const updatedData = JSON.parse(JSON.stringify(data))
         if (updatedData[key][index].editable === "true")
             delete updatedData[key][index].editable
         else
             updatedData[key][index].editable = "true"
-        setPathoData(updatedData)
+        setData(updatedData)
     }
 
     const handleRemove = (key, index) => {
-        setPathoData({ ...pathoData, [key]: pathoData[key].filter((_, i) => i !== index) })
+        setData({ ...data, [key]: data[key].filter((_, i) => i !== index) })
     }
 
     const resetData = () => {
+
+
         const updatedData = {}
 
-        for (const [key, value] of Object.entries(PathoData)) {
-            console.log(value)
-            if (!Array.isArray(value))
-                updatedData[key] = value
-            else
-                updatedData[key] = value.map((item) => {
-                    return {
-                        ...item,
-                        id: item.id + generateUniqueId(),
-                    }
-                })
-        }
+        for (const [key, value] of Object.entries(PathoData))
+            updatedData[key] = Array.isArray(value)
+                ? value.map(item => ({ ...item, id: item.id + generateUniqueId() }))
+                : { ...value, key: generateUniqueId() }
 
-        setPathoData(updatedData)
+        console.log(updatedData.Interpretation);
+
+        setData(updatedData)
         localStorage.removeItem('pathoData')
     }
 
 
     const resetForm = () => {
-        setPathoData(defaultPathoData)
+        const updatedData = {}
+
+        for (const [key, value] of Object.entries(defaultPathoData))
+            updatedData[key] = Array.isArray(value)
+                ? value.map(item => ({ ...item, id: item.id + generateUniqueId() }))
+                : value
+
+        setData(updatedData)
         localStorage.removeItem('pathoData')
     }
 
     useEffect(() => {
-        localStorage.setItem('pathoData', JSON.stringify(pathoData))
-    }, [pathoData])
+        localStorage.setItem('pathoData', JSON.stringify(data))
+    }, [data])
 
     return (
         <>
@@ -103,8 +108,8 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                             <Text style={{ paddingLeft: "0.3em" }} colSpan={4}>Blood</Text>
                         </td>
                     </tr>
-                    {Object.keys(pathoData).map((key) => {
-                        if (Array.isArray(pathoData[key]))
+                    {Object.keys(data).map((key) => {
+                        if (Array.isArray(data[key]))
                             return (
                                 <React.Fragment key={key}>
                                     <tr>
@@ -122,7 +127,7 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                                         </td>
                                     </tr>
                                     {
-                                        pathoData[key].map((item, index) => (
+                                        data[key].map((item, index) => (
                                             <tr key={item.id}>
                                                 <td>
                                                     <Input size='small' className='input-border-style'
@@ -130,7 +135,7 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                                                         placeholder='name'
                                                         defaultValue={item.name}
                                                         style={{ width: "13rem" }}
-                                                        onChange={(e) =>
+                                                        onBlur={(e) =>
                                                             handleInputChange(key, index, "name", e.target.value)
                                                         }
                                                     />
@@ -141,7 +146,7 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                                                         placeholder='value'
                                                         defaultValue={item.value}
                                                         style={{ width: "6em", textAlign: "center" }}
-                                                        onChange={(e) =>
+                                                        onBlur={(e) =>
                                                             handleInputChange(key, index, "value", e.target.value)
                                                         }
                                                     />
@@ -156,14 +161,14 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                                                         className='input-border-style'
                                                         disabled={(item.editable && formEditable) ? false : true}
                                                         style={{ width: "4em", textAlign: "right" }} size='small'
-                                                        onChange={(e) =>
+                                                        onBlur={(e) =>
                                                             handleInputChange(key, index, "min", e.target.value)
                                                         } />
                                                     -
                                                     <Input defaultValue={item.max}
                                                         className='input-border-style'
                                                         disabled={(item.editable && formEditable) ? false : true} placeholder='max' style={{ width: "4em", textAlign: "left" }} size='small'
-                                                        onChange={(e) =>
+                                                        onBlur={(e) =>
                                                             handleInputChange(key, index, "max", e.target.value)
                                                         } /></td>
                                                 <td>
@@ -172,7 +177,7 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                                                         placeholder='unit'
                                                         defaultValue={item.unit}
                                                         style={{ width: "7em" }}
-                                                        onChange={(e) =>
+                                                        onBlur={(e) =>
                                                             handleInputChange(key, index, "unit", e.target.value)
                                                         } />
                                                     {formEditable &&
@@ -196,11 +201,14 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                             <div style={{ display: "flex", margin: "0.3em 0 0 0" }}>
                                 <span style={{ fontWeight: "700" }}>Instruments:</span>
                                 <Input size='small' className='input-border-style'
-                                    key={pathoData.Instruments}
+                                    key={data.Instruments.key}
                                     disabled={!formEditable}
                                     placeholder='unit'
-                                    defaultValue={pathoData.Instruments}
-                                    onChange={(e) => setPathoData({ ...pathoData, Instruments: e.target.value })} />
+                                    defaultValue={data.Instruments.value}
+                                    onBlur={(e) => setData({
+                                        ...data,
+                                        Instruments: { ...data.Instruments, value: e.target.value }
+                                    })} />
                             </div>
                         </td>
                     </tr>
@@ -209,11 +217,14 @@ const PathologyForm = ({ pathoData, setPathoData, formEditableProps }) => {
                             <div style={{ display: "flex", margin: "0.3em 0 0 0" }}>
                                 <span style={{ fontWeight: "700" }}>Interpretation:</span>
                                 <Input size='small' className='input-border-style'
-                                    key={pathoData.Interpretation}
+                                    key={data.Interpretation.key}
                                     disabled={!formEditable}
                                     placeholder='unit'
-                                    defaultValue={pathoData.Interpretation}
-                                    onChange={(e) => setPathoData({ ...pathoData, Interpretation: e.target.value })} />
+                                    defaultValue={data.Interpretation.value}
+                                    onBlur={(e) => setData({
+                                        ...data,
+                                        Interpretation: { ...data.Interpretation, value: e.target.value }
+                                    })} />
                             </div>
                         </td>
                     </tr>

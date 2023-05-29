@@ -5,12 +5,12 @@ const Strong = ({ children }) => <Text style={{ fontWeight: "700" }}>{children}<
 const StrongDiv = ({ children }) => <div style={{ fontWeight: "700" }}>{children}</div>
 
 
-const PathologyHeader = ({ data = { name: "Yash M. Patel", age: "21", sex: "Male", pid: "555", address: "125, Shivam Bungalow, S G Road, Ahmedabad", refName: "Dr. Hiren Shah", regDate: "02:31 PM 02 Dec, 21", collectedDate: "03:01 PM 02 Dec, 21", reportedDate: "04:49 PM 02 Dec, 21" } }) => {
+const PathologyHeader = ({data}) => {
     return (
         <>
             <Row>
                 <Col span={8}>
-                    <Title level={4} style={{ margin: "0", fontWeight:"700"}} >{data.name}</Title>
+                    <Title level={4} style={{ margin: "0", fontWeight: "700" }} >{data.name}</Title>
                     <div style={{ display: "inline-flex", flexDirection: "column" }}>
                         <Text>Age : {data.age} Years</Text>
                         <Text>Sex : {data.sex}</Text>
