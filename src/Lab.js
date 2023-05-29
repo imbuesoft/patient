@@ -10,7 +10,7 @@ const Lab = () => (
       <tr><td>
         <Header name={"Bhargav Padhiyar"} />
         {/* <Body editable={true} /> */}
-        <Report editable={false} />
+        <Report editable={true} />
         <Footer />
       </td></tr>
     </table>

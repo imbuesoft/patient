@@ -24,20 +24,16 @@ const Report = (props) => {
         // }
         // //console.log(reportData);
         // console.log(reportData);
-        //
     }
     return (
         <>
             <form onSubmit={submitReport}>
                 <table className='table-body'>
-
                     <thead>
                         <tr>
                             <td colSpan={5}><div style={{ fontSize: '18px', fontWeight: '700', textAlign: 'center', paddingBottom: '8px' }}>Complete Blood Count (CBC)</div></td>
                         </tr>
-
                         <tr>
-
                             <th className='table-head-main' style={{ width: '230px' }}>Investigation</th>
                             <th className='table-head-main' style={{ width: '70px' }}>Result</th>
                             <th style={{ width: '50px' }}></th>
@@ -94,7 +90,6 @@ const Report = (props) => {
                         </tr>
                     </tfoot>
                 </table >
-
                 <hr></hr>
             </form >
         </>
