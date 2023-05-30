@@ -1,9 +1,9 @@
-import Card from "./Card";
+import Cards from './compo/Card';
 
 const App = () => {
   return (
     <>
-      <Card />
+      <Cards/>
     </>
   )
 };
