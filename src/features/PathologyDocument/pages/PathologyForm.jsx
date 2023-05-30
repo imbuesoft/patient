@@ -88,7 +88,7 @@ const PathologyForm = props => {
                 <Button title='this is temporary buttons' onClick={resetForm}>Reset Form</Button >
             </div>
             <Title level={4} style={{ fontWeight: "700", textAlign: "center" }}>Complate Blood Count (CBC)</Title>
-            <table style={{ width: "", borderCollapse: "separate", borderSpacing: " 0.4em 0em" }}>
+            <table style={{ width: "100%", borderCollapse: "separate", borderSpacing: " 0.4em 0em" }}>
                 <thead>
                     <tr>
                         <td><Title level={5} style={{ fontWeight: "700", paddingLeft: "0.3em" }}>Investigation</Title> </td>
@@ -172,22 +172,24 @@ const PathologyForm = props => {
                                                             handleInputChange(key, index, "max", e.target.value)
                                                         } /></td>
                                                 <td>
-                                                    <Input size='small' className='input-border-style'
-                                                        disabled={(item.editable && formEditable) ? false : true}
-                                                        placeholder='unit'
-                                                        defaultValue={item.unit}
-                                                        style={{ width: "7em" }}
-                                                        onBlur={(e) =>
-                                                            handleInputChange(key, index, "unit", e.target.value)
-                                                        } />
-                                                    {formEditable &&
-                                                        <>
-                                                            <span onClick={() => { handleEdit(key, index) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}>
-                                                                {!item.editable ? <EditOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /> : <CheckOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} />}
-                                                            </span>
-                                                            <span onClick={() => { handleRemove(key, index) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}><MinusOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /></span>
-                                                        </>
-                                                    }
+                                                    <div style={{ display: "inline-flex" }}>
+                                                        <Input size='small' className='input-border-style'
+                                                            disabled={(item.editable && formEditable) ? false : true}
+                                                            placeholder='unit'
+                                                            defaultValue={item.unit}
+                                                            style={{ width: "6em" }}
+                                                            onBlur={(e) =>
+                                                                handleInputChange(key, index, "unit", e.target.value)
+                                                            } />
+                                                        {formEditable &&
+                                                            <div style={{display:"inline-flex"}}>
+                                                                <span onClick={() => { handleEdit(key, index) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}>
+                                                                    {!item.editable ? <EditOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /> : <CheckOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} />}
+                                                                </span>
+                                                                <span onClick={() => { handleRemove(key, index) }} style={{ display: "inline-grid", height: "1.1rem", width: "1.1rem", margin: "0 0 0 0.5em ", cursor: "pointer", background: "#ddd", borderRadius: "0.3em" }}><MinusOutlined size={"small"} style={{ margin: "auto", fontSize: '0.7em' }} /></span>
+                                                            </div>
+                                                        }
+                                                    </div>
                                                 </td>
                                             </tr>
                                         ))

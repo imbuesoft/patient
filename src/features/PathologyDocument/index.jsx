@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PathologyForm from './pages/PathologyForm';
 import PathologyHeader from './pages/PathologyHeader';
 import PathologyFooter from './pages/PathologyFooter';
 
-const index = ({header, main, footer}) => {
+const index = ({ header, main, footer }) => {
+    console.log(main);
     return (
         <>
             <div style={{ display: 'grid' }}>
-                <div style={{ margin: "1em auto 0 ", border: "2px solid #ddd", boxShadow: "0 1em 5em #00000022", borderRadius: "12px", padding: "1em", width: "40em", background: "#fff" }} >
+                <div style={{
+                    margin: "1em auto 0 ", border: "2px solid #ddd", boxShadow: "0 1em 5em #00000022", borderRadius: "12px", padding: "1em", background: "#fff",
+                    width: "auto", maxWidth: "43em"
+                }} >
                     <PathologyHeader {...header} />
                     <PathologyForm {...main} />
                     <PathologyFooter {...footer} />
