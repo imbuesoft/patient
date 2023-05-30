@@ -10,9 +10,9 @@ const Features = () => {
 
 
   return (
-    <div className='col-3'>
+    <div className='col-12 col-sm-6 col-lg-4 col-xl-3 py-2'>
       <div style={divStyle}>
-        <div className="card featurescard">
+        <div className="card features_card">
           <div className="card-content features-card-content">
             <h3 className="card-title features-card-title">
               <b className="title">Access India's digital Health ecosystem</b>
@@ -49,8 +49,9 @@ const Features = () => {
               </div>
             </button>
           </div>
-          <div className="card-image features-card-image">
+          <div className="card-image features-card-image-container">
             <img
+              className='features-card-image'
               src="https://www.eka.care/_next/image?url=https%3A%2F%2Fcdn.eka.care%2Fvagus%2Fcl5jndjc8001l0sh9b4dc9yx5.png&w=1920&q=75"
               alt="img"
             />
