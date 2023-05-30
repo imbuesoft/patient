@@ -5,8 +5,8 @@ const App = () => {
     <>
       <Prescription />
       {/* <Patient />
-      <Invoice /> */}
-      {/* <Lab /> */}
+      <Invoice /> 
+      <Lab /> */}
     </>
   )
 };
