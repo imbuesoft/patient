@@ -14,7 +14,7 @@ function App() {
       <Slider />
 
       <div className="container mt-5">
-        <div className='row'>
+        <div className='row m-0 p-0 '>
           <Service />
           <Service />
           <Service />
