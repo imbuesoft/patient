@@ -16,7 +16,7 @@ const Testimonial = () => {
                     data-bs-target="#carouselExampleControls"
                     data-bs-slide="prev"
                 >
-                    <span className="carousel-control-prev-icon" aria-hidden="true" />
+                    <span className="carousel-control-prev-icon d-none d-sm-block" aria-hidden="true" />
                     <span className="visually-hidden">Previous</span>
                 </button>
                 <div className="carousel-inner">
@@ -98,7 +98,7 @@ const Testimonial = () => {
                     data-bs-target="#carouselExampleControls"
                     data-bs-slide="next"
                 >
-                    <span className="carousel-control-next-icon" aria-hidden="true" />
+                    <span className="carousel-control-next-icon  d-none d-sm-block" aria-hidden="true" />
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
