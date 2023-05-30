@@ -1,0 +1,21 @@
+.drSearch {
+  height:100%;
+  width: 445px;
+}
+
+.ctSearch{
+
+  width:346px;
+  height:100%;
+}
+.suggestionBox{
+  width: 400px;
+ max-height: 250px;
+ background-color: #fff;
+}
+.loc{
+  height: 50px;
+}
+.drSearch:focus ,.ctSearch:focus{
+  outline: none;
+}

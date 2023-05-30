@@ -1,8 +1,15 @@
-import CreatePatient from "./CreatePatient";
+import './App.css';
+// import Body from './Body';
+// import Navbar from './Navbar';
+import Searchbar from './search_bar/Searchbar';
 
 function App() {
   return (
-    <CreatePatient />
+    <div className="App">
+      {/* "<Navbar/>
+      <Body/>" */}
+      <Searchbar/>
+    </div>
   );
 }
 
