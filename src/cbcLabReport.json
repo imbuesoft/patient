@@ -1,0 +1,39 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Neutrophils",
+      "result": 30,
+      "referenceRange": ["50","62"],
+      "unit":"%"
+    },
+    {
+      "id": 2,
+      "name": "Lymphocytes",
+      "result": 30,
+      "referenceRange":[ "20","40"],
+      "unit":"%"
+    },
+    {
+      "id": 3,
+      "name": "Eosinophils",
+      "result": 7,
+      "referenceRange": ["00","06"],
+      "unit":"%"
+    },
+    {
+      "id": 4,
+      "name": "Monocytes",
+      "result": 7,
+      "referenceRange": ["00","10"],
+      "unit":"%"
+    },
+    {
+      "id": 5,
+      "name": "Basophils",
+      "result": 4,
+      "referenceRange": ["00","02"],
+      "unit":"%"
+    }
+  ]
+}
