@@ -4,7 +4,7 @@ import videoconsult from './videoconsult.png';
 
 const Service = () => {
     return (
-        <div className='col-2'>
+        <div className='col-sm-6 col-md-3 col-lg-2'>
             <div className="card servicecard">
                 <img src={videoconsult} alt="Card Image" className='card-img servicecardimg' />
                 <div className="info">
