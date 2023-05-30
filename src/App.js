@@ -1,15 +1,10 @@
 
-import Alert from "./Alert";
-//import Alert2 from "./Alert2";
-//import Log from "./Log";
-
-
+import Card from "./Cards/Card";
 function App() {
   return (
-    <Alert/>
-    //<Alert2/>
-    //<Log/>
-    
+    <>
+   <Card/>
+    </>
   )
 }
 

@@ -1,0 +1,56 @@
+.card {
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(0, 255,255)
+  }
+  .card-title {
+    color: #010101; /* Specify the desired color for the title */
+    font-size: 28px; /* Specify the desired font size for the title */
+    font-family: 'DM Sans', sans-serif;/* Specify the desired font family for the title */
+    word-spacing: 2px; 
+    letter-spacing: 0.3px; /* Add spacing between each character */
+  }
+  .card-content {
+    padding: 16px;
+  }
+
+  
+  .card-description {
+    color: #212121; /* Specify the desired color for the description */
+    font-size: 15px; /* Specify the desired font size for the description */
+    font-family: 'DM Sans', sans-serif; /* Specify the desired font family for the description */
+    margin-top: 15px;
+
+  }
+  .card-image {
+    margin-top: auto;
+    margin-left: 140px ;
+  }
+  
+  .card-image img {
+    width: 200px;
+    height: 200px; 
+    object-fit: cover;
+  }
+  .btn {
+    margin-top: 10px; /* Add margin to separate the button from the description */
+    color: #010101; /* Specify the desired color for the button text */
+    border-color: #010101; /* Specify the desired color for the button border */
+    background-color: transparent; /* Make the button background transparent */
+    font-weight: 555;
+    transition: background-color 0.3s ease; /* Add a transition effect for smooth hover */
+  }
+  
+  .btn:hover {
+    background-color: #010101; /* Change the background color on hover */
+    color: #ffffff; /* Change the text color on hover */
+  }
+  #button-container:hover #test-container svg {
+    transform: translateX(6px);
+  }
+  
