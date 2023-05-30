@@ -5,6 +5,7 @@ import Service from './Component/Service/Service';
 import Capsule from './Component/Capsule/Capsule';
 import Testimonial from './Component/Testimonial/Testimonial';
 import Features from './Component/Features/Features';
+import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
@@ -41,13 +42,12 @@ function App() {
         </div>
       </div>
 
-      <div className="container-fluid mt-5">
-        
-      </div>
 
       <div className="container-fluid mt-5">
         <Testimonial />
       </div>
+
+      <Footer />
 
     </div>
   );
