@@ -8,6 +8,7 @@ const Features = () => {
     alignItems: 'center',
   };
 
+
   return (
     <div className='col-3'>
       <div style={divStyle}>

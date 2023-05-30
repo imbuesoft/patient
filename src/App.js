@@ -1,11 +1,11 @@
 import './App.css';
-import Navbar from './Component/Navbar/Navbar';
-import Slider from './Component/Slider/Slider';
-import Service from './Component/Service/Service';
-import Capsule from './Component/Capsule/Capsule';
-import Testimonial from './Component/Testimonial/Testimonial';
-import Features from './Component/Features/Features';
-import Footer from './Component/Footer/Footer';
+import Navbar from './Component/Navbar';
+import Slider from './Component/Slider';
+import Service from './Component/Service';
+import Capsule from './Component/Capsule';
+import Testimonial from './Component/Testimonial';
+import Features from './Component/Features';
+import Footer from './Component/Footer';
 
 function App() {
   return (

@@ -6,7 +6,7 @@ const VideoConsult = () => {
         <div className='wraper'>
             <div className='maincontainer'>
                 <div className='imagecontainer'>
-                    <img src={videoconsult} alt='img' />
+                    <img className='video_consult_img' src={videoconsult} alt='img' />
                 </div>
                 <div className='infocontainer'>
                     <div className='heading'>
