@@ -6,12 +6,15 @@ import Capsule from './Component/Capsule';
 import Testimonial from './Component/Testimonial';
 import Features from './Component/Features';
 import Footer from './Component/Footer';
+import Searchbar from './Component/Searchbar/Searchbar';
 
 function App() {
   return (
-    <div className="">
+    <div className="App">
       <Navbar />
-      <div className="container mt-5">
+      <Searchbar />
+
+      <div className="container-fluid px-5">
         <Slider />
       </div>
 

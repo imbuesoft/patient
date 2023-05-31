@@ -1,32 +1,15 @@
 import React from 'react'
+import './SliderCard.css'
 
 const SliderCard = () => {
     return (
         <div
-            className="card"
-            style={{
-                width: "20rem",
-                float: "right",
-                marginTop: "20px",
-                height: "27rem",
-                backgroundColor: "#4042b2",
-                borderRadius: "10.62px",
-                borderColor: "#4042b2",
-            }}
+            className="card mainCard"
         >
             <img
                 src="https://www.eka.care/_next/image?url=https%3A%2F%2Fcdn.eka.care%2Fvagus%2Fcl5guuf6h000b0sh95v9z4yza.png&w=1920&q=75"
-                className="card-img-top"
+                className="card-img-top imgBG"
                 alt="sym"
-                style={{
-                    height: "34%",
-                    backgroundColor: "#232477",
-                    borderRadius: "50%",
-                    width: "55%",
-                    shapeImageThreshold: "circle",
-                    padding: "14px",
-                    margin: "24px",
-                }}
             />
             <h4
                 style={{
@@ -55,7 +38,7 @@ const SliderCard = () => {
                     type="button"
                     className="btn btn"
                     style={{
-                        backgroundColor: "#232477",
+                        backgroundColor: "#0b3c43",
                         color: "white",
                         height: "20%",
                     }}

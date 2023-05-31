@@ -1,6 +1,8 @@
 import React from "react";
-import logo from "./sliderlogo.png";
 import SliderCard from "./SliderCard";
+import logo from "./slidelogo.png";
+import logo2 from "./slidelogo2.png";
+import logo3 from "./slidelogo3.png";
 
 const Slider = () => {
     return (
@@ -13,7 +15,7 @@ const Slider = () => {
                             // padding: "5% 8% 8% 4%",
                             borderRadius: "24px",
                             fontFamily: "DM Sans, sans-serif",
-                            backgroundColor: "#6567ec",
+                            backgroundColor: "#429CA5",
                         }}
                     >
                         <div className="d-flex w-100 justify-content-center align-items-center flex-column flex-lg-row">
@@ -60,7 +62,21 @@ const Slider = () => {
                                 </a>
                             </div>
                         </div>
-                        <img src={logo} alt="logo" style={{ width: "100%", maxWidth: "40em" }} />
+                        <div className="row">
+                            <div className='col-4'>
+                                <img src={logo} alt="logo" style={{ margin: "44px 10px 0px 10px" }} /><br />
+                                <span>NHA Approved</span>
+                            </div>
+                            <div className='col-4'>
+                                <img src={logo2} alt="logo" style={{ margin: "44px 10px 0px 10px" }} /><br />
+                                <span>Co-WIN Approved</span>
+                            </div>
+                            <div className='col-4'>
+                                <img src={logo3} alt="logo" style={{ margin: "44px 10px 0px 10px" }} /><br />
+                                <span>Private & Secure</span>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
