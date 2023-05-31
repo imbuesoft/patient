@@ -176,6 +176,7 @@ const AabhaCard = () => {
           className="create-abha-button btn btn-primary"
           disabled={!checkbox2}
           onClick={handleCreateABHA}
+          style={{width: "230px"}}
         >
           Create ABHA
         </button>
@@ -189,8 +190,8 @@ const AabhaCard = () => {
       </div>
 
       <div>
-        <p style={{textAlign: "center"}}>By continuing, you agree to eka.care Terms of Service &
-Privacy Policy</p>
+        <p style={{textAlign: "center"}}>By continuing, you agree to eka.care <a href='/'>Terms of Service</a> &  
+        <a href='/'>Privacy Policy</a></p>
       </div>
     </div>
   );
