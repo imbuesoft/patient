@@ -13,9 +13,25 @@
  max-height: 250px;
  background-color: #fff;
 }
+.suggestionBoxSp{
+  width: 500px;
+ max-height: 250px;
+ background-color: #fff;
+}
 .loc{
   height: 50px;
 }
 .drSearch:focus ,.ctSearch:focus{
   outline: none;
+}
+.iconSearch{
+  width: 15%;
+}
+
+.textSearch{
+  width: 80%;
+}
+
+.suggestionBox::-webkit-scrollbar,.suggestionBoxSp::-webkit-scrollbar {
+  display: none; 
 }
