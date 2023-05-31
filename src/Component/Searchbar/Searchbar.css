@@ -1,0 +1,43 @@
+.searchArea{
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid #6c68fa;
+}
+
+.drSearch {
+  background: transparent;
+  height:100%;
+  width: 415px;
+}
+
+.ctSearch{
+  background:transparent;
+  width:346px;
+  height:100%;
+}
+.suggestionBox{
+  width: 400px;
+ max-height: 250px;
+ background-color: #fff;
+}
+.suggestionBoxSp{
+  width: 500px;
+ max-height: 250px;
+ background-color: #fff;
+}
+.loc{
+  height: 50px;
+}
+.drSearch:focus ,.ctSearch:focus{
+  outline: none;
+}
+.iconSearch{
+  width: 15%;
+}
+
+.textSearch{
+  width: 80%;
+}
+
+.suggestionBox::-webkit-scrollbar,.suggestionBoxSp::-webkit-scrollbar {
+  display: none; 
+}

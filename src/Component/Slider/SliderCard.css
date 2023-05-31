@@ -1,0 +1,18 @@
+.mainCard{
+    width: 320px;
+    float: right;
+    margin-top :20px;
+    height: 450px;
+    background-color: #216A71;
+    border-radius: 20px;
+    border: none;
+}
+
+.imgBG{
+    height: 150px;
+    background-color: #175057;
+    border-radius: 120px;
+    width: 150px;
+    padding: 14px;
+    margin: 24px;
+}

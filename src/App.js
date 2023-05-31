@@ -6,11 +6,14 @@ import Capsule from './Component/Capsule/Capsule';
 import Testimonial from './Component/Testimonial/Testimonial';
 import Features from './Component/Features/Features';
 import Footer from './Component/Footer/Footer';
+import Searchbar from './Component/Searchbar/Searchbar';
 
 function App() {
   return (
-    <div className="">
+    <div className="App">
       <Navbar />
+
+      <Searchbar/>
       <Slider />
 
       <div className="container mt-5">

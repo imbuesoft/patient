@@ -1,5 +1,7 @@
 import React from "react";
-import logo from "./sliderlogo.png";
+import logo from "./slidelogo.png";
+import logo2 from "./slidelogo2.png";
+import logo3 from "./slidelogo3.png";
 import SliderCard from "./SliderCard";
 
 const Slider = () => {
@@ -10,10 +12,10 @@ const Slider = () => {
                     <div
                         className="card-body text-white"
                         style={{
-                            padding: "5% 8% 8% 4%",
+                            padding: "2% 8% 3% 4%",
                             borderRadius: "24px",
                             fontFamily: "DM Sans, sans-serif",
-                            backgroundColor: "#6567ec",
+                            backgroundColor: "#429CA5",
                         }}
                     >
                         <SliderCard />
@@ -57,7 +59,21 @@ const Slider = () => {
                                 />
                             </a>
                         </div>
-                        <img src={logo} alt="logo" style={{ marginTop: "44px" }} />
+                        <div className="row">
+                            <div className='col-4'>
+                                <img src={logo} alt="logo" style={{ margin: "44px 10px 0px 10px" }} /><br/>
+                                <span>NHA Approved</span>
+                            </div>
+                            <div className='col-4'>
+                                <img src={logo2} alt="logo" style={{ margin: "44px 10px 0px 10px" }} /><br/>
+                                <span>Co-WIN Approved</span>
+                            </div>
+                            <div className='col-4'>
+                                <img src={logo3} alt="logo" style={{ margin: "44px 10px 0px 10px" }} /><br/>
+                                <span>Private & Secure</span>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
