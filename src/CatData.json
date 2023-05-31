@@ -1,0 +1,470 @@
+[
+    {
+        "id": "DC01",
+        "category": "Digestive Care",
+        "path": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTOJ_VNoLW_HG9bEu1a1K9lABv3ZoqvMuTUc95qYymhtt1I3LMFnKtI8EiFFWtmpHFWem7ZLXr0pJNSE6Nz7XO2sjz-1JGubDK6AnLw79A&usqp=CAE",
+        "title": "Setu Probiotic for Tummy",
+        "price": 499,
+        "w": "90px",
+        "h": "100px"
+    },
+    {
+        "id": "DC02",
+        "category": "Digestive Care",
+        "path": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR3A1_ktaC1Loor624YHsjiNUmdbeH5XIkm_2ZjepZyO7c_cO3bVV48anPDYz3zDEWEO0HdjUUii5_qCTyaBucu4__Z5ISyRmtyKBFgIve1gYVzuXtO-o6dMg&usqp=CAE",
+        "title": "STOMACH CLEANSER Detox",
+        "price": 999,
+        "w": "90px",
+        "h": "80px"
+    },
+    {
+        "id": "DC03",
+        "category": "Digestive Care",
+        "path": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQ3Ocjk5I_iykJy2vveSAs31hj09AedYltO981iCY7BjTAGOhpuaFJ56WrhkYZZtBOeJokaT30u7Ur_ALM0rzlWdChwnf8kdKbi_JmqAVMOTkUIAszbMOhLOg&usqp=CAE",
+        "title": "Gut Army - Prebiotic",
+        "price": 619,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "DC04",
+        "category": "Digestive Care",
+        "path": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQRuoRpI3p-XZHRsIJuQwIuz8Me9-yGjWakSXUijcNcHdAu_JygtcxT9XzxF9H4lrCydNc9FPof8KjuMR0zSeu9_dlA2iqdyGM30nAdFoi5AsiUAAljJBG-sQ&usqp=CAE",
+        "title": "Gut Helath",
+        "price": 540,
+        "w": "120px",
+        "h": "110px"
+    },
+    {
+        "id": "DC05",
+        "category": "Digestive Care",
+        "path": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTDwByEky1PRqL7a0MLJOKKW2lh8bTc3d3kEyDQhzahKN53tdC3aHzlgXMoJ0BaJgBHmYJicKCV0yYi6OkAEgwHWzTlCXK_PgrYzgUQhoU1IvFUnYtENB3yIQ&usqp=CAE",
+        "title": "Himalayan Organics Digestive Care Enzyme",
+        "price": 750,
+        "w": "90px",
+        "h": "130px"
+    },
+    {
+        "id": "DC06",
+        "category": "Digestive Care",
+        "path": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRqaW7zSGQ-yIceZTDx_ljXVwjlaHW0AanUzOlKrW35GoQs-7Gsc8XMOslRRGJjsQIp63fUmMXntLzkhMqhTjCOaKJZe9fW5zAYocHqk-PFcqPWmXGARIR1Aw&usqp=CAE",
+        "title": "Saridon - Strip of 10 Tablets",
+        "price": 434,
+        "w": "90px",
+        "h": "120px"
+    },
+    {
+        "id": "DC07",
+        "category": "Digestive Care",
+        "path": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSy8CqbAupx9CodGqwnXKZB-t0I3GVSbSa7zSus1YyQF0Zw6SztrxIKzzRfV8SOi8nrqMaUu__YrbO6xFPNNPK42m34wXUgtm1vTUN1-V-1&usqp=CAE",
+        "title": "melts Healthy Gut with Natural",
+        "price": 629,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "DC08",
+        "category": "Digestive Care",
+        "path": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS1ygzIsov0_-OItctE1fNoAJNUJfVMydov_9nPzghgWfFYVugoJu91tvvCy7s_7m9SF1KWmU7V-9OqBZRsL0OUt34-ALzdm9ljgYmJBZs&usqp=CAE",
+        "title": "Gut Helath Combo for better Digestion",
+        "price": 799,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "EE01",
+        "category": "Eye & Ear Care",
+        "path": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQAieeNm7wkodFFCVZgeavNyGQcGUouzTQ5EmmZ4qRjfV_NlePiLhBw1PNeMHl842tMNsmAmTqdLeEqlw9Fx9YmHgUka5sxaRKEOF6gFB3YZcjvcteK3trptw&usqp=CAE",
+        "title": "Setu Eye Relief Capsules With 20mg",
+        "price": 1600,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "EE02",
+        "category": "Eye & Ear Care",
+        "path": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ6XLAbrkCbwU_yGrbseLcifTONa7Mzwjxe1hD2EDMeGY-vrV3PLw2lg6iAAy03pfx5IukNWDjZ47-dRA0NUJFvBKamE_rDPkHJw8v8cNfZ-tsaPoB8Rtn2&usqp=CAE",
+        "title": "Vision Optimum 60 Capsules",
+        "price": 499,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "EE03",
+        "category": "Eye & Ear Care",
+        "path": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRKYzsl90nk1F4MPpU4ZDWvwTXoyeCdTkw5UFDvaJwORDDk7X_TKdw-Z1Lj9P9KQxT0i04rWauNY3fZI4mM-FN5skAy-rB6Tm9KBJEiV_xGoRRO33hue86tNg&usqp=CAE",
+        "title": "Himaliyan Organics Plant Based",
+        "price": 705,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "EE04",
+        "category": "Eye & Ear Care",
+        "path": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRz11wA58ImBWIC5Jp7m8aoYiToarVuDRUxYA5DK8CFKQ9DB14FWwnG-f7APJNV3223tiqxK11AuYKJmeGSQoAC6ooO5p29LKRsOvw9-BVSQssWU2xr8cK8&usqp=CAE",
+        "title": "TrueBasiics Eye Shiled",
+        "price": 869,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "EE05",
+        "category": "Eye & Ear Care",
+        "path": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQLjh0K9V1yTXsAkOAhY8cdoEPSuYr14IDzXL0MGThLFsIxrG8hZXVy4Z6SBSM-Udo7FK6eiQs7i1k4tHTnDquL3iOijXx-whtC4D7nuqfpGM8fHW8UxPui&usqp=CAE",
+        "title": "Mack's Unisex's Snoozers Ear Plugs (6 Pair)",
+        "price": 1920,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "EE06",
+        "category": "Eye & Ear Care",
+        "path": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTU7WX8Rp6K_G4X-QuTeomlpD57TwqIqrbAF-gTsaubwl-qLcl9kv37HHNPciIqKVpTmm_TGieUqNpn6AU75NiBwQDnxK9qFQ5lDSSXTtgjgEIVqJopVB0R&usqp=CAE",
+        "title": "Virbac Epiotic 50ml",
+        "price": 100.8,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "EE07",
+        "category": "Eye & Ear Care",
+        "path": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRssDJhsLwwWe0Yz-zhIrm7I-8Rt2XYPHsX17CpuRGemHAlcEirOCr_Qvgp_g9KpNGw_LlIbxsX9RppT_snG5uvK2he6MY1-sFe3V91JwDAc2n2acnzN1n8HQ&usqp=CAE",
+        "title": "Lenskart Aquadrop Natural",
+        "price": 44,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "EE08",
+        "category": "Eye & Ear Care",
+        "path": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT79IVNdAj1p6jV_XDvI639b6OOxpBP2z7a4q4eIKtGPh4uXg_4r3L8CoLhMPUHb1i-MYZPsIcVU-IfmbgQwrSaAxLtrCugDv3R7e6Mjb_oDEMju9o0jt7BfA&usqp=CAE",
+        "title": "AL-EARTONE Drops",
+        "price": 158,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "OC01",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/51lFyjsFohL._AC_SX184_.jpg",
+        "title": "Dabur Red Bae Fresh Gel - 2*300gm",
+        "price": 360,
+        "w": "90px",
+        "h": "60px"
+    },
+    {
+        "id": "OC02",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/51-fEsOCDEL._AC_SX184_.jpg",
+        "title": "Colgate Visible White O2 - 50g",
+        "price": 250,
+        "w": "90px",
+        "h": "130px"
+    },
+    {
+        "id": "OC03",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/615pXDGcT-L._AC_SX184_.jpg",
+        "title": "Closeup Toothpaste - 4*150gm",
+        "price": 295,
+        "w": "90px",
+        "h": "40px"
+    },
+    {
+        "id": "OC04",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/316BTfLTPEL._AC_SX184_.jpg",
+        "title": "Amway Glister Toothpaste 190 g",
+        "price": 283,
+        "w": "90px",
+        "h": "30px"
+    },
+    {
+        "id": "OC05",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/51sKw8xzibL._AC_SX184_.jpg",
+        "title": "Amazon Brand - Solimo Bamboo",
+        "price": 400,
+        "w": "90px",
+        "h": "80px"
+    },
+    {
+        "id": "OC06",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/41NUIYqfF6L._AC_SX184_.jpg",
+        "title": "Colgate Gentle Enamel Ultra Soft",
+        "price": 240,
+        "w": "70px",
+        "h": "150px"
+    },
+    {
+        "id": "OC07",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/413L0M6ESCL._AC_SX184_.jpg",
+        "title": "Rusabl Bamboo manual Toothbrush",
+        "price": 299,
+        "w": "90px",
+        "h": "120px"
+    },
+    {
+        "id": "OC08",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/41PWnJ8ZMZL._AC_SX184_.jpg",
+        "title": "Colgate Visible White O2",
+        "price": 250,
+        "w": "40px",
+        "h": "140px"
+    },
+    {
+        "id": "OC09",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/41cUERwAIYS._AC_SX184_.jpg",
+        "title": "Colgate Vedshakti Oil Pulling Ayurvedic",
+        "price": 350,
+        "w": "150px",
+        "h": "140px"
+    },
+    {
+        "id": "OC10",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/41FO-AwVcbS._AC_SX184_.jpg",
+        "title": "Dabur Red Pulling Oil",
+        "price": 130,
+        "w": "60px",
+        "h": "140px"
+    },
+    {
+        "id": "OC11",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/31s1vgfZ+HL._AC_SX184_.jpg",
+        "title": "Himalaya Active Fresh Saunf",
+        "price": 115,
+        "w": "65px",
+        "h": "140px"
+    },
+    {
+        "id": "OC12",
+        "category": "Oral Care",
+        "path": "https://images-eu.ssl-images-amazon.com/images/I/410o9MN2tdS._AC_SX184_.jpg",
+        "title": "Colgate Plax Fresh Mint - 500 ml ",
+        "price": 285,
+        "w": "55px",
+        "h": "140px"
+    },
+    {
+        "id": "PR01",
+        "category": "Pain Relief",
+        "path": "https://www.theryco.co.in/therycoadmin//Upload/Product/ODNWWHJ5Tkc=.png",
+        "title": "Paracetamol Febpar 500 ",
+        "price": 100,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "PR02",
+        "category": "Pain Relief",
+        "path": "https://www.netmeds.com/images/product-v1/600x600/340387/crocin_pain_relief_tablet_15_s_0.jpg",
+        "title": "Crocin Pain Relief - Strip of 15 Tablets",
+        "price": 65.73,
+        "w": "90px",
+        "h": "80px"
+    },
+    {
+        "id": "PR03",
+        "category": "Pain Relief",
+        "path": "https://m.media-amazon.com/images/I/61I-ghtBsyL._SY450_.jpg",
+        "title": "Dr Ortho Pain Relief Oil 120 ml",
+        "price": 295,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "PR04",
+        "category": "Pain Relief",
+        "path": "https://newassets.apollo247.com/pub/media/catalog/product/z/a/zan0246_1.jpg",
+        "title": "Zandu Balm 50 ml",
+        "price": 150,
+        "w": "90px",
+        "h": "110px"
+    },
+    {
+        "id": "PR05",
+        "category": "Pain Relief",
+        "path": "https://m.media-amazon.com/images/I/51Eq6akCATS._AC_UL320_.jpg",
+        "title": "Iodex - Bottle of 40 g Balm",
+        "price": 160,
+        "w": "90px",
+        "h": "110px"
+    },
+    {
+        "id": "PR06",
+        "category": "Pain Relief",
+        "path": "https://m.media-amazon.com/images/I/51COdyjxiVL._AC_UL320_.jpg",
+        "title": "Saridon - Strip of 10 Tablets",
+        "price": 42.30,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "PR07",
+        "category": "Pain Relief",
+        "path": "https://newassets.apollo247.com/pub/media/catalog/product/m/o/moo0032.jpg",
+        "title": "Moov  Instant Pain Relief - 80g",
+        "price": 199,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "PR08",
+        "category": "Pain Relief",
+        "path": "https://m.media-amazon.com/images/I/617EgnIpBjL._AC_UY218_.jpg",
+        "title": "Burfen Powder- Bottle of 40g ",
+        "price": 150,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "PR09",
+        "category": "Pain Relief",
+        "path": "https://m.media-amazon.com/images/I/71HS9igkDrL._AC_UY218_.jpg",
+        "title": "Omnigal - Tube of 50 gm Gel",
+        "price": 162.80,
+        "w": "90px",
+        "h": "80px"
+    },
+    {
+        "id": "PR10",
+        "category": "Pain Relief",
+        "path": "https://m.media-amazon.com/images/I/51Q9OHyyr-L._AC_UY218_.jpg",
+        "title": "Dynapar QPS - Bottle of 30 ml",
+        "price": 299,
+        "w": "60px",
+        "h": "120px"
+    },
+    {
+        "id": "PR11",
+        "category": "Pain Relief",
+        "path": "https://m.media-amazon.com/images/I/41tRVrFecdL._AC_UY218_.jpg",
+        "title": "Rumaalaya - Bottle of 60 ml Liniment",
+        "price": 130,
+        "w": "60px",
+        "h": "130px"
+    },
+    {
+        "id": "PR12",
+        "category": "Pain Relief",
+        "path": "https://m.media-amazon.com/images/I/71EG8mqUpnL._AC_UY218_.jpg",
+        "title": "Volini - Tube of 75 gm Gel",
+        "price": 245,
+        "w": "90px",
+        "h": "40px"
+    },
+    {
+        "id": "RA01",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/815CGLnheaL._AC_UL320_.jpg",
+        "title": "Kasakesari Syrup 200forRespiratory",
+        "price": 675,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "RA02",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/41nzBLOUurL._AC_UL320_.jpg",
+        "title": "Respiratory Medicine and Allergy",
+        "price": 3597,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "RA03",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/31XUjAOwB3L._AC_UL320_.jpg",
+        "title": "Salt Pipe - Refillable SInhaler",
+        "price": 4000,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "RA04",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/51+Pcfxph8L._AC_UL320_.jpg",
+        "title": "AVP Haridrakhandam Anti-Allergy",
+        "price": 250,
+        "w": "70px",
+        "h": "80px"
+    },
+    {
+        "id": "RA05",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/71y+H0yXL+L._AC_UL320_.jpg",
+        "title": "Vasaka- Pure Vasaka Extract 60 Capsule",
+        "price": 360,
+        "w": "40px",
+        "h": "60px"
+    },
+    {
+        "id": "RA06",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/41TwWu0CMIL._AC_UL320_.jpg",
+        "title": "PULMOSTONG Supports healbreathing",
+        "price": 1890,
+        "w": "90px",
+        "h": "80px"
+    },
+    {
+        "id": "RA07",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/31ydvqUdK6L._AC_UL320_.jpg",
+        "title": "NANO ® Breathing Lung Exerciser",
+        "price": 499,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "RA08",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/61fG1U5HktS._AC_UL320_.jpg",
+        "title": "Pillcraft BroncOpeSallaki-based Lung Detox Agent",
+        "price": 330,
+        "w": "70px",
+        "h": "80px"
+    },
+    {
+        "id": "RA09",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/71ajmNWXbXL._AC_UL320_.jpg",
+        "title": "SHVASRATAN FOR RESPIRATORY CARE",
+        "price": 799,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "RA10",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/71F5AYQdPSL._AC_UL320_.jpg",
+        "title": "Himalaya Wellness Pure HeTulasi Respiratory Wellness",
+        "price": 200,
+        "w": "90px",
+        "h": "90px"
+    },
+    {
+        "id": "RA11",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/41y3OG8RIgL._AC_UL320_.jpg",
+        "title": "SSI healthcare BMC F2 Full FMask for Respiratory",
+        "price": 3999,
+        "w": "80px",
+        "h": "90px"
+    },
+    {
+        "id": "RA12",
+        "category": "Respiratory & Allergies",
+        "path": "https://m.media-amazon.com/images/I/61RHrj0BZRL._AC_UL320_.jpg",
+        "title": "Kaviraj Swaskas Syrup : for CouBronchial asthma, Wheezing",
+        "price": 120,
+        "w": "65px",
+        "h": "80px"
+    }
+]
