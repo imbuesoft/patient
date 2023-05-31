@@ -1,54 +1,127 @@
-import React from 'react';
-import { QRCode } from 'antd';
-import { Typography } from 'antd';
-const { Text} = Typography;
+import { Select, Table, Button } from 'antd';
+import { useState } from 'react';
 
+const App = () => {
+  const [selectedPatient, setSelectedPatient] = useState(null);
+  const [selectedReport, setSelectedReport] = useState(null);
+  const [data, setData] = useState([]);
 
-const downloadQRCode = () => {
-  const canvas = document.getElementById('myqrcode')?.querySelector('canvas');
-  if (canvas) {
-    const url = canvas.toDataURL();
-    const a = document.createElement('a');
-    a.download = 'QRCode.png';
-    a.href = url;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-  }
+  const handlePatientChange = (value) => {
+    setSelectedPatient(value);
+  };
+
+  const handleReportChange = (value) => {
+    setSelectedReport(value);
+  };
+
+  const patientList = [
+    {
+      value: 'Dhara Ramavat',
+      label: 'Dhara Ramavat',
+    },
+    {
+      value: 'Khushi menpara',
+      label: 'Khushi menpara',
+    },
+    {
+      value: 'Jinal taraviya',
+      label: 'Jinal taraviya',
+    },
+  ];
+
+  const reportList = [
+    {
+      value: 'HEMOGLOBIN',
+      label: 'HEMOGLOBIN',
+    },
+    {
+      value: 'RBC COUNT',
+      label: 'RBC COUNT',
+    },
+    {
+      value: 'BLOOD INDICES',
+      label: 'BLOOD INDICES',
+    },
+    {
+      value: 'WBC COUNT',
+      label: 'WBC COUNT',
+    },
+    {
+      value: 'DIFFERENT WBC COUNT',
+      label: 'DIFFERENT WBC COUNT',
+    },
+    {
+      value: 'PLATELET COUNT',
+      label: 'PLATELET COUNT',
+    },
+  ];
+
+  const edit = (
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlRpYzCNgof4S7x1rryvTUu1vCEHYu6W-F9w&usqp=CAU" alt="Edit" height="20px" width="20px" />
+  );
+
+  const view = (
+    <img src="https://thumbs.dreamstime.com/b/view-icon-vector-sign-symbol-isolated-white-background-logo-concept-your-web-mobile-app-design-134155788.jpg" alt="view" height="20px" width="20px" />
+  );
+
+  const handleAdd = () => {
+    if (selectedReport && selectedPatient) {
+      const newReport = {
+        key: data.length + 1,
+        Report: selectedReport,
+        Edit: edit,
+        View: view,
+      };
+
+      setData((prevData) => [...prevData, newReport]);
+      setSelectedReport(null);
+    }
+  };
+
+  const columns = [
+    {
+      title: 'Report',
+      dataIndex: 'Report',
+      key: 'Report',
+      render: (text) => <a>{text}</a>,
+    },
+    {
+      title: 'Edit',
+      dataIndex: 'Edit',
+      key: 'Edit',
+    },
+    {
+      title: 'View',
+      dataIndex: 'View',
+      key: 'View',
+    },
+  ];
+
+  return (
+    <>
+      <Select
+        defaultValue="Select Patient"
+        style={{
+          width: 150,
+        }}
+        onChange={handlePatientChange}
+        options={patientList}
+      />
+      <Select
+        defaultValue="Select Report"
+        style={{
+          width: 150,
+          marginLeft: '10px',
+        }}
+        onChange={handleReportChange}
+        options={reportList}
+      />
+      <Button type="primary" onClick={handleAdd}>
+        <span>+</span>
+      </Button>
+      <Table columns={columns} dataSource={data} />
+    </>
+  );
 };
 
-
-
-
-const App = () => (
-  
-  <div id="myqrcode" >
-    <hr style={{ borderTop: '1px solid #000', margin: '10px 0' }} />
-    <QRCode
-      value="https://ant.design/"
-      style={{
-        margin:'auto',
-      }}
-    />
-     
-
-<div style={{ textAlign: 'center' }}>
-      <Text style={{fontSize:'30px'}}>For any concerns regarding this report,call our quality helpline on +91 88662 02121</Text>
-    </div>
-    <div>
-      <Text style={{position: 'absolute',padding:'30px', top: '0', left: '0', paddingLeft: '0px',fontSize:'30px'}}>Sample Collection:</Text>
-      <Text strong style={{position: 'absolute', top: '0', left: '215px', padding: '30px',fontSize:'30px'}}>
-        +91 88662 02121
-      </Text>
-      <Text style={{position: 'absolute',padding:'90px', top: '0', left: '0', paddingLeft: '1px',fontSize:'30px'}}>Payment UPI:</Text>
-      <Text strong style={{position: 'absolute', top: '0', left: '90px', padding: '90px',fontSize:'30px'}}>
-       smartlab@ICICI </Text>
-       <Text strong style={{position: 'absolute',padding:'30px', top: '0', left: '0', paddingLeft: '1080px',fontSize:'30px'}}>Report Printed By:</Text>
-       <Text style={{position: 'absolute',padding:'30px', top: '0', left: '0', paddingLeft: '1330px',fontSize:'30px'}}>Miss Rashmi Varma</Text>
-       <Text strong style={{position: 'absolute',padding:'90px', top: '0', left: '0', paddingLeft: '1083px',fontSize:'28px'}}>Report Printed on:</Text>
-       <Text style={{position: 'absolute',padding:'90px', top: '0', left: '0', paddingLeft: '1330Px',fontSize:'28px'}}>04:35PM,02Apr,23</Text>
-       </div>
-</div>
-
-);
 export default App;
