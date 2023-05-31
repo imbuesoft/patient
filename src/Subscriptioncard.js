@@ -43,22 +43,20 @@ const Subscriptioncard = () => {
                         </div>
                         </div>
                     </table> 
-                 
-                
-            </div>
+        </div>
 
             <div className="col-3">
                  
                     <table cellPadding="px">
                         <div className="card" style={{width:'256px',height:'500px',borderRadius:'20px'}}>
                             <tr>
-                                <td><div className="card-header" style={{width:'16rem',backgroundColor:'silver',borderRadius:'10px'}} ><p align="center" style={{color:'white',fontSize:'20px'}}>⟡ silver</p></div></td>
+                                <td><div className="card-header" style={{width:'16rem',backgroundColor:'silver',borderRadius:'10px'}} ><p align="center" style={{color:'white',fontSize:'20px',fontWeight:'bold'}}>⟡ Silver</p></div></td>
                             </tr>
                          
                         <div className="card-body" style={{backgroundColor:"#ECF8F9",borderBottomLeftRadius:'20px',borderBottomRightRadius:'20px'}}>
                             <center>
                             <tr>
-                                <td><p className="card-text"><label style={{fontSize:'40px',fontWeight:'bold'}}>₹3600</label><br />INR/Yearly</p></td>
+                                <td><p className="card-text"><label style={{fontSize:'40px',fontWeight:'bold'}}>₹18500</label><br />INR/Yearly</p></td>
                             </tr>
                             <tr>
                                 <td><p style={{marginTop:'30px',fontWeight:'bold'}}>✓</p></td>
@@ -88,13 +86,13 @@ const Subscriptioncard = () => {
                  <table cellPadding="px">
                      <div className="card" style={{width:'256px',height:'500px',borderRadius:'20px'}}>
                          <tr>
-                             <td><div className="card-header" style={{width:'16rem',backgroundColor:'gold',borderRadius:'10px'}} ><p align="center" style={{color:'white',fontSize:'20px'}}>⟡ silver</p></div></td>
+                             <td><div className="card-header" style={{width:'16rem',backgroundColor:'gold',borderRadius:'10px'}} ><p align="center" style={{color:'white',fontSize:'20px',fontWeight:'bold'}}>Gold</p></div></td>
                          </tr>
                       
                      <div className="card-body" style={{backgroundColor:"#ECF8F9",borderBottomLeftRadius:'20px',borderBottomRightRadius:'20px'}}>
                          <center>
                          <tr>
-                             <td><p className="card-text"><label style={{fontSize:'40px',fontWeight:'bold'}}>₹3600</label><br />INR/Yearly</p></td>
+                             <td><p className="card-text"><label style={{fontSize:'40px',fontWeight:'bold'}}>₹36500</label><br />INR/Yearly</p></td>
                          </tr>
                          <tr>
                              <td><p style={{marginTop:'30px',fontWeight:'bold'}}>✓</p></td>
@@ -122,13 +120,13 @@ const Subscriptioncard = () => {
                  <table cellPadding="px">
                      <div className="card" style={{width:'256px',height:'500px',borderRadius:'20px'}}>
                          <tr>
-                             <td><div className="card-header" style={{width:'16rem',backgroundColor:'lightpink',borderRadius:'10px'}} ><p align="center" style={{color:'white',fontSize:'20px'}}>⟡ silver</p></div></td>
+                             <td><div className="card-header" style={{width:'16rem',backgroundColor:'purple',borderRadius:'10px'}} ><p align="center" style={{color:'white',fontSize:'20px',fontWeight:'bold'}}>Platinum</p></div></td>
                          </tr>
                       
                      <div className="card-body" style={{backgroundColor:"#ECF8F9",borderBottomLeftRadius:'20px',borderBottomRightRadius:'20px'}}>
                          <center>
                          <tr>
-                             <td><p className="card-text" ><label style={{fontSize:'40px',fontWeight:'bold'}}>₹3600</label><br />INR/Yearly</p></td>
+                             <td><p className="card-text" ><label style={{fontSize:'40px',fontWeight:'bold'}}>₹45500</label><br />INR/Yearly</p></td>
                          </tr>
                          <tr>
                              <td><p style={{marginTop:'30px',fontWeight:'bold'}}>✓</p></td>
