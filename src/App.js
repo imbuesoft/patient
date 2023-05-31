@@ -11,7 +11,9 @@ function App() {
   return (
     <div className="">
       <Navbar />
-      <Slider />
+      <div className="container mt-5">
+        <Slider />
+      </div>
 
       <div className="container mt-5">
         <div className='row m-0 p-0 '>
@@ -47,7 +49,9 @@ function App() {
         <Testimonial />
       </div>
 
-      <Footer />
+      <div className="mt-5">
+        <Footer />
+      </div>
 
     </div>
   );
