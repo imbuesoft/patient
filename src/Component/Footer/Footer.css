@@ -48,7 +48,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4em 5em 4em 0;
     
     
 }
@@ -92,6 +91,5 @@
     width: 100%;
     display: flex;
     justify-content: right;
-    margin-right: 3em;
     gap: 1em;
 }
