@@ -7,6 +7,7 @@ import Testimonial from './Component/Testimonial';
 import Features from './Component/Features';
 import Footer from './Component/Footer';
 import Searchbar from './Component/Searchbar/Searchbar';
+import VideoConsult from './Component/VideoConsult/VideoConsult';
 
 function App() {
   return (
@@ -48,8 +49,13 @@ function App() {
       </div>
 
 
+
       <div className="container-fluid mt-5">
         <Testimonial />
+      </div>
+
+      <div className="container-fluid mt-5">
+        <VideoConsult />
       </div>
 
       <div className="mt-5">
