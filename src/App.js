@@ -1,11 +1,12 @@
-import Cards from './compo/Card';
+import Service from './component/services/service';
 
-const App = () => {
+function App() {
   return (
     <>
-      <Cards/>
+    <Service/>
+
     </>
-  )
-};
+  );
+}
 
 export default App;
