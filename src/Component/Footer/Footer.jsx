@@ -37,87 +37,90 @@ const Footer = () => {
     return (
         <>
             <div className='h-auto'>
-                <div className='footer-container text-white d-flex flex-column h-auto  min-vh-100'>
-                    <div className="container-fluid text-center flex-grow-1 d-flex justify-content-center align-items-center">
-                        <div className="row h-100">
-                            <div className="col-12 col-xl-7 d-flex gap-3">
+                <div className='footer-container-main text-white d-flex flex-column pt-md-5'>
+                    <div className="footer-container container d-flex flex-column">
+                        <div className='w-100 d-md-none pt-4 d-flex justify-content-center align-items-center'>
+                            <img className='footer-navigation-image' src={logo} alt="medipract" />
+                        </div>
+                        <div className="container-fluid w-100 overflow-hidden p-0 text-center flex-grow-1 d-flex justify-content-center align-items-center">
+                            <div className="row h-100 w-100">
+                                <div className="col-12 col-xl-7 p-0 d-flex gap-3">
 
-                                <div className="footer-card-container">
-                                    <div className="row row-cols-3">
-                                        {
-                                            footerCardData?.map((item, index) => {
-                                                return <FooterCard data={{ ...item, key: index }} />
-                                            })
-                                        }
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="col-12 col-xl-5">
-                                <div className="footer-form-container text-start">
-
-                                    <div className='footer-form-card'>
-                                        <h5 className=''>Contact us</h5>
-                                        <div className=' mt-3' style={{ fontSize: "14px" }} >Integrated with NDHM and CoWin portals</div>
-                                        <div className='mt-5'>
-                                            <div className="row row-cols-2">
-                                                <div className="col">
-                                                    <div className="">
-                                                        <label htmlFor="iam" className="form-label">I am a</label>
-                                                        <input type="text" className="form-control" id="iam" />
-                                                    </div>
-                                                </div>
-                                                <div className="col">
-                                                    <div className="">
-                                                        <label htmlFor="email" className="form-label">Name</label>
-                                                        <input type="email" className="form-control" id="email" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div className="row row-cols-2 mt-3">
-                                                <div className="col">
-                                                    <div className="">
-                                                        <label htmlFor="phone" className="form-label">Phone No</label>
-                                                        <input type="number" className="form-control" id="phone" />
-                                                    </div>
-                                                </div>
-                                                <div className="col">
-                                                    <div className="">
-                                                        <label htmlFor="specialization" className="form-label">Specialization</label>
-                                                        <input type="text" className="form-control" id="specialization" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                                    <div className="footer-card-container px-2 pt-4">
+                                        <div className="row row-cols-3 w-100 m-0">
+                                            {
+                                                footerCardData?.map((item, index) => {
+                                                    return <FooterCard data={{ ...item, key: index }} />
+                                                })
+                                            }
                                         </div>
-                                        <button className="btn btn-primary  w-100 mt-5 fs-6 " style={{ height: "3em", background: "#5253CF", border: "none" }} disabled>Contact to MediPract</button>
                                     </div>
+                                </div>
+                                <div class="col-12 col-xl-5 p-0">
+                                    <div className="footer-form-container text-start p-3">
+                                        <div className='footer-form-card'>
+                                            <h5 className=''>Contact us</h5>
+                                            <div className=' mt-3' style={{ fontSize: "14px" }} >Integrated with NDHM and CoWin portals</div>
+                                            <div className='mt-5'>
+                                                <div className="row row-cols-2">
+                                                    <div className="col-12 col-sm-6 mt-3">
+                                                        <div className="">
+                                                            <label htmlFor="iam" className="form-label">I am a</label>
+                                                            <input type="text" className="form-control" id="iam" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-12 col-sm-6 mt-3">
+                                                        <div className="">
+                                                            <label htmlFor="email" className="form-label">Name</label>
+                                                            <input type="email" className="form-control" id="email" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="row row-cols-2">
+                                                    <div className="col-12 col-sm-6 mt-3">
+                                                        <div className="">
+                                                            <label htmlFor="phone" className="form-label">Phone No</label>
+                                                            <input type="number" className="form-control" id="phone" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-12 col-sm-6 mt-3">
+                                                        <div className="">
+                                                            <label htmlFor="specialization" className="form-label">Specialization</label>
+                                                            <input type="text" className="form-control" id="specialization" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button className="btn btn-primary  w-100 mt-5 fs-6 " style={{ height: "3em", background: "#5253CF", border: "none" }} disabled>Contact to MediPract</button>
+                                        </div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='footer-line'></div>
-                    <div className='footer-navigation d-flex flex-column flex-md-row'>
-                        <div className='w-100 d-none d-md-block'>
-                            <img className='order-0 footer-navigation-image' src={logo} alt="" />
-                        </div>
-                        <div className='order-2 order-md-1 h-100 d-flex justify-content-center align-items-center footer-navigation-copyright w-100 d-flex justify-content-center'>Copyright © 2023 MediPract.com</div>
-                        <div className='order-1 order-md-2 h-100 d-flex justify-content-center align-items-center footer-navigation-social me-md-3'>
-                            <div className='d-flex'>
-                                <a className='mx-2' href="http://" target="_blank" rel="noopener noreferrer">
-                                    <Twitter {...svgAttributes} />
-                                </a>
-                                <a className='mx-2' href="http://" target="_blank" rel="noopener noreferrer">
-                                    <Facebook {...svgAttributes} />
-                                </a>
-                                <a className='mx-2' href="http://" target="_blank" rel="noopener noreferrer">
-                                    <Linkedin {...svgAttributes} />
-                                </a>
-                                <a className='mx-2' href="http://" target="_blank" rel="noopener noreferrer">
-                                    <Instagram {...svgAttributes} />
-                                </a>
+                        <div className='footer-line'></div>
+                        <div className='footer-navigation d-flex flex-column flex-md-row'>
+                            <div className='w-100 d-none d-md-block ps-5'>
+                                <img className='order-0 footer-navigation-image ' src={logo} alt="medipract" />
                             </div>
+                            <div className='order-2 order-md-1 h-100 d-flex justify-content-center align-items-center footer-navigation-copyright w-100 d-flex justify-content-center text-center'>Copyright © 2023 MediPract.com</div>
+                            <div className='order-1 order-md-2 h-100 d-flex justify-content-center align-items-center footer-navigation-social me-md-3'>
+                                <div className='d-flex'>
+                                    <a className='mx-2' href="http://" target="_blank" rel="noopener noreferrer">
+                                        <Twitter {...svgAttributes} />
+                                    </a>
+                                    <a className='mx-2' href="http://" target="_blank" rel="noopener noreferrer">
+                                        <Facebook {...svgAttributes} />
+                                    </a>
+                                    <a className='mx-2' href="http://" target="_blank" rel="noopener noreferrer">
+                                        <Linkedin {...svgAttributes} />
+                                    </a>
+                                    <a className='mx-2' href="http://" target="_blank" rel="noopener noreferrer">
+                                        <Instagram {...svgAttributes} />
+                                    </a>
+                                </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
