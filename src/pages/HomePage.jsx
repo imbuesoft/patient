@@ -9,7 +9,7 @@ import Searchbar from '../Component/Searchbar/Searchbar';
 import VideoConsult from '../Component/VideoConsult';
 
 const Container = (x) =>
-  <div className={"container-fluid px-5 " + x.className} style={{ maxWidth: "125em", ...x.style }}>
+  <div className={"container-fluid mt-5 " + x.className} style={{ maxWidth: "125em", ...x.style }}>
     {x.children}
   </div>
 
@@ -68,7 +68,7 @@ function App() {
         <VideoConsult />
       </Container>
 
-      <div style={{background:"#232477"}}>
+      <div className='mt-5' style={{background:"#232477"}}>
         <Container>
           <Footer />
         </Container>
