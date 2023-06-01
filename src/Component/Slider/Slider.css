@@ -1,0 +1,9 @@
+.slider-store-image {
+    height: 3em;
+}
+@media (max-width: 768px) {
+    .slider-store-image {
+        width: 10em;
+        height: auto;
+    }
+}
