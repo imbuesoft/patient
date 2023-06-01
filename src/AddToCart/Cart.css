@@ -1,73 +1,82 @@
-.Cart-container{
- 
+.Cart-container {
+
     width: 60%;
     height: 500px;
     border: 2px solid black;
     margin: auto;
     margin-top: 20px;
-    background-color:#ebe2e200;
+    background-color: #ebe2e200;
 }
-.Privous-button{
-  margin: 9px 0 0 10px;
+
+.Privous-button {
+    margin: 9px 0 0 10px;
 
 }
-.location-w-item{
-    
-    width: 725px;
+
+.location-w-item {
+
+
     height: 40px;
-border: 2px solid whitesmoke;
-margin-left: 15px;
-margin-top: 10px;
+    border: 2px solid whitesmoke;
+    margin-left: 15px;
+    margin-top: 10px;
 
-display: flex;
-background-color: whitesmoke;
-border-radius: 3px;
+    display: flex;
+    background-color: whitesmoke;
+    border-radius: 3px;
 
 
 }
-.navbar-nav{
+
+.navbar-nav {
     font-size: small;
     float: left;
 }
-.p1{
+
+.p1 {
     font-size: large;
-    font-weight: 600;   
-   margin-left:150px ;
-   padding-top:5px ;
-   
+    font-weight: 600;
+    margin-left: 150px;
+    padding-top: 5px;
+
 }
 
-.first-item{
+.first-item {
     /* border: 2px solid black ; */
-    width: 725px;
+
     margin-left: 15px;
     background-color: whitesmoke;
     margin-top: 2px;
     border: 2px solid whitesmoke;
     border-radius: 3px;
-   display: flex;
-   padding-right:10px ;
-  
+    display: flex;
+    padding-right: 10px;
+
 }
+
 /* hr{
     margin-left: 5px;
     margin-right: 5px;
 } */
-.container{
+.container {
     display: flex;
 }
-.container .discript1{
-    margin-top:5px;
+
+.container .discript1 {
+    margin-top: 5px;
     margin-left: 10px;
 }
-.discript1 h6{
-    margin:0px ;
+
+.discript1 h6 {
+    margin: 0px;
 }
-.container p{
+
+.container p {
     font-size: small;
     margin-bottom: 0;
 }
-.count{
+
+.count {
     width: 89px;
     height: 30px;
     border: 1px solid #14bef0;
@@ -77,7 +86,8 @@ border-radius: 3px;
     background-color: #14bef0;
     text-align: center;
 }
-.count button{
+
+.count button {
     border: none;
     height: 27.5px;
     /* margin-top: 1px; */
@@ -85,25 +95,27 @@ border-radius: 3px;
     color: #14bef0;
 
 }
- .count span{
-    padding-left:11.5px;
- 
+
+.count span {
+    padding-left: 11.5px;
+
     background-color: #14bef0;
     color: white;
 }
-.price-section p{
+
+.price-section p {
     text-align: right;
 }
-.Add-more{
-    width: 725px;
+
+.Add-more {
     height: 100px;
     margin-left: 15px;
     margin-top: 3px;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
 }
 
-.Add-more .Addmorebutton{
-    border: 1.5px solid #14bef0 ;
+.Add-more .Addmorebutton {
+    border: 1.5px solid #14bef0;
     background-color: white;
     color: #14bef0;
     width: 150px;
@@ -112,27 +124,29 @@ border-radius: 3px;
     margin-left: 13px;
     margin-top: 4px;
 }
+
 .Addmorebutton:hover {
     background-color: #14bef0;
     color: white;
     transition: .3s;
 }
-.cart-footer{
+
+.cart-footer {
     height: 78px;
-    width: 725px;
     margin-left: 15px;
     margin-top: 3px;
     /* border: 2px solid black; */
-    background-color: whitesmoke ;
-   
+    background-color: whitesmoke;
+
     /* border */
 }
-.cart-footer p{
+
+.cart-footer p {
     padding-top: 5px;
     padding-left: 7px;
 }
-.checkoutbtn{
-    width: 703px;
+
+.checkoutbtn {
     height: 30px;
     margin-left: 11px;
     background-color: #14bef0;
@@ -140,5 +154,5 @@ border-radius: 3px;
     border: none;
     font-weight: 450;
     border-radius: 2px;
-   font-size: medium;
+    font-size: medium;
 }
