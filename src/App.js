@@ -7,13 +7,14 @@ import Testimonial from './Component/Testimonial/Testimonial';
 import Features from './Component/Features/Features';
 import Footer from './Component/Footer/Footer';
 import Searchbar from './Component/Searchbar/Searchbar';
+import Consult from './Component/Consult/Consult';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-
       <Searchbar/>
+      <Consult />
       <Slider />
 
       <div className="container mt-5">

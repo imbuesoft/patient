@@ -1,0 +1,24 @@
+.mainDiv {
+    height: 419px;
+    width: 94%;
+    border-radius: 20px;
+    background-color: #f8e9e6;
+}
+
+.title-text {
+    color: black;
+}
+
+.profile-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    position: absolute  ;
+}
+
+.imgs {
+    width: 15px;
+    display: relative;
+}
