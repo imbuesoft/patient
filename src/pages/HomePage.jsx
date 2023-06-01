@@ -8,15 +8,28 @@ import Footer from '../Component/Footer';
 import Searchbar from '../Component/Searchbar/Searchbar';
 import VideoConsult from '../Component/VideoConsult';
 
+const Container = (x) =>
+  <div className={"container-fluid px-5 " + x.className} style={{ maxWidth: "125em", ...x.style }}>
+    {x.children}
+  </div>
+
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      {/* <Searchbar /> */}
 
-      <div className="container-fluid px-5" style={{maxWidth:"125em"}}>
-        <Slider />
+      <div style={{ backgroundColor: '#429ca533' }}>
+        <Container>
+          <Navbar />
+        </Container>
       </div>
+
+      {/* <Container>
+        <Searchbar />
+      </Container> */}
+
+      <Container>
+        <Slider />
+      </Container>
 
       <div className="container mt-5">
         <div className='row m-0 p-0 '>
@@ -47,18 +60,18 @@ function App() {
         </div>
       </div>
 
-
-
-      <div className="container-fluid mt-5 px-5" style={{maxWidth:"125em"}}>
+      <Container>
         <Testimonial />
-      </div>
+      </Container>
 
-      <div className="container-fluid mt-5">
+      <Container>
         <VideoConsult />
-      </div>
+      </Container>
 
-      <div className="mt-5">
-        <Footer />
+      <div style={{background:"#232477"}}>
+        <Container>
+          <Footer />
+        </Container>
       </div>
 
     </div>
