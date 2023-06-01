@@ -50,13 +50,13 @@ const Footer = () => {
                                         <div className="row row-cols-3 w-100 m-0">
                                             {
                                                 footerCardData?.map((item, index) => {
-                                                    return <FooterCard data={{ ...item, key: index }} />
+                                                    return <FooterCard key={index} data={{ ...item, key: index }} />
                                                 })
                                             }
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-xl-5 p-0">
+                                <div className="col-12 col-xl-5 p-0">
                                     <div className="footer-form-container text-start p-3">
                                         <div className='footer-form-card'>
                                             <h5 className=''>Contact us</h5>
