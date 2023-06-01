@@ -6,7 +6,7 @@ import './ImgCard.css'; // Import custom CSS file for additional styling
 const ImgCard = () => {
   return (
     <div className="container">
-      <div className="header text-white p-2">
+      <div className="header text-white p-0">
         <div className="row align-items-center">
           <div className="col-6">
             <div className="logo">
