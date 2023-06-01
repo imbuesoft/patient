@@ -1,10 +1,12 @@
-import Service from './component/services/service';
+// import Service from './component/services/service';
+ import Myslidebar from './component/slidebar/myslidebar';
+
 
 function App() {
   return (
     <>
-    <Service/>
-
+    {/* <Service/> */}
+    <Myslidebar/>
     </>
   );
 }
