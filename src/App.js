@@ -1,8 +1,10 @@
-import Subscriptioncard from "./Subscriptioncard";
+/*import Subscriptioncard from "./Subscriptioncard";*/
+import Bookedmedicinetable from "./Bookedmedicinetable";
 function App() {
   return (
    <>
-      <Subscriptioncard />
+     {/* <Subscriptioncard />*/}
+     <Bookedmedicinetable />
    </>
   );
 }
