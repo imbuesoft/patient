@@ -1,5 +1,6 @@
 /*import Subscriptioncard from "./Subscriptioncard";*/
-import Bookedmedicinetable from "./Bookedmedicinetable";
+
+import Bookedmedicinetable from "./medicine/Bookedmedicinetable";
 function App() {
   return (
    <>
