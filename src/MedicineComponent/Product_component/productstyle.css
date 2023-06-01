@@ -1,0 +1,78 @@
+
+.productcontainer{
+    display: flex;
+    /* align-items: start; */
+    margin-bottom: 500px;
+}
+
+.sideimg{
+    margin-top: 15px;
+}
+.productinfo{
+    margin-top: 30px;
+    height: 480.797px;
+    width: 388.75px;
+    border: 1px solid #F0F0F5;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 10px; */
+    border: 1.5px solid #F0F0F5;
+}
+.list-group-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h5{
+    color: #bdbdbe;
+    
+    margin-left: 20px;
+    
+}
+.unitclass{
+    display: flex;
+    font-size: small;
+    margin-left: 20px;
+    justify-content: space-between;
+}
+hr{
+    width: 158.375px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+.tabletcount{
+    height: 40px;
+    width: 158.375px;
+    text-align: center;
+    font-size: small;
+    border: 1px solid #F0F0F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50%;
+    
+}
+.Addtocart{
+    width: 356.75px;
+    margin: 0 14px;
+    margin-top: 10px;
+    border: 0;
+    background-color: #14BEF0;
+    height: 40px;
+    border-radius: 2px;
+    color: white;
+}
+.heighlighs{
+    border-top: 1px solid #F0F0F5;
+    margin-top: 20px;
+}
+ul li{
+    color: #bdbdbe;
+}
+ul li span{
+    color: black;
+}
+
+.productwraper{
+    position: fixed;
+}
