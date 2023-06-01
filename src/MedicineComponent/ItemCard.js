@@ -7,7 +7,7 @@ const ItemCard = (props) => {
                 <span className="position-absolute fw-bold text-white px-2 p-1 rounded-pill" style={{ fontSize: 11, backgroundColor: 'rgb(71, 184, 90)' }}>{props.discount}</span>
                 <div style={{ textAlign: "center" }}>
                     <div className="d-flex align-items-center justify-content-center" style={{ height: 140, width: 130, }}>
-                        <img src={props.path} className="rounded" style={{ height: 90, width: 90 }} />
+                        <img src={props.path} alt={props.title} className="rounded" style={{ height: 90, width: 90 }} />
                     </div>
                 </div>
                 <span className="card-title pt-2" style={{ height: "60px", fontSize: 16, textAlign: 'left', fontWeight: '600' }}>{props.title}</span>
