@@ -7,7 +7,7 @@ const Testimonial = () => {
             <div
                 id="carouselExampleControls"
                 className="carousel slide w-100 h-auto"
-                style={{ minHeight: "22em", background: "#aaa", borderRadius:"25px" }}
+                style={{ minHeight: "22em", background: "#429ca5", borderRadius:"25px" }}
                 data-bs-ride="carousel"
             >
                 <button
