@@ -4,6 +4,13 @@
   color: #fff;
 }
 
+.accordion-button:after {
+  order: -1;
+  margin-left: 0;
+  margin-right: 0.5em;
+}
+
+
 .sidebar-divider {
   border-top: 1px solid #fff;
   margin-top: 10px;
@@ -81,7 +88,7 @@
 
 
 
-.categoties-btn{
+.categoties-btn {
   border: 0px;
   padding: 6px 0px;
   background: white;
@@ -90,10 +97,11 @@
   font-size: 18px;
 }
 
-hr{
+hr {
   color: grey;
   margin: 10px;
 }
-.maintitle{
+
+.maintitle {
   font-size: 30px;
 }
