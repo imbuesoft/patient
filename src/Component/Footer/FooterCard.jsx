@@ -8,10 +8,10 @@ const FooterCard = ({ data = {
     return (
         <>
             <div className="col-12 col-sm-6 col-md-4 col-lg-4 col-xxl-4" key={data?.key}>
-                <div className="card footer-card">
+                <div className="card footer-card h-auto flex-shrink-0">
                     <div className="card-body">
                         <h5 className="card-title text-start text-light">{data?.title}</h5>
-                        <ul className="footer-card-ul">
+                        <ul className="footer-card-ul p-0 text-start">
                             {data?.list?.map((item, index) => {
                                 return (
                                     <li key={index}>
