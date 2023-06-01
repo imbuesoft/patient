@@ -28,7 +28,7 @@ const ImgCard = () => {
               <h1 className="text-white" style={{fontSize: "18px", marginLeft: "30px", fontWeight: "400"}}>
                 All insurance accepted &amp; No-cost EMI available.
               </h1>
-              <div className="border-box">
+              <div className="border-box" style={{marginTop: "30px"}}>
                 <div className="reach-out">
                     <h1 className="text-white" style={{ fontSize: "18px", marginLeft: "10px", fontWeight: "400", marginTop: "5px" }}>
                     Reach out to us on
