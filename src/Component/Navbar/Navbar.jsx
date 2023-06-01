@@ -4,8 +4,7 @@ import './Navbar.css'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-md " style={{ backgroundColor: '#429ca533' }}>
-            
+        <nav className="navbar navbar-expand-md ">
                 <a className="navbar-brand" href="#abcd" data-bs-dismiss="offcanvas" >
                     <img src={logo} alt="" width="140" className="d-inline-block align-text-top" />
                 </a>
