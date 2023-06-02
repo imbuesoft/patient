@@ -1,0 +1,32 @@
+[
+    {
+      "dr_name": "Ramesh Srinivasan",
+      "cust_name": "Kumar MVS(Verified)",
+      "cust_profile":"K",
+      "duraction":"a day ago",
+      "Reason":"Visited for Royal care super Specialty lab",
+      "reccomend":"yes",
+      "rev":"Doctor is very good, listens to the child issues carefully, and prescribes very minimal to no medicine. Highly recommend",
+      "g_tag":["Best Medicine","Explanation of the health issue"]
+    },
+    {
+      "dr_name": "Prakash Gujarati",
+      "cust_name": "Deep Pandya(Verified)",
+      "cust_profile":"D",
+      "duraction":"a month ago",
+      "Reason":"Visited For  schizophrenia",
+      "rev":"Doctor Understood the issue i was facing for years.",
+      "reccomend":"yes",
+      "g_tag":["Best Medicine","Doctor friendliness","Value for money"]
+    },
+    {
+      "dr_name": "Miraj Sangdecha",
+      "cust_name": "Gehna Tibb(Verified)",
+      "cust_profile":"G",
+      "duraction":"a year ago",
+      "rev":"Very patient and takes time to understand our problem and explain everything in detail.One the best doctor we have met so far. Would definitely recommend him for any gastro related issues for your kid",
+      "reccomend":"yes",
+      "g_tag":["Best Medicine"]
+    }
+  ]
+  

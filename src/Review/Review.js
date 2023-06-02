@@ -1,36 +1,43 @@
-import React from 'react'
-import './Review.css'
+import React from 'react';
+import './Review.css';
 
-const Review = () => {
+const Review = ({ data }) => {
   return (
     <div className='review m-auto'>
-      <div className="card mycard shadow">
-        <div className="card-header" style={{backgroundColor:'white'}}>
-          <b>Patient Stories for Dr. Ramesh Srinivasan</b>
-        </div>
-            <div className="card-body" >
-              <div className='feedback'>
-                <div className='feedback_icon'>
-                  K
-                </div>
-                <div className="reviewer-name">
-                  <span style={{color: "#787887"}}>Kumar MVS(Verified)</span>
-                  <span className='tag'>In-clinic</span>
-                  <span style={{color: "#787887",fontSize:'13.5px',marginLeft:'35px'}}>a month ago</span><br/>
-                </div>
+      {data.map((item, index) => (
+        <div className="card mycard shadow" key={index}>
+          <div className="card-header" style={{ backgroundColor: 'white' }}>
+            <b>Patient Stories for Dr. {item.dr_name}</b>
+          </div>
+          <div className="card-body">
+            <div className='feedback'>
+              <div className='feedback_icon'>
+                {item.cust_profile}
               </div>
-              <div className='feedback_write'>
-                  <span><b>Visited for Royal care super Specilalty lab </b></span><br/>
-                  <span style={{marginBottom:'25px'}}>I recommend the lab</span>
-              </div>
-              <div className='reason'>
-                <span>Happy with:</span><span className='feedback__context'>Best Service</span><br/><br/>
-                <span className='reason_para'>The lab is very Closely releted to te patients.They Provide best service and effectively.We satisfied with the Lab. </span>
+              <div className="reviewer-name">
+                <span style={{ color: "#787887" }}>{item.cust_name}</span>
+                <span className='tag'>In-clinic</span>
+                <span style={{ color: "#787887", fontSize: '13.5px', marginLeft: '35px' }}>{item.duraction}</span><br/>
               </div>
             </div>
+            <div className='feedback_write'>
+              <span><b>{item.Reason} </b></span><br/>
+              <span style={{ marginBottom: '25px' }}>I recommend the doctor : {item.reccomend}</span>
+            </div>
+            <div className='reason'>
+            <span>Happy with:</span>
+              {item.g_tag.map(val=>{
+              return(<span className='feedback__context'>{val}</span> )
+              })
+            }
+              <br/><br/>
+              <span className='reason_para'>{item.rev}</span>
+            </div>
+          </div>
         </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Review
+export default Review;
