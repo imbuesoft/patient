@@ -24,6 +24,7 @@ const MedicinesSearch = () => {
         setClick(false);
     }
 
+
     return (
     <div className='container-fluid navBar'>
         <div className="row pt-4">

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import SidebarFilter from './MedicineComponent/SidebarFilter'
+import SidebarFilter from '../MedicineComponent/SidebarFilter'
 import './Medicine.css'
-import ItemCard from './MedicineComponent/ItemCard'
-import CategoryCard from './MedicineComponent/CategoryCard'
+import ItemCard from '../MedicineComponent/ItemCard'
+import CategoryCard from '../MedicineComponent/CategoryCard'
 import CatData from "./CatData.json";
-import Sidebar from './MedicineComponent/Sidebar New/Sidebar'
-import MedicinesSearch from './MedicineComponent/SearchBar/MedicinesSearch'
-import Offer from './MedicineComponent/Offer/Offer'
+import Sidebar from '../MedicineComponent/Sidebar New/Sidebar'
+import MedicinesSearch from '../MedicineComponent/SearchBar/MedicinesSearch'
+import Offer from '../MedicineComponent/Offer/Offer'
 
 const Medicine = () => {
     const [category, setCategory] = useState("Eye & Ear Care");

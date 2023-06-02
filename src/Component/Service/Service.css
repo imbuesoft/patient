@@ -1,4 +1,4 @@
-.servicecard {
+.service_card {
   position: relative;
   width: 198.677px;
   height: 288.667px;
@@ -6,29 +6,28 @@
   border-radius: 24px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .12);
   display: block;
-
+  overflow: hidden;
 }
 
-.servicecardimg {
+.service_card_img {
+  object-fit: contain;
   position: relative;
   width: 100%;
+  border-radius: 0;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   height: 170px;
   background: #AFCFED;
-  padding-top: 12px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-bottom: 0px;
 
 }
 
-.info {
+.service_info {
   position: relative;
   padding: 1px 15px 0px;
 }
 
 .row-1 {
+  margin-top: 0.3em;
   padding-bottom: 0px;
   color: #2d2d32;
   font-weight: 550;
@@ -42,4 +41,21 @@
   font-weight: 400;
   color: #787887;
   padding-bottom: 5px;
+}
+
+@media (max-width: 767px) {
+  .service_card { 
+    /* width: 100%; */
+  }
+}
+
+@media (max-width: 469px) {
+  .service_card { 
+    width: 100%;
+  }
+}
+@media (max-width: 321px) {
+  .service_card_container{
+    width: 100%;
+  }
 }

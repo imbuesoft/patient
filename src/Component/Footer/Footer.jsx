@@ -1,167 +1,126 @@
 import './Footer.css'
 import logo from './logo.svg'
+import { ReactComponent as Twitter } from './assets/twitter.svg'
+import { ReactComponent as Facebook } from './assets/facebook.svg'
+import { ReactComponent as Linkedin } from './assets/linkedin.svg'
+import { ReactComponent as Instagram } from './assets/instagram.svg'
+import FooterCard from './FooterCard'
+
+const footerCardData = [
+    {
+        title: "About",
+        list: [{ label: "Home" }, { label: "Terms and Conditions", link: "#" }, { label: "Privacy Policy", link: "#" }, { label: "Google Api Disclosure", link: "#" }, { label: "Security", link: "#" },]
+    },
+    {
+        title: "Products",
+        list: [{ label: "For Doctors", link: "#" }, { label: "Eka EMR", link: "#" }, { label: "GMB For Doctors", link: "#" }, { label: "EMR for Neurologists", link: "#" }]
+    },
+    {
+        title: "Cowin",
+        list: [{ label: "Book Vaccination Slot", link: "#" }, { label: "Download Vaccination Certificate", link: "#" }, { label: "Change Mobile Number", link: "#" }, { label: "Add Passport Details", link: "#" }]
+    },
+    {
+        title: "ABDM",
+        list: [{ label: "Create ABHA", link: "#" }]
+    },
+    {
+        title: "About Us",
+        list: [{ label: "Team", link: "#" }, { label: "Eka Stories", link: "#" }]
+    },
+]
+
+const svgAttributes = {
+    fill: 'white', height: 23, width: 23,
+}
 
 const Footer = () => {
     return (
         <>
-            <div className='overflow-hidden'>
-                <div className='footer-container text-white d-flex flex-column'>
-                    <div className="container-fluid text-center flex-grow-1">
-                        <div className="row h-100">
-                            <div className="col-7 d-flex gap-3">
+            <div className='h-auto'>
+                <div className='footer-container-main h-100 w-100 text-white d-flex flex-column pt-md-5'>
+                    <div className="footer-container h-100 container d-flex flex-column">
+                        <div className='w-100 d-md-none pt-4 d-flex justify-content-center align-items-center'>
+                            <img className='footer-navigation-image' src={logo} alt="medipract" />
+                        </div>
+                        <div className="container-fluid w-100 overflow-hidden p-0 text-center flex-grow-1 d-flex justify-content-center align-items-center">
+                            <div className="row h-100 w-100">
+                                <div className="col-12 col-xl-7 p-0 d-flex gap-3">
 
-                                <div className="footer-card-container">
-                                    <div className="row row-cols-3">
-                                        <div className="col">
-                                            <div className="card footer-card">
-                                                <div className="card-body">
-                                                    <h5 className="card-title text-start text-light">About</h5>
-                                                    <ul className="footer-card-ul">
-                                                        <li>Home</li>
-                                                        <li>Terms and Conditions</li>
-                                                        <li>Privacy Policy</li>
-                                                        <li>Google Api Disclosure</li>
-                                                        <li>Security</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col">
-                                            <div className="card footer-card">
-                                                <div className="card-body">
-                                                    <h5 className="card-title text-start text-light">Products</h5>
-                                                    <ul className="footer-card-ul">
-                                                        <li>For Doctors</li>
-                                                        <li>Eka EMR</li>
-                                                        <li>GMB For Doctors</li>
-                                                        <li>EMR for Neurologists</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col">
-                                            <div className="card footer-card">
-                                                <div className="card-body">
-                                                    <h5 className="card-title text-start text-light">Cowin</h5>
-                                                    <ul className="footer-card-ul">
-                                                        <li>Book Vaccination Slot</li>
-                                                        <li>Download Vaccination Certificate</li>
-                                                        <li>Change Mobile Number</li>
-                                                        <li>Add Passport Details</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row row-cols-3 mt-4">
-                                        <div className="col">
-                                            <div className="card footer-card">
-                                                <div className="card-body">
-                                                    <h5 className="card-title text-start text-light">ABDM</h5>
-                                                    <ul className="footer-card-ul">
-                                                        <li>Create ABHA</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col">
-                                            <div className="card footer-card">
-                                                <div className="card-body">
-                                                    <h5 className="card-title text-start text-light">About Us</h5>
-                                                    <ul className="footer-card-ul">
-                                                        <li>Team</li>
-                                                        <li>Eka Stories</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+                                    <div className="footer-card-container px-2 pt-4">
+                                        <div className="row row-cols-3 w-100 m-0">
+                                            {
+                                                footerCardData?.map((item, index) => {
+                                                    return <FooterCard key={index} data={{ ...item, key: index }} />
+                                                })
+                                            }
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-                            <div class="col-5">
-                                <div className="footer-form-container text-start">
-
-                                    <div className='footer-form-card'>
-                                        <h5 className=''>Contact us</h5>
-                                        <div className=' mt-3' style={{ fontSize: "14px" }} >Integrated with NDHM and CoWin portals</div>
-                                        <div className='mt-5'>
-                                            <div className="row row-cols-2">
-                                                <div className="col">
-                                                    <div className="">
-                                                        <label htmlFor="iam" className="form-label">I am a</label>
-                                                        <input type="text" className="form-control" id="iam" />
+                                <div className="col-12 col-xl-5 p-0">
+                                    <div className="text-start p-3 h-100 w-100 m-0 flex-shrink-0 d-flex justify-content-center align-items-center">
+                                        <div className='footer-form-card h-100 w-100 flex-shrink-0'>
+                                            <h5 className=''>Contact us</h5>
+                                            <div className=' mt-3' style={{ fontSize: "14px" }} >Integrated with NDHM and CoWin portals</div>
+                                            <div className='mt-5'>
+                                                <div className="row row-cols-2">
+                                                    <div className="col-12 col-sm-6 mt-3">
+                                                        <div className="">
+                                                            <label htmlFor="iam" className="form-label">I am a</label>
+                                                            <input type="text" className="form-control" id="iam" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-12 col-sm-6 mt-3">
+                                                        <div className="">
+                                                            <label htmlFor="email" className="form-label">Name</label>
+                                                            <input type="email" className="form-control" id="email" />
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div className="col">
-                                                    <div className="">
-                                                        <label htmlFor="email" className="form-label">Name</label>
-                                                        <input type="email" className="form-control" id="email" />
+                                                <div className="row row-cols-2">
+                                                    <div className="col-12 col-sm-6 mt-3">
+                                                        <div className="">
+                                                            <label htmlFor="phone" className="form-label">Phone No</label>
+                                                            <input type="number" className="form-control" id="phone" />
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-12 col-sm-6 mt-3">
+                                                        <div className="">
+                                                            <label htmlFor="specialization" className="form-label">Specialization</label>
+                                                            <input type="text" className="form-control" id="specialization" />
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="row row-cols-2 mt-3">
-                                                <div className="col">
-                                                    <div className="">
-                                                        <label htmlFor="phone" className="form-label">Phone No</label>
-                                                        <input type="number" className="form-control" id="phone" />
-                                                    </div>
-                                                </div>
-                                                <div className="col">
-                                                    <div className="">
-                                                        <label htmlFor="specialization" className="form-label">Specialization</label>
-                                                        <input type="text" className="form-control" id="specialization" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <button className="btn btn-primary  w-100 mt-5 fs-6 " style={{ height: "3em", background: "#5253CF", border: "none" }} disabled>Contact to MediPract</button>
                                         </div>
-                                        <button className="btn btn-primary  w-100 mt-5 fs-6 " style={{ height: "3em", background: "#5253CF", border: "none" }} disabled>Contact to MediPract</button>
-                                    </div>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className='footer-line'></div>
-                    <div className='footer-navigation'>
-                        <div className='w-100'>
-                            <img className='footer-navigation-image' src={logo} alt="" />
+                        <div className='footer-line d-none d-lg-block '></div>
+                        <div className='footer-navigation d-flex flex-column flex-md-row'>
+                            <div className='w-100 d-none d-md-block ps-5'>
+                                <img className='order-0 footer-navigation-image ' src={logo} alt="medipract" />
+                            </div>
+                            <div className='order-2 order-md-1 h-100 d-flex justify-content-center align-items-center footer-navigation-copyright w-100 d-flex justify-content-center text-center'>Copyright © 2023 MediPract.com</div>
+                            <div className='order-1 order-md-2 h-100 d-flex justify-content-center align-items-center d-flex justify-content-rig me-md-3'>
+                                <div className='d-flex'>
+                                    <a className='mx-2 footer-link' href="http://" target="_blank" rel="noopener noreferrer">
+                                        <Twitter {...svgAttributes} />
+                                    </a>
+                                    <a className='mx-2 footer-link' href="http://" target="_blank" rel="noopener noreferrer">
+                                        <Facebook {...svgAttributes} />
+                                    </a>
+                                    <a className='mx-2 footer-link' href="http://" target="_blank" rel="noopener noreferrer">
+                                        <Linkedin {...svgAttributes} />
+                                    </a>
+                                    <a className='mx-2 footer-link' href="http://" target="_blank" rel="noopener noreferrer">
+                                        <Instagram {...svgAttributes} />
+                                    </a>
+                                </div>
 
-                        </div>
-                        <div className='footer-navigation-copyright w-100 d-flex justify-content-center'>Copyright © 2023 MediPract.com</div>
-                        <div className='footer-navigation-social'>
-
-                            {/* svg for twitter */}
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" className='footer-navigation-svg-icon' viewBox="0 0 24 24" fill="white">
-                                    <path d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M22.47 5.09c-.81.36-1.68.6-2.6.71.94-.56 1.66-1.44 2-2.5-.88.52-1.86.9-2.9 1.1-.84-.9-2.04-1.46-3.37-1.46-2.55 0-4.6 2.05-4.6 4.6 0 .36.04.72.13 1.07-3.82-.19-7.2-2.03-9.49-4.82-.4.69-.63 1.49-.63 2.35 0 1.6.81 3 2.04 3.82-.75-.02-1.46-.23-2.07-.57v.06c0 2.23 1.59 4.08 3.7 4.5-.39.1-.8.16-1.22.16-.3 0-.6-.03-.88-.08.6 1.87 2.33 3.23 4.4 3.27-1.61 1.26-3.64 2.01-5.85 2.01-.38 0-.76-.02-1.14-.07 2.08 1.34 4.55 2.12 7.21 2.12 8.64 0 13.39-7.16 13.39-13.39 0-.2 0-.41-.01-.61.92-.67 1.72-1.52 2.35-2.48z" />
-                                </svg>
-                            </a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" className='footer-navigation-svg-icon' viewBox="0 0 24 24" fill="white">
-                                    <path d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M22.47 5.09c-.81.36-1.68.6-2.6.71.94-.56 1.66-1.44 2-2.5-.88.52-1.86.9-2.9 1.1-.84-.9-2.04-1.46-3.37-1.46-2.55 0-4.6 2.05-4.6 4.6 0 .36.04.72.13 1.07-3.82-.19-7.2-2.03-9.49-4.82-.4.69-.63 1.49-.63 2.35 0 1.6.81 3 2.04 3.82-.75-.02-1.46-.23-2.07-.57v.06c0 2.23 1.59 4.08 3.7 4.5-.39.1-.8.16-1.22.16-.3 0-.6-.03-.88-.08.6 1.87 2.33 3.23 4.4 3.27-1.61 1.26-3.64 2.01-5.85 2.01-.38 0-.76-.02-1.14-.07 2.08 1.34 4.55 2.12 7.21 2.12 8.64 0 13.39-7.16 13.39-13.39 0-.2 0-.41-.01-.61.92-.67 1.72-1.52 2.35-2.48z" />
-                                </svg>
-                            </a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" className='footer-navigation-svg-icon' viewBox="0 0 24 24" fill="white">
-                                    <path d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M22.47 5.09c-.81.36-1.68.6-2.6.71.94-.56 1.66-1.44 2-2.5-.88.52-1.86.9-2.9 1.1-.84-.9-2.04-1.46-3.37-1.46-2.55 0-4.6 2.05-4.6 4.6 0 .36.04.72.13 1.07-3.82-.19-7.2-2.03-9.49-4.82-.4.69-.63 1.49-.63 2.35 0 1.6.81 3 2.04 3.82-.75-.02-1.46-.23-2.07-.57v.06c0 2.23 1.59 4.08 3.7 4.5-.39.1-.8.16-1.22.16-.3 0-.6-.03-.88-.08.6 1.87 2.33 3.23 4.4 3.27-1.61 1.26-3.64 2.01-5.85 2.01-.38 0-.76-.02-1.14-.07 2.08 1.34 4.55 2.12 7.21 2.12 8.64 0 13.39-7.16 13.39-13.39 0-.2 0-.41-.01-.61.92-.67 1.72-1.52 2.35-2.48z" />
-                                </svg>
-                            </a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" className='footer-navigation-svg-icon' viewBox="0 0 24 24" fill="white">
-                                    <path d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M22.47 5.09c-.81.36-1.68.6-2.6.71.94-.56 1.66-1.44 2-2.5-.88.52-1.86.9-2.9 1.1-.84-.9-2.04-1.46-3.37-1.46-2.55 0-4.6 2.05-4.6 4.6 0 .36.04.72.13 1.07-3.82-.19-7.2-2.03-9.49-4.82-.4.69-.63 1.49-.63 2.35 0 1.6.81 3 2.04 3.82-.75-.02-1.46-.23-2.07-.57v.06c0 2.23 1.59 4.08 3.7 4.5-.39.1-.8.16-1.22.16-.3 0-.6-.03-.88-.08.6 1.87 2.33 3.23 4.4 3.27-1.61 1.26-3.64 2.01-5.85 2.01-.38 0-.76-.02-1.14-.07 2.08 1.34 4.55 2.12 7.21 2.12 8.64 0 13.39-7.16 13.39-13.39 0-.2 0-.41-.01-.61.92-.67 1.72-1.52 2.35-2.48z" />
-                                </svg>
-                            </a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" className='footer-navigation-svg-icon' viewBox="0 0 24 24" fill="white">
-                                    <path d="M0 0h24v24H0z" fill="none" />
-                                    <path d="M22.47 5.09c-.81.36-1.68.6-2.6.71.94-.56 1.66-1.44 2-2.5-.88.52-1.86.9-2.9 1.1-.84-.9-2.04-1.46-3.37-1.46-2.55 0-4.6 2.05-4.6 4.6 0 .36.04.72.13 1.07-3.82-.19-7.2-2.03-9.49-4.82-.4.69-.63 1.49-.63 2.35 0 1.6.81 3 2.04 3.82-.75-.02-1.46-.23-2.07-.57v.06c0 2.23 1.59 4.08 3.7 4.5-.39.1-.8.16-1.22.16-.3 0-.6-.03-.88-.08.6 1.87 2.33 3.23 4.4 3.27-1.61 1.26-3.64 2.01-5.85 2.01-.38 0-.76-.02-1.14-.07 2.08 1.34 4.55 2.12 7.21 2.12 8.64 0 13.39-7.16 13.39-13.39 0-.2 0-.41-.01-.61.92-.67 1.72-1.52 2.35-2.48z" />
-                                </svg>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>

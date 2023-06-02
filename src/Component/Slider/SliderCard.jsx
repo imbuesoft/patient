@@ -1,12 +1,16 @@
 import React from 'react'
 import './SliderCard.css'
+
 const SliderCard = () => {
     return (
-        <div className="card mainCard">
+        <div
+            className="card mainCard"
+        >
             <img
                 src="https://www.eka.care/_next/image?url=https%3A%2F%2Fcdn.eka.care%2Fvagus%2Fcl5guuf6h000b0sh95v9z4yza.png&w=1920&q=75"
                 className="card-img-top imgBG"
-                alt="sym"/>
+                alt="sym"
+            />
             <h4
                 style={{
                     textAlign: "topright",

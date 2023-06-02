@@ -1,68 +1,42 @@
-*{
-    box-sizing: border-box;
+.footer-link{
+    outline: transparent;
+    text-decoration: none;
+    color: #9FA0FF;
 }
-
-.b{
-    border: 1px solid yellow;
-}
-
-.footer-container{
-    background-color: #232477;
-    height: 96vh;
-    width: 100vw;
+.footer-link:hover{
+    color: #9fa1ffad;
+    border-bottom: 1px solid #9FA0FF;
 }
 .footer-line{
-    margin: auto;
-    height: 0.1px;
+    height: 0.5px;
     width: 80%;
+    margin: 6em auto 0 auto;
     background: #6567EC;
-}
-.footer-card-container{
-    margin: auto 2em;
-    padding: 3em 0 0 0;
 }
 
 .card.footer-card{
     border: 1px solid transparent;
     background-color: transparent;
-    height: auto;
     width: 13.5em;
     font-size: 16px;
-    flex-shrink: 0;
 }
 
 .footer-card-ul{
     text-transform: capitalize;
     color: #9FA0FF;
-    padding: 0;
     margin: 2em 0 0 0;
     list-style-type: none;
-    text-align: start;
 }
 .footer-card-ul li{
     margin: 0.5em 0;
 }
 
-.footer-form-container{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4em 5em 4em 0;
-    
-    
-}
 .footer-form-card{
     border: 1px solid #6567EC;
     border-radius: 0.8em;
-    height: 100%;
-    width: 100%;
+    max-width: 40em;
     background-color: transparent;
     font-size: 16px;
-    flex-shrink: 0;
     padding: 4em 2em 2em 2em;
 }
 
@@ -78,19 +52,20 @@
 .footer-navigation-image{
     height: auto;
     width: 12em;
-    margin-left: 3em;
 }
+
 .footer-navigation-copyright{
     font-size: 0.9em;
 }
+
 .footer-navigation-svg-icon{
     height: 20px;
     width: 20px;
 }
+
 .footer-navigation-social{
     width: 100%;
     display: flex;
     justify-content: right;
-    margin-right: 3em;
     gap: 1em;
 }
