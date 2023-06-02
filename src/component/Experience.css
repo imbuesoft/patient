@@ -1,0 +1,15 @@
+ img {
+     margin: auto;
+    height: 60px;
+        width: 60px;
+ }
+
+ .container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   
+ }
+ h4{
+    font-size: medium;
+ }
