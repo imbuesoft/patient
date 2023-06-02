@@ -7,27 +7,27 @@ import Healthfeed from './Healthfeed';
 
 const TabsComponent = () => {
   const tabs = [
-    { id: 1, title: 'Info', content: <InfoContain/> },
-    { id: 2, title: 'Stories', content: <Stories/> },
-    { id: 3, title: 'Consult Q&A', content: <Consult_QA/> },
-    { id: 4, title: 'Healthfeed', content: <Healthfeed/> },
+    { id: 1, title: 'Info', content: <InfoContain /> },
+    { id: 2, title: 'Stories', content: <Stories /> },
+    { id: 3, title: 'Consult Q&A', content: <Consult_QA /> },
+    { id: 4, title: 'Healthfeed', content: <Healthfeed /> },
   ]
   const [activeTab, setActiveTab] = useState(1);
-  const handleClose =() =>{
+  const handleClose = () => {
     setActiveTab('')
   }
   return (
     <div className='containerForTabs mt-5'>
-      <ul className="nav nav-tabs border-0">
+      <ul className="nav nav-tabs">
         {
           tabs.map((tab) => (
-          <li key={tab.id} className="nav-item text-dark">
-            <button 
-              className={`nav-link ${tab.id === activeTab ? 'fw-bold text-white bg-primary' : ''}`} 
-              onClick={() => setActiveTab(tab.id)}>
-              {tab.title}
-            </button>
-          </li>
+            <li key={tab.id} className="nav-item text-dark">
+              <button
+                className={`nav-link ${tab.id === activeTab ? 'fw-bold text-white bg-primary' : ''}`}
+                onClick={() => setActiveTab(tab.id)}>
+                {tab.title}
+              </button>
+            </li>
           ))
         }<i class="bi bi-x-circle close fs-5" onClick={handleClose}></i>
       </ul>
