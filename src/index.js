@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import New from './New';
+import Lab from './Lab';
 import Medicine from './Medicine';
 import App from './App'
 
@@ -10,6 +10,6 @@ root.render(
   <React.StrictMode>
    <App />
     <Medicine />
-    <New />
+    <Lab />
   </React.StrictMode>
 );

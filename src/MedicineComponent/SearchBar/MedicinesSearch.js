@@ -25,10 +25,10 @@ const MedicinesSearch = () => {
     }
 
     return (
-    <div className='container-fluid navBar  '>
+    <div className='container-fluid navBar'>
         <div className="row pt-4">
             <div className="col-1 me-5">
-                <img src={logo} className='companyLogo'/>
+                <img src={logo} alt='medicinelogo' className='companyLogo'/>
             </div>
             <div className="col ms-5">
                 <div className='row bg-white searchbar'>

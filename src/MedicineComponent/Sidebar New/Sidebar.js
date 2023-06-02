@@ -1,12 +1,12 @@
 import "./Sidebar.css"
 function Sidebar(){
     return (
-    <div className="sideMain w-25">
+    <div className="sideMain w-30">
       <p className='text-start ps-2 fs-3'>Categories</p><hr/>
       <div className="accordion " id="accordionPanelsStayOpenExample">
       <div className="accordion-item border-0">
         <h2 className="accordion-header ">
-          <button className="accordion-button mybtn" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="   " aria-controls="panelsStayOpen-collapseOne">
+          <button className="accordion-button mybtn" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
             Surgical
           </button>
         </h2>

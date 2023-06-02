@@ -4,6 +4,9 @@ import './Medicine.css'
 import ItemCard from './MedicineComponent/ItemCard'
 import CategoryCard from './MedicineComponent/CategoryCard'
 import CatData from "./CatData.json";
+import Sidebar from './MedicineComponent/Sidebar New/Sidebar'
+import MedicinesSearch from './MedicineComponent/SearchBar/MedicinesSearch'
+import Offer from './MedicineComponent/Offer/Offer'
 
 const Medicine = () => {
     const [category, setCategory] = useState("Eye & Ear Care");
@@ -19,11 +22,13 @@ const Medicine = () => {
 
     return (
         <>
+            <MedicinesSearch />
             <div className="container">
-                <h2>Category</h2>
                 <div className="row">
                     <div className="col-md-2">
+                        <h2>Category</h2>
                         <SidebarFilter categories={uniqueCats} setCategory={setCategory} category={category} />
+                        <Sidebar />
                     </div>
                     <div className="col-md-10">
                         <div className="row mb-5">
@@ -45,10 +50,12 @@ const Medicine = () => {
                             }
                         </div>
                     </div>
+                  
+                    <Offer />
                 </div>
             </div>
         </>
     )
 }
 
-export default Medicine
+export default Medicine;

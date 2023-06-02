@@ -1,36 +1,43 @@
-.navBar{
+.navBar {
     background-color: #32AEB1;
     min-height: auto;
-    height: 200px;
+    height: 100px;
 }
-.companyLogo{
+
+.companyLogo {
     height: 60px;
-    width:120px;
+    width: 120px;
     margin: 10px 0px 0px 40px;
 }
-.searchbar{
-    height:60px;
+
+.searchbar {
+    height: 60px;
     width: 700px;
     min-width: auto;
     border-radius: 10px;
 }
-.mediSearch{
-    height:50px;
+
+.mediSearch {
+    height: 50px;
     border: none;
     width: 350px;
 }
-input:focus{
+
+input:focus {
     outline: 0
 }
-.locationBtn{
+
+.locationBtn {
     height: 50px;
     width: 160px;
     background-color: transparent;
 }
-.locationBtn .pincode{
+
+.locationBtn .pincode {
     color: #32AEB1;
 }
-.deliveryBox{
+
+.deliveryBox {
     box-shadow: 2px 2px 10px #6161618b;
     height: 400px;
     width: 410px;
@@ -38,10 +45,11 @@ input:focus{
     border-radius: 10px;
     background-color: #fff;
 }
-.signInAndLoc{
+
+.signInAndLoc {
     background-color: #32AEB1;
     height: 50px;
-    width:350px;
+    width: 350px;
     color: #fff;
     font-weight: 600;
     font-size: 20px;
@@ -50,18 +58,21 @@ input:focus{
     margin: auto;
     letter-spacing: 1px;
 }
-.pinEnterIcon{
+
+.pinEnterIcon {
     background-color: #f3f7fb;
     font-size: 20px;
     border-radius: 10px;
 }
-.pinEnter{
+
+.pinEnter {
     height: 50px;
     background-color: transparent;
     border: none;
-    width:270px;
+    width: 270px;
 }
-.DetBtn{
+
+.DetBtn {
     background-color: transparent;
     font-size: 14px;
     padding: 10px;
