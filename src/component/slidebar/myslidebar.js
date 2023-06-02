@@ -3,7 +3,7 @@ import './myslidebar.css';
 
 const Myslidebar = () => {
   return (
-    <div className="sidebar sidebar-accordion">
+    <div className=" card  sidebar-accordion">
 
       <div className="accordion accordion-sidebar" id="accordionExample">
         <div className="accordion-item">

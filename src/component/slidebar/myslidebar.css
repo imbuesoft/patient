@@ -2,6 +2,7 @@
   width: 280px;
   background-color: #212121;
   color: #fff;
+  height:800px;
 }
 
 .accordion-button:after {
@@ -15,31 +16,10 @@
   border-top: 1px solid #fff;
   margin-top: 10px;
   margin-bottom: 10px;
+  height: 700px;
 }
 
-.sidebar-content {
-  width: 100%;
-  padding: 20px;
-}
 
-.sidebar-logo {
-  display: flex;
-  align-items: center;
-  padding-bottom: 3px;
-  margin-bottom: 3px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.logo-icon {
-  fill: currentColor;
-}
-
-.logo-text {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-left: 0.5rem;
-}
 
 .sidebar-menu {
   list-style: none;
