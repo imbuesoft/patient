@@ -1,0 +1,33 @@
+.filter {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 250px;
+    margin-top: 50px;
+    
+  }
+  body {
+    background-color: #f1f1f1; /* Set the desired darker background color */
+  }
+
+  .scrollable-list {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  
+  .scrollable-list::-webkit-scrollbar {
+    width: 3px; 
+  }
+  
+  .scrollable-list::-webkit-scrollbar-track {
+    background-color: #eee; 
+  }
+  
+  .scrollable-list::-webkit-scrollbar-thumb {
+    background-color: #aaa; 
+    border-radius: 4px;
+  }
+  
+  .scrollable-list::-webkit-scrollbar-thumb:hover {
+    background-color: #888; 
+  }
+  
