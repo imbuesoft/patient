@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import './Appointment.css';
 
 const Appointment = () => {
-  const [checkbox, setCheckbox] = useState(false);
+  const [checkbox, setcheckbox] = useState(false);
 
   const handleCheckboxChange = (e) => {
-    setCheckbox2(e.target.checked);
+    setcheckbox(e.target.checked);
   };
 
   const handleCreateAppoint = () => {
@@ -85,7 +85,7 @@ const Appointment = () => {
           <br />
           <button
             className="create-appoint-button"
-            disabled={!checkbox2}
+            disabled={!checkbox}
             onClick={handleCreateAppoint}
           >
             Pay & Confirm
