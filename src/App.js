@@ -1,11 +1,11 @@
 import React from 'react'
-import App from "./Components/Griddesign/App"
+import GridCards from "./Components/GridCards/App"
 
 const App = () => {
   return (
-    <div>
-      <App />
-    </div>
+    <>
+      <GridCards />
+    </>
   )
 }
 
