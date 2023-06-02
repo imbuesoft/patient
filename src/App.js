@@ -13,26 +13,46 @@ function App() {
     <div className="App">
       <Navbar />
 
-      <Searchbar/>
+      <Searchbar />
       <Slider />
 
       <div className="container mt-5">
         <div className='row'>
-          <Service />
-          <Service />
-          <Service />
-          <Service />
-          <Service />
-          <Service />
+          <div className='col-lg-3 col-md-4 col-sm-12'>
+            <Service />
+          </div>
+          <div className='col-lg-3 col-md-4 col-sm-12'>
+            <Service />
+          </div>
+          <div className='col-lg-3 col-md-4 col-sm-12'>
+            <Service />
+          </div>
+          <div className='col-lg-3 col-md-4 col-sm-12'>
+            <Service />
+          </div>
+          <div className='col-lg-3 col-md-4 col-sm-12'>
+            <Service />
+          </div>
+          <div className='col-lg-3 col-md-4 col-sm-12'>
+            <Service />
+          </div>
         </div>
       </div>
 
       <div className="container mt-5">
         <div className='row'>
-          <Capsule />
-          <Capsule />
-          <Capsule />
-          <Capsule />
+          <div className='col-lg-3 col-md-4 col-sm-6 col-12'>
+            <Capsule />
+          </div>
+          <div className='col-lg-3 col-md-4 col-sm-6 col-12'>
+            <Capsule />
+          </div>
+          <div className='col-lg-3 col-md-4 col-sm-6 col-12'>
+            <Capsule />
+          </div>
+          <div className='col-lg-3 col-md-4 col-sm-6 col-12'>
+            <Capsule />
+          </div>
         </div>
       </div>
 
@@ -44,14 +64,10 @@ function App() {
           <Features />
         </div>
       </div>
-
-
       <div className="container-fluid mt-5">
         <Testimonial />
       </div>
-
       <Footer />
-
     </div>
   );
 }

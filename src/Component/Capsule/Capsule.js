@@ -3,7 +3,7 @@ import React from 'react'
 function Capsule() {
     return (
         <div className='col-3'>
-            <div className="card" style={{ width: "300px", height: "120px" }}>
+           { <div className="card" style={{ width: "300px", height: "120px" }}>
                 <div className="card-body">
                     <div className="d-flex h-100 w-100">
                         <div className="d-grid">
@@ -15,7 +15,7 @@ function Capsule() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }

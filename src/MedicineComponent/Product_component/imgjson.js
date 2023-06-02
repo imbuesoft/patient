@@ -5,7 +5,6 @@ const imge = [
     {"img" : "./img/m4.jfif"},
     {"img" : "./img/m5.jfif"},
     {"img" : "./img/m6.jfif"}
-    
 ]
 
 
