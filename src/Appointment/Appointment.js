@@ -14,7 +14,7 @@ const Appointment = () => {
 
   return (
     <div className="appointment-container d-flex justify-content-center align-items-center">
-      <div className="card card-appointment w-50">
+      <div className="card card-appointment w-50" style={{background: "#F8F6F0"}}>
         <div className="card-body">
           <h5 className="card-title">
             This appointment is for
@@ -60,7 +60,7 @@ const Appointment = () => {
                 id="consultationFees"
                 value="Rs 500"
                 disabled
-                style={{ width: "100px", height: "45px", marginLeft: "-200px" }}
+                style={{ width: "100px", height: "45px", marginLeft: "-210px" }}
               />
             </div>
           </div>
@@ -72,12 +72,13 @@ const Appointment = () => {
           </div>
           <br />
           <div className="input-checkbox">
-            <label>
+            <label style={{fontWeight: "600"}}>
               <input
                 type="checkbox"
                 name="checkbox"
                 checked={checkbox}
                 onChange={handleCheckboxChange}
+                style={{marginRight: "7px", marginTop: "5px"}}
               />
               By Booking this appointment you agree to MediPract's <a href="/">Terms & Conditions.</a>
             </label>
