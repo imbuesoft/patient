@@ -33,7 +33,7 @@ const Navbar = () => {
                             {/* DONT REMOVE - DROP DOWN Menu example */}
                             <li className="nav-item dropdown">
                                 <a className="nav-link border-0 dropdown-toggle" data-bs-toggle="dropdown" href="#abcd" role="button" aria-expanded="false">Dropdown</a>
-                                <ul className="dropdown-menu responsive-position">
+                                <ul className="dropdown-menu  dropdown-menu-lg-end responsive-position">
                                     <li><a className="dropdown-item" href="#abcd" data-bs-dismiss="offcanvas" >Action</a></li>
                                     <li><a className="dropdown-item" href="#abcd" data-bs-dismiss="offcanvas" >Another action</a></li>
                                     <li><a className="dropdown-item" href="#abcd" data-bs-dismiss="offcanvas" >Something else here</a></li>
