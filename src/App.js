@@ -1,11 +1,14 @@
 /*import Subscriptioncard from "./Subscriptioncard";*/
 
-import Bookedmedicinetable from "./medicine/Bookedmedicinetable";
+//import Bookedmedicinetable from "./medicine/Bookedmedicinetable";
+
+import Contectus from "./contectus/Contectus";
 function App() {
   return (
    <>
      {/* <Subscriptioncard />*/}
-     <Bookedmedicinetable />
+     {/*<Bookedmedicinetable />*/}
+     <Contectus />
    </>
   );
 }
