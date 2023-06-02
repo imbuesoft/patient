@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Appointment.css';
 
 const Appointment = () => {
-  const [checkbox2, setCheckbox2] = useState(false);
+  const [checkbox, setCheckbox] = useState(false);
 
   const handleCheckboxChange = (e) => {
     setCheckbox2(e.target.checked);
@@ -75,8 +75,8 @@ const Appointment = () => {
             <label>
               <input
                 type="checkbox"
-                name="checkbox2"
-                checked={checkbox2}
+                name="checkbox"
+                checked={checkbox}
                 onChange={handleCheckboxChange}
               />
               By Booking this appointment you agree to MediPract's <a href="/">Terms & Conditions.</a>
