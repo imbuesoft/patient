@@ -15,7 +15,7 @@ const FooterCard = ({ data = {
                             {data?.list?.map((item, index) => {
                                 return (
                                     <li key={index}>
-                                        <a href={item?.link} target="_blank" rel="noopener noreferrer">
+                                        <a className='footer-link' href={item?.link} target="_blank" rel="noopener noreferrer">
                                             {item?.label}
                                         </a>
                                     </li>

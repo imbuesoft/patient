@@ -98,7 +98,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className='footer-line d-none d-lg-block m-auto '></div>
+                        <div className='footer-line d-none d-lg-block '></div>
                         <div className='footer-navigation d-flex flex-column flex-md-row'>
                             <div className='w-100 d-none d-md-block ps-5'>
                                 <img className='order-0 footer-navigation-image ' src={logo} alt="medipract" />
