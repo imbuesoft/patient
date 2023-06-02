@@ -4,7 +4,7 @@ const Doctordetail = () => {
 
     const doctordetailscard1 = {
         position: "relative",
-        width: "280px",
+        width: "270px",
         height: "300px",
         border: "2px solid #f0f0f5",
         borderRadius: "10px",
@@ -14,7 +14,7 @@ const Doctordetail = () => {
     };
     const doctordetailscard2 = {
         position: "absolute",
-        width: "280px",
+        width: "270px",
         height: "209px",
         backgroundColor: "#5d5ba2",
         border: "2px solid #f0f0f5",
@@ -65,4 +65,4 @@ const Doctordetail = () => {
     )
 }
 
-export default Doctordetail
+export default Doctordetail;

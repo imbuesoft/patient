@@ -1,11 +1,11 @@
 .sidebar {
     width: 280px;
-    background-color: #fff;
-    color:  #212121;
+    background-color: #212121;
+    color:#fff;
   }
   
   .sidebar-divider {
-    border-top: 1px solid #212121;
+    border-top: 1px solid #fff;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -13,19 +13,6 @@
   .sidebar-content {
     width: 100%;
     padding: 20px;
-  }
-  
-  .sidebar-logo {
-    display: flex;
-    align-items: center;
-    padding-bottom: 3px;
-    margin-bottom: 3px;
-    color: #212121;
-    text-decoration: none;
-  }
-  
-  .logo-icon {
-    fill: currentColor;
   }
   
   .logo-text {
@@ -69,12 +56,7 @@
   
   .sub-menu-link,
   .sub-menu-link-dark {
-    color: #212121;
+    color: #fff;
     text-decoration: none;
-  }
-  
-  .sub-menu-link:hover,
-  .sub-menu-link-dark:hover {
-    text-decoration: underline;
   }
   
