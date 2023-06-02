@@ -26,8 +26,8 @@ const Review = ({ data }) => {
             </div>
             <div className='reason'>
             <span>Happy with:</span>
-              {item.g_tag.map(val=>{
-              return(<span className='feedback__context'>{val}</span> )
+              {item.g_tag.map((val,index)=>{
+              return(<span key={index}className='feedback__context'>{val}</span> )
               })
             }
               <br/><br/>
