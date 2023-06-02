@@ -1,0 +1,65 @@
+body
+{
+  background-color:rgb(234, 229, 229);
+}
+.title{
+    font-weight:bold;
+    font-size:25px;
+    margin-bottom: 10px;
+}
+
+.mobile{
+    font-weight: bold;
+    font-size:30px;
+    margin-bottom:25px;
+}
+.mobile-name {
+    color: black; 
+    text-align:left;
+    padding-left:30px;
+  }
+  
+  .red-asterisk {
+    color: red;
+  }
+  .mobilenumber{
+    width:90%;
+    height:15%;
+    margin-bottom:15px;
+    
+  }
+  
+  .continue{
+    color:white;
+    background-color: rgb(163, 160, 160);
+    border: none;
+    width:90%;
+    height:35px;
+    font-size:20px;
+    font-weight:bold;
+    padding-left:30px;
+    
+  }
+  
+  .text1{
+    text-align:left;
+    padding-left:30px;
+  }
+  
+  .text2{
+    text-align:left;
+    padding-left:30px;
+    margin-bottom:20px;
+  }
+  button{
+    color:blue;
+    border:none;
+    background-color: white;
+    padding:0px;
+  }
+  .icon
+  {
+    padding-right:8px;
+  }
+  
+  
