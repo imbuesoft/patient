@@ -1,7 +1,7 @@
 import "./Sidebar.css"
 function Sidebar(){
     return (
-    <div className="sideMain">
+    <div className="sideMain w-25">
       <p className='text-start ps-2 fs-3'>Categories</p><hr/>
       <div className="accordion " id="accordionPanelsStayOpenExample">
       <div className="accordion-item border-0">

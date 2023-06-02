@@ -4,6 +4,7 @@ import HealthCheckupPackage from "./MedicineComponent/HealthPackage/HealthChecku
 import Offer from "./MedicineComponent/Offer/Offer";
 import Productdetails from "./MedicineComponent/Product_component/Productdetails";
 import MedicinesSearch from "./MedicineComponent/SearchBar/MedicinesSearch";
+import Sidebar from './MedicineComponent/Sidebar New/Sidebar'
 
 const New = () => {
   return (
@@ -14,7 +15,7 @@ const New = () => {
       <Offer />
       <Productdetails />
       <MedicinesSearch />
-      
+      <Sidebar />
     </>
   )
 }
