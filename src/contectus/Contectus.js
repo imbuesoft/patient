@@ -95,7 +95,7 @@ const Contectus = () => {
                                 <p style={{fontSize:'75%'}}>Practo Technologies Pvt.Ltd,WeWeork, 3rd Floor,Salarpuria Symbiosis Arekere, Bannereghatta Main Road Bangaluru 560 076 Karnataka, india</p>
                             </div>
                             <div className="col-6"> 
-                            <h6 align="right" style={{color:'#73C2FB'}}>Get Direction</h6>
+                            <h6 align="right" style={{color:'#73C2FB'}}><a href="#" style={{textDecoration:'none'}}>Get Direction</a></h6>
                             </div>
                         </div>
                     </div>
