@@ -1,0 +1,122 @@
+.scrollable-tabs-container{
+    font-family: "Roboto",sans-serif;
+    max-width: 400px;
+    margin: 16px auto;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+.mainscroller{
+    position: relative;
+    display: flex;
+}
+.scrollable-tabs-container img{
+   
+    cursor: pointer;
+    padding: 8px;
+    
+}
+.scrollable-tabs-container ul{
+    display: flex;
+    gap: 20px;
+    padding: 12px 24px;
+    margin: 0;
+    list-style: none;
+    overflow-x: scroll;
+    -ms-overflow-style:none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+.scrollable-tabs-container ul::-webkit-scrollbar{
+    display: none;
+}
+.scrollable-tabs-container .a{
+    text-decoration: none;
+    padding: 4px 30px;
+    display: inline-block;
+    user-select: none;
+    white-space: nowrap;
+    position: relative;
+    color: black;
+}
+/* .scrollable-tabs-container .a.active{
+   background-color:rgb(99, 196, 150) ;
+   color: white;
+   /* position: absolute; }*/
+
+
+.a::after{
+    content: "";
+    position: absolute;
+    background-color: rgb(99, 196, 150);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 4px;
+    transition: 0.3s;
+}
+.a:hover::after{
+    width: 90%;
+}
+.right-arrow
+{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    right: 0;
+    background-color: white;
+    justify-content: flex-end;
+    margin-right: 400px;
+}
+ .left-arrow{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-left: 350px;
+    background-color: white;
+    justify-content: flex-start;
+  
+}
+.Eveningtime{
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-right: 400px; */
+    margin-top: 50px;
+}
+.Nighttime{
+    display: flex;
+    justify-content: space-evenly;
+    /* margin-right: 200px; */
+    margin-top: 50px;
+    
+}
+.Nighttime img{
+    height: 24px;
+}
+.Eveningtime img{
+    height: 24px;
+}
+.timecontainer{
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+    margin-left: 100px;
+    transition: 0.2s ease-in-out;
+    
+    /* margin-top: 100px; */
+}
+
+
+
+.active{
+    
+    border: 0.5px solid rgb(161, 199, 161);
+}
