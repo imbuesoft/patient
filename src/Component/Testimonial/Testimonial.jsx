@@ -6,8 +6,8 @@ const Testimonial = () => {
         <>
             <div
                 id="carouselExampleControls"
-                className="carousel slide w-100 h-auto"
-                style={{ minHeight: "22em", background: "#429ca5", borderRadius:"25px" }}
+                className="carousel carousel-dark slide w-100 h-auto"
+                style={{ minHeight: "22em", borderRadius:"25px", background:"#bbbbbb33" }}
                 data-bs-ride="carousel"
             >
                 <button
@@ -19,7 +19,7 @@ const Testimonial = () => {
                     <span className="carousel-control-prev-icon d-none d-sm-block" aria-hidden="true" />
                     <span className="visually-hidden">Previous</span>
                 </button>
-                <div className="carousel-inner p-3 text-center  text-white">
+                <div className="carousel-inner p-3 text-center ">
                     <h1 className='mt-5 mb-3 '>What our users have to say</h1>
                     <div className="carousel-item active">
                         <p>
@@ -98,7 +98,7 @@ const Testimonial = () => {
                     data-bs-target="#carouselExampleControls"
                     data-bs-slide="next"
                 >
-                    <span className="carousel-control-next-icon  d-none d-sm-block" aria-hidden="true" />
+                    <span className="carousel-control-next-icon testimonial-carousel-control-next-icon  d-none d-sm-block" aria-hidden="true" />
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
