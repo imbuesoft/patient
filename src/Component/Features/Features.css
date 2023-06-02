@@ -1,11 +1,20 @@
+@media screen and (min-width: 1200px) and (max-width: 1555px) {
+  .features-card-responsive {
+    padding: 1em 5em !important;
+    width: auto;
+  }
+}
+
 .features_card {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  background-color: #64E3FB;
+  /* background-color: #64E3FB; */
+  background-color: var(--color-secondary);
 }
 
 .features-card-title {
@@ -29,11 +38,11 @@
 
 }
 
-.features-card-image-container {
-}
+.features-card-image-container {}
 
 .features-card-image {
   width: 100%;
+  max-width: 300px;
   height: 100%;
   object-fit: cover;
 }

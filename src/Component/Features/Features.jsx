@@ -10,7 +10,7 @@ const Features = () => {
 
 
   return (
-    <div className='col-12 col-sm-6 col-lg-4 col-xl-3 py-2'>
+    <div className='col-12 col-sm-6 col-md-6 col-lg-auto py-2 px-auto px-lg-4 px-xl-3 m-xxl-0 features-card-responsive'>
       <div style={divStyle}>
         <div className="card features_card">
           <div className="card-content features-card-content">
