@@ -1,11 +1,12 @@
-import SmallCard from './Components/SmallCard/App'
-
+import React from 'react'
+import App from "./Components/Griddesign/App"
 
 const App = () => {
-    return (
-        <>
-            <SmallCard />
-        </>
-    )
-};
+  return (
+    <div>
+      <App />
+    </div>
+  )
+}
+
 export default App;
