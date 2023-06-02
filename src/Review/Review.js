@@ -4,7 +4,7 @@ import './Review.css'
 const Review = () => {
   return (
     <div className='review m-auto'>
-      <div className="card mycard">
+      <div className="card mycard shadow">
         <div className="card-header" style={{backgroundColor:'white'}}>
           <b>Patient Stories for Dr. Ramesh Srinivasan</b>
         </div>
