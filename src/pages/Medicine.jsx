@@ -4,7 +4,7 @@ import './Medicine.css'
 import ItemCard from '../MedicineComponent/ItemCard'
 import CategoryCard from '../MedicineComponent/CategoryCard'
 import CatData from "./CatData.json";
-import Sidebar from '../MedicineComponent/Sidebar New/Sidebar'
+import Sidebar from '../MedicineComponent/Sidebar/Sidebar'
 import MedicinesSearch from '../MedicineComponent/SearchBar/MedicinesSearch'
 import Offer from '../MedicineComponent/Offer/Offer'
 
@@ -50,7 +50,7 @@ const Medicine = () => {
                             }
                         </div>
                     </div>
-                  
+
                     <Offer />
                 </div>
             </div>
