@@ -27,10 +27,9 @@ function App() {
 
       <Space />
 
-
-      {/* <Container>
+      <Container>
         <Searchbar />
-      </Container> */}
+      </Container>
 
       <Container>
         <Slider />

@@ -34,7 +34,7 @@
     background: #ffffff88;
     border: 1px solid #ffffff33;
     backdrop-filter: blur(8px);
-    box-shadow:  0 3px 32px 0px rgb(0 0 0 / 30%);
+    box-shadow: 0 3px 32px 0px rgb(0 0 0 / 30%);
     width: 100%;
     border-radius: 0.5rem;
     display: flex;
@@ -61,15 +61,16 @@
 }
 
 .search-suggestion-container {
-    max-height: 20em;
+    max-height: auto;
+    max-height: 60vh;
     overflow-y: auto;
     overflow-x: hidden;
     position: absolute;
     width: 100%;
-    top: 4em;
-    
+    top: 5em;
 }
-.search-suggestion-container > div {
+
+.search-suggestion-container>div {
     border-radius: 1em;
     background: #ffffffcc;
     border: 1px solid #ffffff33;
@@ -77,21 +78,7 @@
     backdrop-filter: blur(8px);
 }
 
-.dots {
-    height: 7px;
-    width: 7px;
-    background-color: #777;
-    display: flex;
-    border-radius: 50%;
-    margin-left: 7px;
-    margin-right: 7px;
-}
-
-.yellow {
-    color: #ffab2e;
-}
-
-.content-text-1 {
+.suggestion-content-text-1 {
     height: 40px;
     width: 40px;
     display: flex;
@@ -103,13 +90,7 @@
     font-weight: 700;
 }
 
-
-.blue {
-    color: #6ecce6;
-}
-
-
-.content-text-2 {
+.suggestion-content-text-2 {
     height: 40px;
     width: 40px;
     display: flex;
@@ -122,12 +103,7 @@
 }
 
 
-.dark-blue {
-    color: #572ce8;
-}
-
-
-.content-text-3 {
+.suggestion-content-text-3 {
     width: 40px;
     display: flex;
     justify-content: center;

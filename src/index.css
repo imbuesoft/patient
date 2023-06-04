@@ -23,7 +23,7 @@ code {
   width: calc(0.5vw + 0.5vh);
   position: fixed;
   /* display: none; */
-  background-color: #f5f5f5;
+  background-color: transparent;
 }
 
 *::-webkit-scrollbar-thumb {

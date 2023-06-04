@@ -1,10 +1,10 @@
 
 .search-area-container{
-  height: 30em;
+  height: 40em;
   width: 100%;
   background-color: #cbc9f8;
   border-radius: 2em;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .search-area-image-container{
