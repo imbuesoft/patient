@@ -1,29 +1,32 @@
 // https://bbbootstrap.com/snippets/bootstrap-task-list-search-70202001
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import './SearchBox.css'
 import SuggestionBox from '../SuggestionBox/SuggestionBox'
 
 
-const SearchBox = ({ Svg, placeholder, data }) => {
+const SearchBox = ({ Svg, placeholder, name, data, suggestionBox, setSuggestionBox }) => {
 
-  const [search, setSearch] = useState('')
   const [suggestions, setSuggestions] = useState(data)
-  const [showSuggestions, setShowSuggestions] = useState(false)
+  const search_input = useRef(null)
+
+  const handleSuggestionClick = (item) => {
+    console.log(item)
+    setSuggestionBox('')
+    search_input.current.value = item?.heading
+  }
 
   return (
     <>
       <div className='w-100 d-grid flex-column position-relative'>
         <div className="search-container mx-auto">
-          {/* {Svg} */}
           {Svg}
           <input
             className="search-box-input ps-0"
-            placeholder="Search Tasks..."
-            onFocus={() => setShowSuggestions(true)}
-            onBlur={() => setShowSuggestions(false)}
+            ref={search_input}
+            placeholder={placeholder}
+            onFocus={() => setSuggestionBox(name)}
             onChange={
               (e) => {
-                setSearch(e.target.value)
                 let value = ''
                 setSuggestions(data?.filter((item) => {
                   // return item?.heading?.toLowerCase().includes(e.target.value?.toLowerCase()) || item?.description?.toLowerCase().includes(e.target.value?.toLowerCase())
@@ -36,7 +39,7 @@ const SearchBox = ({ Svg, placeholder, data }) => {
             }
           />
         </div>
-        <div className={`${(!showSuggestions && 'd-none ') || ''} p-3 search-suggestion-container z-3`}>
+        <div className={`${(suggestionBox !== name && 'd-none ') || ''} p-3 search-suggestion-container z-3`}>
           <div className='position-relative '>
             {
               suggestions?.length > 0 ?
@@ -45,7 +48,8 @@ const SearchBox = ({ Svg, placeholder, data }) => {
                     <SuggestionBox key={index} data={{
                       heading: item?.heading,
                       description: item?.description
-                    }} />
+                    }}
+                    handleClick={handleSuggestionClick} />
                   )
                 })
                 :
