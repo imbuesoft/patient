@@ -12,7 +12,7 @@ const sidebarData = [
     },
     {
         id: 2,
-        svg: <i className="fa-solid fa-bell logoitems"></i>,
+        svg: <i className="fa-solid fa-bell fa-shake"></i>,
         name: 'Notifications',
         link: '',
     },
