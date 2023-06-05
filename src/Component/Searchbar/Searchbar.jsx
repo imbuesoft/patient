@@ -6,11 +6,11 @@ import { ReactComponent as Location } from './assets/location.svg'
 
 import SearchBox from "./SearchBox/SearchBox";
 import cites from './assets/cites.json'
-import doctors from './assets/doctors.json'
+import doctorsType from './assets/DoctorsType.json'
 
 const locationSearchData = []
-cites?.map((item, index) => {
-  item?.city?.map((city, index) => {
+cites?.map((item) => {
+  item?.city?.map((city) => {
     locationSearchData.push({
       "heading": city,
       "description": item?.state
@@ -18,19 +18,18 @@ cites?.map((item, index) => {
   })
 })
 
-const doctorsSearchData = []
-doctors?.map((item, index) => {
-  doctorsSearchData.push({
+const doctorsTypeSearchData = []
+doctorsType?.map((item) => {
+  doctorsTypeSearchData.push({
     "heading": item
   })
 })
-
 
 const Searchbar = () => {
 
   const [suggestionBox, setSuggestionBox] = useState('')
   const [searchLocation, setSearchLocation] = useState('')
-  const [searchDoctor, setSearchDoctor] = useState('')
+  const [searchDoctorType, setSearchDoctorType] = useState('')
 
   return (
     <>
@@ -78,11 +77,11 @@ const Searchbar = () => {
               <SearchBox {...{
                 Svg: <Search fill="#00000099" />,
                 placeholder: "Search doctor, clinics, hospitals, etc.",
-                data: doctorsSearchData,
+                data: doctorsTypeSearchData,
                 suggestionBox,
                 setSuggestionBox,
-                name: "doctor",
-                setSearch: setSearchDoctor,
+                name: "doctor-type",
+                setSearch: setSearchDoctorType,
               }} />
             </div>
           </div>
