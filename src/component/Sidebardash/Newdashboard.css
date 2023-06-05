@@ -1,0 +1,54 @@
+.servicecard {
+    position:relative;
+    width: 250px;
+    height: 150px;
+    border: 1px solid #f0f0f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .12);
+    display:inline-flex;
+    float: left;
+}
+.headericon{
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+}
+.headerimg{
+    width: 10%;
+}
+.dashboardtitle{
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 4%;
+  margin-top: 2%
+}
+  .row-1 {
+    padding-bottom: 0px;
+    color: #2d2d32;
+    font-weight: 550;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+  }
+  
+  .row-2 {
+    margin-top: -6px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #787887;
+  }
+  .row-3{
+    justify-content: end;
+    color: blue;
+  }
+.pxx{
+    right: 0px;
+    position:absolute;
+    margin: 0px;
+    top:80%;
+}
+  .nav-mainbar{
+    position:relative;
+      font-size: 30px;
+      width: 100%;
+    background-color:gray ;
+  }

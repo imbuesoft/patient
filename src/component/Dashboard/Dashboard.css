@@ -1,0 +1,152 @@
+*{
+  box-sizing: border-box;
+  left: 0px;
+  top: 0px;
+}
+.main-side{
+  transition: all 0.7 ease;
+    position: flex;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    flex-direction: row;
+}
+
+
+.sidebar-items{
+    width: 200px;
+    background-color: #212121;
+    height: 100vh;
+    font-size: 20px;
+    padding: 2px;
+    transition: all 0.5 ease;
+  }
+.side-listicon{
+    position: flex;
+    text-align: end;
+    font-size: 30px;    
+    margin-right: 10px;
+}
+.side-listicon:hover{
+    cursor: pointer;
+}
+.sidebar-button{
+    position: absolute;
+    font-size: 20px;
+}
+
+.sidebar-collapsed {
+    position: flex;
+    top: 0px;
+    left: 0px;
+    padding: 2px;
+    transition: all 0.6  ease;
+    width: 80px;
+    background-color: #12171e;
+    height: 100vh;
+    
+  }
+.sidebar-items .main-component{
+    position: fixed;
+    margin-left: 220px;
+
+    width: auto;
+}
+
+.main-component {
+    position:relative;
+    float: left;
+
+}
+
+.sidebar-items ul,li{
+    list-style: none;
+    padding:2px;
+    position: relative;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+.sidebar-items ul,li,a{
+    color: white;
+    text-align: center;
+    padding:5px;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+.item{
+    opacity: 0;
+}
+
+.nav-main{
+  position: absolute;
+    clear: both;
+    position: re;
+    width: 100%;
+    height: 50px;
+    background-color: grey;
+}
+
+
+.servicecard {
+    position:relative;
+    width: 250px;
+    height: 150px;
+    border: 1px solid #f0f0f5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .12);
+    display:inline-flex;
+    float: left;
+    left: -30px;
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  .icon-hp{
+    margin-right: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;  
+  }
+  
+  .info {
+    position: relative;
+    padding: 8px 15px 0px;
+  }
+  
+  .row-1 {
+    padding-bottom: 0px;
+    color: #2d2d32;
+    font-weight: 550;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+  }
+  
+  .row-2 {
+    margin-top: -6px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #787887;
+    padding-bottom: 5px;
+  }
+  .row-3{
+    text-align: right;
+    justify-content: end;
+    color: blue;
+  }
+.pxx{
+    right: 0px;
+    position:absolute;
+    margin: 0px;
+    top:75%;
+}
+  .nav-mainbar{
+    position:relative;
+    left:-140px;
+      font-size: 30px;
+      width: 110%;
+    background-color:gray ;
+  }
+  .heading{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top: 20px;
+  }

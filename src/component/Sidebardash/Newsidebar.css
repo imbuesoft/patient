@@ -1,0 +1,147 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main-logo{
+    width: 30px;
+}
+.user-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.conat{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.sidebar-main{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    min-height: 100vh;
+    height: 100%;
+    width: 5%;
+    padding: 0.4rem 0.8rem;
+    background-color: #12171e;
+    transition: all 0.9s ease;
+}
+
+.sidebar-main.sidebar-collapsed ~ .main-compo{
+    left: 0px;
+}
+.sidebar-main.sidebar-collapsed{
+    width: 20%;
+}
+.menubtn{
+    position: absolute;
+    color: #fff;
+    left: 40%;
+    top: .5rem;
+    font-size: 35px;
+    cursor: pointer;
+}
+.sidebar-main.sidebar-collapsed .menubtn{
+    left: 85%;
+}
+.sidebar-main .div-logo{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 25px;
+    margin-left: 20px;
+    opacity: 0; 
+    transition: all 0.9s ease;
+
+}
+.sidebar-main.sidebar-collapsed .div-logo{
+    opacity: 1;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 1rem 4px;    
+}
+.user p{
+    color: #fff;
+    opacity: 0;
+    float: left;
+    margin: 0px;
+    margin-left: 1rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+
+}
+.maintitle{
+    
+  font-family: "Audiowide", sans-serif; 
+  margin-left: 5%;
+}
+
+.sidebar-main.sidebar-collapsed p{
+    opacity: 1;
+}
+
+.sidebar-main ul li{
+    position: relative;
+    list-style-type: none;
+    height: 40px;
+    font-size: 30px;
+    width: 90%;
+    line-height: 40px;
+    margin: 0.9rem auto;
+}
+.sidebar-main ul,li,a{
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5rem ;
+}
+
+.sidebar-main ul li a i{
+    min-width: 0px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;  
+    border-radius: 10px;
+}
+
+ol,ul{
+    padding: 0px;
+}
+.sidebar-main .nav-item{
+    opacity: 0 ;
+    align-items: center;
+}
+.sidebar-main.sidebar-collapsed .nav-item{
+    opacity: 1;
+}
+a span{
+    margin-left: 1rem;  
+}
+
+.sidebar-main ul li .tip{
+  position: absolute;
+  left: 70px;
+  top:50%;
+  background-color: #12171e;
+  transform: translate(0,-50%);  
+  box-shadow: 0 0.rem 0.8rem rgba(0,0,0,0.3);
+  border-radius: 0.6rem;
+  float: left;
+  padding: .4rem 1.2rem;
+  line-height: 1.8rem;
+  z-index: 20;
+  opacity: 0;
+}
+
+.sidebar-main  ul li:hover .tip{
+    opacity: 1;
+}
+.sidebar-main.sidebar-collapsed ul li .tip{
+    display: none;
+}
