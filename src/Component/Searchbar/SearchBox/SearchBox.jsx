@@ -1,7 +1,7 @@
 // https://bbbootstrap.com/snippets/bootstrap-task-list-search-70202001
 import { useState } from 'react';
 import './SearchBox.css'
-import SuggestionBox from '../SuggestionBox'
+import SuggestionBox from '../SuggestionBox/SuggestionBox'
 
 
 const SearchBox = ({ Svg, placeholder, data }) => {

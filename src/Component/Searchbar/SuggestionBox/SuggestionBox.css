@@ -1,0 +1,4 @@
+.suggestion-container:hover{
+  background: rgba(55, 141, 255, 0.444);
+  border-radius: 1em;
+}
