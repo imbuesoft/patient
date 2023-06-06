@@ -49,6 +49,8 @@
   .nav-mainbar{
     position:relative;
       font-size: 30px;
-      width: 100%;
+      width: 102%;
+      left:-12px;
     background-color:gray ;
+    z-index: -20;
   }

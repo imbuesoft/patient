@@ -56,7 +56,7 @@ const Newsidebar = () => {
 
     }
     return (
-        <div className=' conat'>
+        <div className=' conat container-fluid'>
             <div className={` sidebar sidebar-main ${action ? 'sidebar-collapsed' : ''}`}>
                 <div className='top'>
                     <div className='div-logo'>
