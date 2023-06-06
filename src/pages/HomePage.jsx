@@ -5,8 +5,9 @@ import Capsule from '../Component/Capsule';
 import Testimonial from '../Component/Testimonial';
 import Features from '../Component/Features';
 import Footer from '../Component/Footer';
-import Searchbar from '../Component/Searchbar/Searchbar';
+import Searchbar from '../Component/Searchbar';
 import VideoConsult from '../Component/VideoConsult';
+import Consult from '../Component/Consult';
 
 const Container = (x) =>
   <div className={"container-fluid " + (x.className || "")} style={{ maxWidth: "125em", ...x.style }}>
@@ -29,6 +30,12 @@ function App() {
 
       <Container>
         <Searchbar />
+      </Container>
+
+      <Space />
+
+      <Container>
+        <Consult />
       </Container>
 
       <Container>
