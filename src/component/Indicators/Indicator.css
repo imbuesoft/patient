@@ -1,0 +1,29 @@
+.maincard{
+    border: 1px solid #f0f0f5;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.12); 
+     width: 300px;
+    margin: auto;
+  }
+.headercard{
+    height: 60px;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 23px;
+    border-top-right-radius: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+.arrow{
+    font-size: 30px;
+}
+.indicatoricons{
+    width: 20px;
+    height: 20px;
+    border-radius:3px;
+    margin-top: 1%;
+}
+.iconstext{
+    font-weight: 600;
+}
