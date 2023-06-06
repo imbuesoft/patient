@@ -44,12 +44,14 @@ const SearchBox = ({ Svg, placeholder, name, data, suggestionBox, setSuggestionB
             {
               suggestions?.length > 0 ?
                 suggestions?.map((item, index) => {
+                  let data = {}
+                  if (item?.heading) data.heading = item?.heading
+                  if (item?.description) data.description = item?.description
+                  if (item?.left) data.left = item?.left
+                  if (item?.right) data.right = item?.right
                   return (
-                    <SuggestionBox key={index} data={{
-                      heading: item?.heading,
-                      description: item?.description
-                    }}
-                    handleClick={handleSuggestionClick} />
+                    <SuggestionBox key={index} data={data}
+                      handleClick={handleSuggestionClick} />
                   )
                 })
                 :

@@ -30,10 +30,8 @@ const Searchbar = () => {
   const [suggestionBox, setSuggestionBox] = useState('')
   const [searchLocation, setSearchLocation] = useState('')
   const [searchDoctorType, setSearchDoctorType] = useState('')
-
   return (
     <>
-
       <div
         className="position-relative w-100"
         style={{ height: "40em", borderRadius: "2em" }}>
@@ -88,7 +86,7 @@ const Searchbar = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default Searchbar;
