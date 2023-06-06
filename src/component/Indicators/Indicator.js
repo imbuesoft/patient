@@ -7,6 +7,38 @@ import Liquor from './liquor.png'
 import Coin from './priority.png';
 import './Indicator.css';
 
+const indicators = [
+    {
+        id: 1,
+        image: EmtTable,
+        indicatorname: 'Empty Table',
+    },
+    {
+        id: 2,
+        image: RunOrder ,
+        indicatorname: 'Running Order',
+    },
+    {
+        id: 3,
+        image: BillP,
+        indicatorname: 'Bill Printed',
+    },
+    {
+        id: 4,
+        image: HoldKot,
+        indicatorname: 'Hold Kot',
+    },
+    {
+        id: 5,
+        image: Liquor,
+        indicatorname: 'Serving Liquor',
+    },
+    {
+        id: 6,
+        image: Coin,
+        indicatorname: 'Priority Order',
+    },
+]
 const Indicator = () => {
     return (
         <div className="card maincard" >
@@ -17,35 +49,18 @@ const Indicator = () => {
                 <span> Understand your Indicators</span>
             </div>
             <div className="card-body">
+
+                {indicators.map((indicate)=>(
                 <div className="d-flex gap-2 iconstext">
-                    <img src={EmtTable} alt='Empty Table' className='indicatoricons' />
-                    <p>Empty Table</p>
+                    <img src={indicate.image} alt='Empty Table' className='indicatoricons' />
+                    <p>{indicate.indicatorname}</p>
                 </div>
-                <div className="d-flex gap-2 iconstext">
-                    <img src={RunOrder} alt='Running Order'className='indicatoricons' />
-                    <p>Running Order</p>
-                </div>
-                <div className="d-flex gap-2 iconstext">
-                    <img src={BillP}  alt='Bill Printed'className='indicatoricons'/>
-                    <p>Bill Printed</p>
-                </div>
-                <div className="d-flex gap-2 iconstext">
-                    <img src={HoldKot} alt='Hold Kot'className='indicatoricons' />
-                    <p>Hold Kot</p>
-                </div>
-                <div className="d-flex gap-2 iconstext">
-                    <img src={Liquor} alt='Serving Liquor' className='indicatoricons'/>
-                    <p>Serving Liquor</p>
-                </div>
-                <div className="d-flex gap-2 iconstext">
-                    <img src={Coin} alt='Priority Order' className='indicatoricons' />
-                    <p>Priority Order</p>
-                </div>
-                    <button type="button" className="btn btn-lg btn-block    " style={{marginTop:'5%',backgroundColor: 'blue',color: 'white',borderRadius:'10px',width:'100%'}}>Okay</button>
-                </div>
+                ))}
+                <button type="button" className="btn btn-lg btn-block    " style={{ marginTop: '5%', backgroundColor: 'blue', color: 'white', borderRadius: '10px', width: '100%' }}>Okay</button>
+            </div>
         </div>
 
     )
 }
 
-export default Indicator
+export default Indicator;
